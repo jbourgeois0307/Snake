@@ -1,0 +1,5 @@
+﻿  main.cpp
+y:\b52\democonsole\democonsole\main.cpp(39): warning C4018: '<' : incompatibilité signed/unsigned
+y:\b52\democonsole\democonsole\main.cpp(40): warning C4018: '<' : incompatibilité signed/unsigned
+y:\b52\democonsole\democonsole\main.cpp(41): warning C4018: '<' : incompatibilité signed/unsigned
+  DemoConsole.vcxproj -> Y:\B52\DemoConsole\Debug\DemoConsole.exe
