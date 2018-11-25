@@ -2,6 +2,8 @@
 #define SNAKE_H
 
 #include <vector>
+#include "Fruit.h"
+
 class Snake
 {
 	int mBodLength;
@@ -15,12 +17,12 @@ public:
 	Snake(float speed, int initX, int initY);
 	~Snake();
 	void slither(int x, int y);
-	void eatFruit(int speedAmplifier);
-	void eatFruit(int speedAmplifier, int tailLength);
+	void eatFruit(Fruit &fruit);
 	void addTail(int addedLength);
 	void cutTail(int cuttedLength);
 	void moveX(int x);
 	void moveY(int y);
+	void speed(float speedModifier);
 };
 
 

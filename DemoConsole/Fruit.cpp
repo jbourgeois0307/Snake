@@ -6,6 +6,13 @@ Fruit::Fruit()
 {
 }
 
+Fruit::Fruit(int x, int y, int pointVal)
+	: mX{x},
+	mY{y},
+	mPointVal{pointVal}
+{
+}
+
 Fruit::~Fruit()
 {
 }
@@ -29,6 +36,12 @@ int Fruit::getMY()
 {
 	return mY;
 }
+
+int Fruit::getMPointVal()
+{
+	return mPointVal;
+}
+
 
 void Fruit::destroyFruit()
 {

@@ -4,14 +4,16 @@
 class Fruit
 {
 	static int sCountFruit;
-	int mX, mY;
+	int mX, mY, mPointVal;
 public:
 	Fruit();
+	Fruit(int x, int y, int pointVal);
 	~Fruit();
 	void setX(int x);
 	void setY(int y);
 	int getMX();
 	int getMY();
+	int getMPointVal();
 	void destroyFruit();
 };
 
