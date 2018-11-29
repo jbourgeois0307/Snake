@@ -13,8 +13,8 @@ YellowFruit::YellowFruit(float speedReducor)
 {
 }
 
-YellowFruit::YellowFruit(int x, int y, int pointVal, float speedReducor)
-	: Fruit(x, y, pointVal),
+YellowFruit::YellowFruit(Point &p, int pointVal, float speedReducor)
+	: Fruit(p, pointVal),
 	mSpeedReducor{speedReducor}
 {
 }

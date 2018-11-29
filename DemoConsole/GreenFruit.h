@@ -9,7 +9,7 @@ class GreenFruit : public Fruit
 public:
 	GreenFruit();
 	GreenFruit(float speedAmplifier);
-	GreenFruit(int x, int y, int pointVal, float speedAmplifier);
+	GreenFruit(Point &p, int pointVal, float speedAmplifier);
 	~GreenFruit();
 	float getSpeedAmplificator();
 };
