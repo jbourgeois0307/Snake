@@ -27,7 +27,7 @@ public:
 	bool gameModeChooser();
 	bool gameOverMenu();
 
-	void showFruit(Fruit f) {
+	void showFruit(Fruit f);
 
 };
 

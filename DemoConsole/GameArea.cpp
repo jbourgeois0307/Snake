@@ -1,6 +1,6 @@
 #include "GameArea.h"
 
-GameArea::GameArea():currentImage_m(ConsoleImage image())
+GameArea::GameArea() :currentImage_m{ ConsoleImage image() }
 {
 }
 

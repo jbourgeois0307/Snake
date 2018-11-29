@@ -14,7 +14,7 @@ void Game::boucleDeJeu(int state) {
 	//ConsoleKeyReader & reader{ Console::getInstance().keyReader() };
 	for (int i{ 0 }; i < slow_m; i++) {
 		for (int j{ 0 }; j < slow_m; j++) {
-			for (int k{ 0 }; k< slow; k++);
+			for (int k{ 0 }; k< slow_m; k++);
 		}
 	}
 	switch (state) {
