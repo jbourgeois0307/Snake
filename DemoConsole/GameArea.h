@@ -1,9 +1,12 @@
-#pragma once
+#include "Console.h"
+#include "Fruit.h"
 class GameArea
 {
 private:
 	GameArea();
 	~GameArea();
+
+	ConsoleImage currentImage_m;
 public:
 
 	static GameArea& getInstance()
@@ -20,5 +23,8 @@ public:
 	bool optionMenu();
 	bool gameModeChooser();
 	bool gameOverMenu();
+
+	void showFruit(Fruit f) {
+
 };
 

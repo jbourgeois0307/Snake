@@ -3,9 +3,15 @@ class Random
 {
 private:
 	std::default_random_engine generator;
-public:
 	Random();
 	~Random();
+public:
+
+	static Random& getInstance()
+	{
+		static Random instance;
+		return instance;
+	}
 
 	int uniformRandomize(size_t min, size_t max);
 

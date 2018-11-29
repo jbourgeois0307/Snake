@@ -1,10 +1,10 @@
 #include "GameSinglePlayer.h"
 #include "Fruit.h"
 #include "GameArea.h"
-#include <random>
+#include "Random.h"
+#include "Point.h"
 GameSinglePlayer::GameSinglePlayer() {
 	haveFruit_m = false;
-	f = new Fruit();
 }
 GameSinglePlayer::~GameSinglePlayer()
 {
@@ -21,18 +21,8 @@ bool GameSinglePlayer::play()
 	return false;
 }
 void GameSinglePlayer::generateFruit() {
-	std::default_random_engine generator;
-	std::uniform_int_distribution<int> distribution(1, 3);
-	int generatedFruit = distribution(generator);
-
-	switch (generatedFruit) {
-	case 1 :
-		break;
-	case 2 :
-		break;
-	case 3:
-		break;
-	}
-	f = new Fruit();
+	Point p{ Random::getInstance().bernoulliRandomize(90),Random::getInstance().bernoulliRandomize(90) };
+	f(p, 1);
+	
 	haveFruit_m = true ;
 }
