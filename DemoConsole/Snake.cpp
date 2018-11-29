@@ -9,17 +9,15 @@ Snake::Snake(float speed)
 	: mSpeed{ speed },
 	mBodLength { 4 }
 {
-	mXPerBodPart.insert(mXPerBodPart.begin(), 50);
-	mYPerBodPart.insert(mYPerBodPart.begin(), 50);
+	mBodPart.insert(mBodPart.begin(), Point(50,50));
 }
 
 //Constructeur qui requiert vitesse et positions de la tête initiales
-Snake::Snake(float speed, int initX, int initY)
+Snake::Snake(float speed, Point &p)
 	: mSpeed{speed},
 	mBodLength { 4 }
 {
-	mXPerBodPart.insert(mXPerBodPart.begin(),initX);
-	mYPerBodPart.insert(mYPerBodPart.begin(),initY);
+	mBodPart.insert(mBodPart.begin(), p);
 }
 
 Snake::~Snake()
@@ -27,10 +25,15 @@ Snake::~Snake()
 }
 
 //Fait avancer le serpent ainsi que sa queue
-void Snake::slither(int x, int y)
+void Snake::slither(Point &p)
 {
-	Snake::moveX(x);
-	Snake::moveY(y);
+	//avance la queue du serpent en premier
+	for (int b{ 1 };b<mBodPart.size();++b)
+	{	
+		(mBodPart.begin() + b) = (mBodPart.begin()-b);
+	}
+	//La tête se place au point demandé
+	slitherHead(p);
 }
 
 void Snake::eatFruit(Fruit &fruit)
@@ -52,23 +55,12 @@ void Snake::eatFruit(Fruit &fruit)
 
 }
 
-void Snake::moveX(int x)
-{
-	for (auto xBod : mXPerBodPart)
-	{
-		xBod += x;
-	}
-}
-
-void Snake::moveY(int y)
-{
-	for (auto yBod : mYPerBodPart)
-	{
-		yBod += y;
-	}
-}
-
 void Snake::speed(float speedModifier) 
 {
 	mSpeed *= speedModifier;
+}
+
+void Snake::slitherHead(Point &p)
+{
+	mBodPart.front() = p;
 }

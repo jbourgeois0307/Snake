@@ -3,25 +3,23 @@
 
 #include <vector>
 #include "Fruit.h"
-
+#include "Point.h"
 class Snake
 {
 	int mBodLength;
 	float mSpeed;
-	std::vector<int> mXPerBodPart;
-	std::vector<int> mYPerBodPart;
+	std::vector<Point> mBodPart;
 
 public:
 	Snake();
 	Snake(float speed);
-	Snake(float speed, int initX, int initY);
+	Snake(float speed, Point &initP);
 	~Snake();
-	void slither(int x, int y);
+	void slither(Point &p);
+	void slitherHead(Point &p);
 	void eatFruit(Fruit &fruit);
 	void addTail(int addedLength);
 	void cutTail(int cuttedLength);
-	void moveX(int x);
-	void moveY(int y);
 	void speed(float speedModifier);
 };
 
