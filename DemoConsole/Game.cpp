@@ -1,8 +1,7 @@
 #include "Game.h"
 #include "GameSinglePlayer.h"
 #include "GameArea.h"
-#include "ElapsedTimer.h"
-Game::Game()
+Game::Game() :slow_m{ 500 }
 {
 
 }
@@ -11,11 +10,9 @@ Game::Game()
 Game::~Game()
 {
 }
-ElapsedTimer<> elapsedtimer;
-size_t slow = 500;
 void Game::boucleDeJeu(int state) {
 	//ConsoleKeyReader & reader{ Console::getInstance().keyReader() };
-	for (int i{ 0 }; i < slow; i++) {
+	for (int i{ 0 }; i < slow_m; i++) {
 		for (int j{ 0 }; j < slow; j++) {
 			for (int k{ 0 }; k< slow; k++);
 		}

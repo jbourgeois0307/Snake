@@ -1,5 +1,5 @@
-#ifndef GAME_H
-#define GAME_H
+#ifndef MULTI_H
+#define MULTI_H
 
 #pragma once
 class GameMultiPlayer

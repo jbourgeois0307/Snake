@@ -1,3 +1,6 @@
+#ifndef SINGLEPLAYER_H
+#define SINGLEPLAYER_H
+
 class GameSinglePlayer
 {
 private:
@@ -17,3 +20,4 @@ public:
 
 };
 
+#endif

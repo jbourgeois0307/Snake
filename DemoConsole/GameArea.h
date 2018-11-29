@@ -1,5 +1,5 @@
-#ifndef GAME_H
-#define GAME_H
+#ifndef GAMEAREA_H
+#define GAMEAREA_H
 
 #include "Console.h"
 #include "Fruit.h"

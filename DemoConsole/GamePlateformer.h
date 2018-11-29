@@ -1,5 +1,5 @@
-#ifndef GAME_H
-#define GAME_H
+#ifndef PLATEFORMER_H
+#define PLATEFORMER_H
 
 #pragma once
 class GamePlateformer

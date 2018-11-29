@@ -20,7 +20,8 @@ public:
 
 private:
 	void boucleDeJeu(int state = 1);
-	void generateGameArea();
-	void generateSnake();
-	void generateApple();
+	size_t slow_m;
+
 };
+
+#endif

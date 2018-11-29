@@ -1,64 +1,41 @@
-<<<<<<< HEAD
 ﻿  Game.cpp
-c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.13.26128\include\ratio(15): error C2059: erreur de syntaxe : 'namespace'
-c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.13.26128\include\ratio(15): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré
-c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\time.h(14): error C2059: erreur de syntaxe : 'chaîne'
-c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\time.h(14): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré
-c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.13.26128\include\thr\xthrcommon.h(21): error C2059: erreur de syntaxe : 'chaîne'
-c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.13.26128\include\thr\xthrcommon.h(21): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré
-c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.13.26128\include\thr\xtimec.h(16): error C2059: erreur de syntaxe : 'chaîne'
-c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.13.26128\include\thr\xtimec.h(16): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré
-c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.13.26128\include\chrono(18): error C2059: erreur de syntaxe : 'namespace'
-c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.13.26128\include\chrono(18): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré
-y:\workspace b52\snake\democonsole\elapsedtimer.h(20): error C3083: 'chrono' : le symbole situé à gauche de '::' doit être un type
-  y:\workspace b52\snake\democonsole\elapsedtimer.h(43): note: voir la référence à l'instanciation de classe modèle 'GameArea::ElapsedTimer<TimeT>' en cours de compilation
-y:\workspace b52\snake\democonsole\elapsedtimer.h(20): error C2039: 'time_point' : n'est pas membre de 'std'
-  c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.13.26128\include\map(19): note: voir la déclaration de 'std'
-y:\workspace b52\snake\democonsole\elapsedtimer.h(20): error C2143: erreur de syntaxe : absence de ';' avant '<'
-y:\workspace b52\snake\democonsole\elapsedtimer.h(20): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-y:\workspace b52\snake\democonsole\elapsedtimer.h(20): error C2238: jetons inattendus avant ';'
-y:\workspace b52\snake\democonsole\game.cpp(6): error C3254: 'GameArea' : la classe contient une substitution explicite '{ctor}', mais ne dérive pas d'une interface qui contient la déclaration de fonction
-y:\workspace b52\snake\democonsole\game.cpp(6): error C2838: '{ctor}' : nom qualifié non conforme dans une déclaration de membre
-y:\workspace b52\snake\democonsole\game.cpp(6): error C2535: 'GameArea::GameArea(void)' : fonction membre déjà définie ou déclarée
-  y:\workspace b52\snake\democonsole\gamearea.h(6): note: voir la déclaration de 'GameArea::GameArea'
-y:\workspace b52\snake\democonsole\game.cpp(12): error C3254: 'GameArea' : la classe contient une substitution explicite '{dtor}', mais ne dérive pas d'une interface qui contient la déclaration de fonction
-y:\workspace b52\snake\democonsole\game.cpp(12): error C2838: '{dtor}' : nom qualifié non conforme dans une déclaration de membre
-y:\workspace b52\snake\democonsole\game.cpp(12): error C2535: 'GameArea::~GameArea(void)' : fonction membre déjà définie ou déclarée
-  y:\workspace b52\snake\democonsole\gamearea.h(7): note: voir la déclaration de 'GameArea::~GameArea'
-y:\workspace b52\snake\democonsole\elapsedtimer.h(16): error C3083: 'chrono' : le symbole situé à gauche de '::' doit être un type
-y:\workspace b52\snake\democonsole\elapsedtimer.h(16): error C2039: 'high_resolution_clock' : n'est pas membre de 'std'
-  c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.13.26128\include\map(19): note: voir la déclaration de 'std'
-y:\workspace b52\snake\democonsole\game.cpp(14): error C2065: 'high_resolution_clock' : identificateur non déclaré
-y:\workspace b52\snake\democonsole\game.cpp(14): error C2923: 'GameArea::ElapsedTimer' : 'high_resolution_clock' n'est pas un argument de type modèle valide pour le paramètre 'TimeT'
-y:\workspace b52\snake\democonsole\game.cpp(16): error C3254: 'GameArea' : la classe contient une substitution explicite 'boucleDeJeu', mais ne dérive pas d'une interface qui contient la déclaration de fonction
-y:\workspace b52\snake\democonsole\game.cpp(16): error C2838: 'boucleDeJeu' : nom qualifié non conforme dans une déclaration de membre
-y:\workspace b52\snake\democonsole\game.cpp(91): error C3254: 'GameArea' : la classe contient une substitution explicite 'start', mais ne dérive pas d'une interface qui contient la déclaration de fonction
-y:\workspace b52\snake\democonsole\game.cpp(91): error C2838: 'start' : nom qualifié non conforme dans une déclaration de membre
-y:\workspace b52\snake\democonsole\gamearea.h(4): fatal error C1075: '{' : jeton correspondant introuvable
+y:\workspace b52\snake\democonsole\game.cpp(5): error C3254: 'GameArea' : la classe contient une substitution explicite '{ctor}', mais ne dérive pas d'une interface qui contient la déclaration de fonction
+y:\workspace b52\snake\democonsole\game.cpp(5): error C2838: '{ctor}' : nom qualifié non conforme dans une déclaration de membre
+y:\workspace b52\snake\democonsole\game.cpp(5): error C2535: 'GameArea::GameArea(void)' : fonction membre déjà définie ou déclarée
+  y:\workspace b52\snake\democonsole\gamearea.h(9): note: voir la déclaration de 'GameArea::GameArea'
+y:\workspace b52\snake\democonsole\game.cpp(11): error C3254: 'GameArea' : la classe contient une substitution explicite '{dtor}', mais ne dérive pas d'une interface qui contient la déclaration de fonction
+y:\workspace b52\snake\democonsole\game.cpp(11): error C2838: '{dtor}' : nom qualifié non conforme dans une déclaration de membre
+y:\workspace b52\snake\democonsole\game.cpp(11): error C2535: 'GameArea::~GameArea(void)' : fonction membre déjà définie ou déclarée
+  y:\workspace b52\snake\democonsole\gamearea.h(10): note: voir la déclaration de 'GameArea::~GameArea'
+y:\workspace b52\snake\democonsole\game.cpp(14): error C3254: 'GameArea' : la classe contient une substitution explicite 'boucleDeJeu', mais ne dérive pas d'une interface qui contient la déclaration de fonction
+y:\workspace b52\snake\democonsole\game.cpp(14): error C2838: 'boucleDeJeu' : nom qualifié non conforme dans une déclaration de membre
+y:\workspace b52\snake\democonsole\game.cpp(89): error C3254: 'GameArea' : la classe contient une substitution explicite 'start', mais ne dérive pas d'une interface qui contient la déclaration de fonction
+y:\workspace b52\snake\democonsole\game.cpp(89): error C2838: 'start' : nom qualifié non conforme dans une déclaration de membre
+y:\workspace b52\snake\democonsole\gamearea.h(7): fatal error C1075: '{' : jeton correspondant introuvable
   GameArea.cpp
 y:\workspace b52\snake\democonsole\gamearea.cpp(4): error C2535: 'GameArea::GameArea(void)' : fonction membre déjà définie ou déclarée
-  y:\workspace b52\snake\democonsole\gamearea.h(6): note: voir la déclaration de 'GameArea::GameArea'
+  y:\workspace b52\snake\democonsole\gamearea.h(9): note: voir la déclaration de 'GameArea::GameArea'
 y:\workspace b52\snake\democonsole\gamearea.cpp(10): error C2535: 'GameArea::~GameArea(void)' : fonction membre déjà définie ou déclarée
-  y:\workspace b52\snake\democonsole\gamearea.h(7): note: voir la déclaration de 'GameArea::~GameArea'
+  y:\workspace b52\snake\democonsole\gamearea.h(10): note: voir la déclaration de 'GameArea::~GameArea'
 y:\workspace b52\snake\democonsole\gamearea.cpp(30): error C2535: 'bool GameArea::singleplayer(void)' : fonction membre déjà définie ou déclarée
-  y:\workspace b52\snake\democonsole\gamearea.h(18): note: voir la déclaration de 'GameArea::singleplayer'
+  y:\workspace b52\snake\democonsole\gamearea.h(21): note: voir la déclaration de 'GameArea::singleplayer'
 y:\workspace b52\snake\democonsole\gamearea.cpp(44): error C2535: 'bool GameArea::multiplayer(void)' : fonction membre déjà définie ou déclarée
-  y:\workspace b52\snake\democonsole\gamearea.h(19): note: voir la déclaration de 'GameArea::multiplayer'
+  y:\workspace b52\snake\democonsole\gamearea.h(22): note: voir la déclaration de 'GameArea::multiplayer'
 y:\workspace b52\snake\democonsole\gamearea.cpp(57): error C2535: 'bool GameArea::plateformer(void)' : fonction membre déjà définie ou déclarée
-  y:\workspace b52\snake\democonsole\gamearea.h(20): note: voir la déclaration de 'GameArea::plateformer'
+  y:\workspace b52\snake\democonsole\gamearea.h(23): note: voir la déclaration de 'GameArea::plateformer'
 y:\workspace b52\snake\democonsole\gamearea.cpp(68): error C2535: 'bool GameArea::gameModeChooser(void)' : fonction membre déjà définie ou déclarée
-  y:\workspace b52\snake\democonsole\gamearea.h(24): note: voir la déclaration de 'GameArea::gameModeChooser'
+  y:\workspace b52\snake\democonsole\gamearea.h(27): note: voir la déclaration de 'GameArea::gameModeChooser'
 y:\workspace b52\snake\democonsole\gamearea.cpp(71): error C2535: 'bool GameArea::gameOverMenu(void)' : fonction membre déjà définie ou déclarée
-  y:\workspace b52\snake\democonsole\gamearea.h(25): note: voir la déclaration de 'GameArea::gameOverMenu'
+  y:\workspace b52\snake\democonsole\gamearea.h(28): note: voir la déclaration de 'GameArea::gameOverMenu'
 y:\workspace b52\snake\democonsole\gamearea.cpp(74): error C2535: 'bool GameArea::newGameMenu(void)' : fonction membre déjà définie ou déclarée
-  y:\workspace b52\snake\democonsole\gamearea.h(22): note: voir la déclaration de 'GameArea::newGameMenu'
+  y:\workspace b52\snake\democonsole\gamearea.h(25): note: voir la déclaration de 'GameArea::newGameMenu'
 y:\workspace b52\snake\democonsole\gamearea.cpp(77): error C2535: 'bool GameArea::optionMenu(void)' : fonction membre déjà définie ou déclarée
-  y:\workspace b52\snake\democonsole\gamearea.h(23): note: voir la déclaration de 'GameArea::optionMenu'
+  y:\workspace b52\snake\democonsole\gamearea.h(26): note: voir la déclaration de 'GameArea::optionMenu'
 y:\workspace b52\snake\democonsole\gamearea.cpp(80): error C2535: 'bool GameArea::welcomeMenu(void)' : fonction membre déjà définie ou déclarée
-  y:\workspace b52\snake\democonsole\gamearea.h(21): note: voir la déclaration de 'GameArea::welcomeMenu'
+  y:\workspace b52\snake\democonsole\gamearea.h(24): note: voir la déclaration de 'GameArea::welcomeMenu'
 y:\workspace b52\snake\democonsole\gamearea.cpp(86): error C2535: 'void GameArea::showFruit(Fruit)' : fonction membre déjà définie ou déclarée
-  y:\workspace b52\snake\democonsole\gamearea.h(27): note: voir la déclaration de 'GameArea::showFruit'
-y:\workspace b52\snake\democonsole\gamearea.h(4): fatal error C1075: '{' : jeton correspondant introuvable
+  y:\workspace b52\snake\democonsole\gamearea.h(30): note: voir la déclaration de 'GameArea::showFruit'
+y:\workspace b52\snake\democonsole\gamearea.h(7): fatal error C1075: '{' : jeton correspondant introuvable
   GameSinglePlayer.cpp
 c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.13.26128\include\algorithm(14): error C2059: erreur de syntaxe : 'namespace'
 c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.13.26128\include\algorithm(14): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré
@@ -71,66 +48,14 @@ y:\workspace b52\snake\democonsole\random.h(5): error C4430: spécificateur de t
 y:\workspace b52\snake\democonsole\gamesingleplayer.cpp(6): error C3254: 'GameArea' : la classe contient une substitution explicite '{ctor}', mais ne dérive pas d'une interface qui contient la déclaration de fonction
 y:\workspace b52\snake\democonsole\gamesingleplayer.cpp(6): error C2838: '{ctor}' : nom qualifié non conforme dans une déclaration de membre
 y:\workspace b52\snake\democonsole\gamesingleplayer.cpp(6): error C2535: 'GameArea::GameArea(void)' : fonction membre déjà définie ou déclarée
-  y:\workspace b52\snake\democonsole\gamearea.h(6): note: voir la déclaration de 'GameArea::GameArea'
+  y:\workspace b52\snake\democonsole\gamearea.h(9): note: voir la déclaration de 'GameArea::GameArea'
 y:\workspace b52\snake\democonsole\gamesingleplayer.cpp(12): error C3254: 'GameArea' : la classe contient une substitution explicite '{dtor}', mais ne dérive pas d'une interface qui contient la déclaration de fonction
 y:\workspace b52\snake\democonsole\gamesingleplayer.cpp(12): error C2838: '{dtor}' : nom qualifié non conforme dans une déclaration de membre
 y:\workspace b52\snake\democonsole\gamesingleplayer.cpp(12): error C2535: 'GameArea::~GameArea(void)' : fonction membre déjà définie ou déclarée
-  y:\workspace b52\snake\democonsole\gamearea.h(7): note: voir la déclaration de 'GameArea::~GameArea'
+  y:\workspace b52\snake\democonsole\gamearea.h(10): note: voir la déclaration de 'GameArea::~GameArea'
 y:\workspace b52\snake\democonsole\gamesingleplayer.cpp(15): error C3254: 'GameArea' : la classe contient une substitution explicite 'play', mais ne dérive pas d'une interface qui contient la déclaration de fonction
 y:\workspace b52\snake\democonsole\gamesingleplayer.cpp(15): error C2838: 'play' : nom qualifié non conforme dans une déclaration de membre
 y:\workspace b52\snake\democonsole\gamesingleplayer.cpp(24): error C3254: 'GameArea' : la classe contient une substitution explicite 'generateFruit', mais ne dérive pas d'une interface qui contient la déclaration de fonction
 y:\workspace b52\snake\democonsole\gamesingleplayer.cpp(24): error C2838: 'generateFruit' : nom qualifié non conforme dans une déclaration de membre
-y:\workspace b52\snake\democonsole\gamearea.h(4): fatal error C1075: '{' : jeton correspondant introuvable
-  GreenFruit.cpp
-y:\workspace b52\snake\democonsole\greenfruit.cpp(16): error C2661: 'Fruit::Fruit' : aucune fonction surchargée ne nécessite 3 arguments
-  PurpleFruit.cpp
-y:\workspace b52\snake\democonsole\purplefruit.cpp(10): error C2661: 'Fruit::Fruit' : aucune fonction surchargée ne nécessite 3 arguments
-  RedFruit.cpp
-y:\workspace b52\snake\democonsole\redfruit.cpp(9): error C2661: 'Fruit::Fruit' : aucune fonction surchargée ne nécessite 3 arguments
-  YellowFruit.cpp
-y:\workspace b52\snake\democonsole\yellowfruit.cpp(17): error C2661: 'Fruit::Fruit' : aucune fonction surchargée ne nécessite 3 arguments
-=======
-﻿  Console.cpp
-  ConsoleColor.cpp
-  ConsoleContext.cpp
-  ConsoleImage.cpp
-  ConsoleKeyEvent.cpp
-  ConsoleKeyFilterDown.cpp
-  ConsoleKeyFilterModifiers.cpp
-  ConsoleKeyFilterUp.cpp
-  ConsoleKeyReader.cpp
-  ConsoleWriter.cpp
-  Fruit.cpp
-  Game.cpp
-y:\b52\snake\democonsole\gamesingleplayer.h(7): error C3646: 'f' : spécificateur de substitution inconnu
-y:\b52\snake\democonsole\gamesingleplayer.h(7): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-y:\b52\snake\democonsole\game.cpp(18): warning C4018: '<' : incompatibilité signed/unsigned
-y:\b52\snake\democonsole\game.cpp(19): warning C4018: '<' : incompatibilité signed/unsigned
-y:\b52\snake\democonsole\game.cpp(20): warning C4018: '<' : incompatibilité signed/unsigned
-  GameArea.cpp
-y:\b52\snake\democonsole\gamearea.cpp(35): warning C4309: 'argument' : troncation de valeur de constante
-y:\b52\snake\democonsole\gamearea.cpp(49): warning C4309: 'argument' : troncation de valeur de constante
-y:\b52\snake\democonsole\gamearea.cpp(62): warning C4309: 'argument' : troncation de valeur de constante
-  GameMultiPlayer.cpp
-  GamePlateformer.cpp
-  GameSinglePlayer.cpp
-y:\b52\snake\democonsole\gamesingleplayer.h(7): error C3646: 'f' : spécificateur de substitution inconnu
-y:\b52\snake\democonsole\gamesingleplayer.h(7): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-y:\b52\snake\democonsole\gamesingleplayer.cpp(7): error C2065: 'f' : identificateur non déclaré
-y:\b52\snake\democonsole\gamesingleplayer.cpp(35): error C2065: 'f' : identificateur non déclaré
-  GreenFruit.cpp
-y:\b52\snake\democonsole\greenfruit.cpp(16): error C2661: 'Fruit::Fruit' : aucune fonction surchargée ne nécessite 3 arguments
-  main.cpp
-  Point.cpp
-  PurpleFruit.cpp
-y:\b52\snake\democonsole\purplefruit.cpp(10): error C2661: 'Fruit::Fruit' : aucune fonction surchargée ne nécessite 3 arguments
-  Génération de code en cours...
-  Compilation en cours...
-  RedFruit.cpp
-y:\b52\snake\democonsole\redfruit.cpp(9): error C2661: 'Fruit::Fruit' : aucune fonction surchargée ne nécessite 3 arguments
-  Snake.cpp
-y:\b52\snake\democonsole\snake.cpp(31): warning C4018: '<' : incompatibilité signed/unsigned
-  YellowFruit.cpp
-y:\b52\snake\democonsole\yellowfruit.cpp(17): error C2661: 'Fruit::Fruit' : aucune fonction surchargée ne nécessite 3 arguments
->>>>>>> 3b4230f0b01de03c012b8a9b23578f938f77f6a8
+y:\workspace b52\snake\democonsole\gamearea.h(7): fatal error C1075: '{' : jeton correspondant introuvable
   Génération de code en cours...
