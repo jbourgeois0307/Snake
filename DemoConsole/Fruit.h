@@ -1,19 +1,19 @@
 #ifndef FRUIT_H
 #define FRUIT_H
 
+#include "Point.h"
+
 class Fruit
 {
 	static int sCountFruit;
-	int mX, mY, mPointVal;
+	Point mPoint;
+	int  mPointVal;
 public:
 	Fruit();
-	Fruit(int x, int y, int pointVal);
+	Fruit(Point &p, int pointVal);
 	~Fruit();
-	void setX(int x);
-	void setY(int y);
-	int getMX();
-	int getMY();
-	int getMPointVal();
+	void setPoint(Point &p);
+	int pointVal();
 	void destroyFruit();
 };
 
