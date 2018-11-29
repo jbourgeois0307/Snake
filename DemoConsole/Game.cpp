@@ -89,9 +89,6 @@ void Game::boucleDeJeu(int state) {
 }
 
 void Game::start(size_t width, size_t height) {
-	
-	typedef int position_t;
-	
 	ConsoleContext context(width, height, "The Snake Game", 8, 8, L"Consolas");
 	Console::defineContext(context);
 	Game::getInstance().boucleDeJeu(7);
