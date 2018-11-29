@@ -1,10 +1,19 @@
-#include "Game.h"
-class GameSinglePlayer : public Game
+class GameSinglePlayer
 {
-public:
+private:
 	GameSinglePlayer();
 	~GameSinglePlayer();
+	bool haveFruit_m;
+	Fruit f;
+public:
+	static GameSinglePlayer& getInstance()
+	{
+		static GameSinglePlayer instance;
+		return instance;
+	}
 
+	bool play();
+	void generateFruit();
 
 };
 

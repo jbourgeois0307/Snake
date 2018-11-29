@@ -1,6 +1,7 @@
 #include "Game.h"
-
-
+#include "GameSinglePlayer.h"
+#include "GameArea.h"
+#include "ElapsedTimer.h"
 Game::Game()
 {
 	 
@@ -11,9 +12,15 @@ Game::Game()
 Game::~Game()
 {
 }
-
+ElapsedTimer<> elapsedtimer;
+size_t slow = 500;
 void Game::boucleDeJeu(int state) {
-	ConsoleKeyReader & reader{ Console::getInstance().keyReader() };
+	//ConsoleKeyReader & reader{ Console::getInstance().keyReader() };
+	for (int i{ 0 }; i < slow; i++) {
+		for (int j{ 0 }; j < slow; j++) {
+			for (int k{ 0 }; k< slow; k++);
+		}
+	}
 	switch (state) {
 	case 1: if (GameArea::getInstance().welcomeMenu()) {
 		boucleDeJeu(state + 1);
@@ -50,7 +57,8 @@ void Game::boucleDeJeu(int state) {
 		boucleDeJeu(state);
 	}
 			break;
-	case 6: if (GameArea::getInstance().singleplayer()) {
+	case 6: GameSinglePlayer::getInstance();
+		if (GameSinglePlayer::getInstance().play()) {
 		boucleDeJeu(state + 1);
 	}
 			else {
@@ -87,6 +95,6 @@ void Game::start(size_t width, size_t height) {
 	
 	ConsoleContext context(width, height, "The Snake Game", 8, 8, L"Consolas");
 	Console::defineContext(context);
-	Game::getInstance().boucleDeJeu(6);
+	Game::getInstance().boucleDeJeu(7);
 }
 

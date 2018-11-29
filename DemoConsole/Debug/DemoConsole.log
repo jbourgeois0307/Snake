@@ -1,5 +1,12 @@
-﻿  main.cpp
-y:\b52\democonsole\democonsole\main.cpp(39): warning C4018: '<' : incompatibilité signed/unsigned
-y:\b52\democonsole\democonsole\main.cpp(40): warning C4018: '<' : incompatibilité signed/unsigned
-y:\b52\democonsole\democonsole\main.cpp(41): warning C4018: '<' : incompatibilité signed/unsigned
-  DemoConsole.vcxproj -> Y:\B52\DemoConsole\Debug\DemoConsole.exe
+﻿  Game.cpp
+y:\workspace b52\snake\democonsole\gamesingleplayer.h(7): error C3646: 'f' : spécificateur de substitution inconnu
+y:\workspace b52\snake\democonsole\gamesingleplayer.h(7): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+y:\workspace b52\snake\democonsole\game.cpp(19): warning C4018: '<' : incompatibilité signed/unsigned
+y:\workspace b52\snake\democonsole\game.cpp(20): warning C4018: '<' : incompatibilité signed/unsigned
+y:\workspace b52\snake\democonsole\game.cpp(21): warning C4018: '<' : incompatibilité signed/unsigned
+  GameSinglePlayer.cpp
+y:\workspace b52\snake\democonsole\gamesingleplayer.h(7): error C3646: 'f' : spécificateur de substitution inconnu
+y:\workspace b52\snake\democonsole\gamesingleplayer.h(7): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+y:\workspace b52\snake\democonsole\gamesingleplayer.cpp(6): error C2065: 'f' : identificateur non déclaré
+y:\workspace b52\snake\democonsole\gamesingleplayer.cpp(23): error C2065: 'f' : identificateur non déclaré
+  Génération de code en cours...

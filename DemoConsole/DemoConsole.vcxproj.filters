@@ -13,152 +13,164 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers sources\Console">
+      <UniqueIdentifier>{f05d5709-c930-4f5a-af1c-95fb01c72a60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Console">
+      <UniqueIdentifier>{541371bb-d23d-48b5-b29b-3dc29a077aa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Game">
+      <UniqueIdentifier>{b4bc0de7-1ee9-4ab0-a31c-af98c270827d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Game">
+      <UniqueIdentifier>{0adbdd21-d6ce-4265-8b31-9140e6431a37}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Console.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Console</Filter>
     </ClCompile>
     <ClCompile Include="ConsoleColor.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Console</Filter>
     </ClCompile>
     <ClCompile Include="ConsoleContext.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Console</Filter>
     </ClCompile>
     <ClCompile Include="ConsoleImage.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Console</Filter>
     </ClCompile>
     <ClCompile Include="ConsoleKeyEvent.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Console</Filter>
     </ClCompile>
     <ClCompile Include="ConsoleKeyFilterDown.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Console</Filter>
     </ClCompile>
     <ClCompile Include="ConsoleKeyFilterModifiers.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Console</Filter>
     </ClCompile>
     <ClCompile Include="ConsoleKeyFilterUp.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Console</Filter>
     </ClCompile>
     <ClCompile Include="ConsoleKeyReader.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Console</Filter>
     </ClCompile>
     <ClCompile Include="ConsoleWriter.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Console</Filter>
     </ClCompile>
     <ClCompile Include="Fruit.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Fichiers sources\Game</Filter>
     </ClCompile>
     <ClCompile Include="GameArea.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Game</Filter>
     </ClCompile>
     <ClCompile Include="GameMultiPlayer.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Game</Filter>
     </ClCompile>
     <ClCompile Include="GamePlateformer.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Game</Filter>
     </ClCompile>
     <ClCompile Include="GameSinglePlayer.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Game</Filter>
     </ClCompile>
     <ClCompile Include="GreenFruit.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Fichiers sources\Game</Filter>
     </ClCompile>
     <ClCompile Include="PurpleFruit.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Game</Filter>
     </ClCompile>
     <ClCompile Include="RedFruit.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Game</Filter>
     </ClCompile>
     <ClCompile Include="Snake.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Game</Filter>
     </ClCompile>
     <ClCompile Include="YellowFruit.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleColor.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleContext.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleImage.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyEvent.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyFilter.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyFilterAny.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyFilterDown.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyFilterModifiers.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyFilterUp.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyReader.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleWriter.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Console</Filter>
     </ClInclude>
     <ClInclude Include="ElapsedTimer.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Console</Filter>
     </ClInclude>
     <ClInclude Include="Fruit.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Fichiers d%27en-tête\Game</Filter>
     </ClInclude>
     <ClInclude Include="GameArea.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Game</Filter>
     </ClInclude>
     <ClInclude Include="GameMultiPlayer.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Game</Filter>
     </ClInclude>
     <ClInclude Include="GamePlateformer.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Game</Filter>
     </ClInclude>
     <ClInclude Include="GameSinglePlayer.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Game</Filter>
     </ClInclude>
     <ClInclude Include="GreenFruit.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Game</Filter>
     </ClInclude>
     <ClInclude Include="PurpleFruit.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Game</Filter>
     </ClInclude>
     <ClInclude Include="RedFruit.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Game</Filter>
     </ClInclude>
     <ClInclude Include="Snake.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Game</Filter>
     </ClInclude>
     <ClInclude Include="YellowFruit.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Console">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Console</Filter>
     </None>
   </ItemGroup>
 </Project>
