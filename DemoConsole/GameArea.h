@@ -12,13 +12,13 @@ public:
 		return instance;
 	}
 
-	void singleplayer();
-	void multiplayer();
-	void plateformer();
-	void welcomeMenu();
-	void newGameMenu();
-	void optionMenu();
-	void gameModeChooser();
-	void gameOverMenu();
+	bool singleplayer();
+	bool multiplayer();
+	bool plateformer();
+	bool welcomeMenu();
+	bool newGameMenu();
+	bool optionMenu();
+	bool gameModeChooser();
+	bool gameOverMenu();
 };
 

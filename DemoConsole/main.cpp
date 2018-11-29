@@ -6,8 +6,7 @@ using namespace std;
 
 int main()
 {
-	Game::start();
-
+	Game::getInstance().start();
 	//
 	//Console::defineContext(context);
 	//

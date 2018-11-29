@@ -1,15 +1,24 @@
-#pragma once
+#include "Console.h"
+#include "GameArea.h"
+
 class Game
 {
-public:
+private:
 	Game();
 	~Game();
-	void static start(size_t width=800, size_t height=600);
+public:
+	void static start(size_t width=800, size_t height=1000);
 	
 	void generateGameArea();
 	void generateSnake();
 	void generateApple();
-
+	static Game& getInstance()
+	{
+		static Game instance;
+		return instance;
+	}
+private:
+	void boucleDeJeu(int state = 1);
 	
 };
 
