@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Console" Collapsed="true">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACQggAAGEAABAQAQAAAAAAAAgAQAgQAAQAQAQAAERI=</HashCode>
+      <FileName>Console.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleColor" Collapsed="true">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABDCCAIAAACAhBIKCCQCiAAAAAQSKKCQSCAAAAACCgg=</HashCode>
+      <FileName>ConsoleColor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleImage" Collapsed="true">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAYgAAAAAAAAAWAQIAAQAAAAAAAQECAAgigAAAxAAA=</HashCode>
+      <FileName>ConsoleImage.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleKeyEvent" Collapsed="true">
+    <Position X="15" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAACAAAIoECAAAAAAAgAAAEAAAAAAEAAAQ=</HashCode>
+      <FileName>ConsoleKeyEvent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleKeyFilter" Collapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConsoleKeyFilter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleKeyFilterAny&lt;LutSize, keyEncoding&gt;" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAQAAAIAAIAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConsoleKeyFilterAny.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleKeyFilterDown" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConsoleKeyFilterDown.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleKeyFilterModifiers" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>ConsoleKeyFilterModifiers.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleKeyFilterUp" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConsoleKeyFilterUp.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleKeyReader" Collapsed="true">
+    <Position X="9.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAQAAAAAAAAACAAAAAAAABAAAAAAEQAAAAAABA=</HashCode>
+      <FileName>ConsoleKeyReader.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleWriter" Collapsed="true">
+    <Position X="11.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAQAwIAAAAAAEABBEgAAAQAIAAAoAAA=</HashCode>
+      <FileName>ConsoleWriter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElapsedTimer&lt;TimeT&gt;" Collapsed="true">
+    <Position X="13.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABEBAEAAAAAAAgAAQAIAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ElapsedTimer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fruit" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAgCAAAAAAAAAAAAAAIAQQAAAAQAAAAAEAAEAAAA=</HashCode>
+      <FileName>Fruit.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Game" Collapsed="true">
+    <Position X="15" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAgAAAABAAAAAjAAAQAAAAIAAAAAAA=</HashCode>
+      <FileName>Game.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameArea" Collapsed="true">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACBAAAAAAAAAAAAIgABAABAARABAAAQAAAAAAIAAAAA=</HashCode>
+      <FileName>GameArea.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameMultiPlayer" Collapsed="true">
+    <Position X="11.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>GameMultiPlayer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GamePlateformer" Collapsed="true">
+    <Position X="13.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAIA=</HashCode>
+      <FileName>GamePlateformer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameSinglePlayer" Collapsed="true">
+    <Position X="15" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAAAAAAAAAACAAAAAAAAAAAACAAAQQAgAAAAAAAAA=</HashCode>
+      <FileName>GameSinglePlayer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GreenFruit" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>GreenFruit.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Point" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAACgAAAAAAAAAAAAAAAABBgAAAAAAA=</HashCode>
+      <FileName>Point.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PurpleFruit" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAABAAAAAAAAAAAAAgCAAAAAAAAAA=</HashCode>
+      <FileName>PurpleFruit.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RedFruit" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RedFruit.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Snake" Collapsed="true">
+    <Position X="11.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAQAAAABAAAAAgAAAAAAgAoAAAIAQAAAAgABAAAAAA=</HashCode>
+      <FileName>Snake.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YellowFruit" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAgAAAAAAAAAEAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>YellowFruit.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="ConsoleContext" Collapsed="true">
+    <Position X="9.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAICSCAAAAQAQAABAAAAABABAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>ConsoleContext.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="is_std_clock&lt;T&gt;" Collapsed="true">
+    <Position X="11.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>ElapsedTimer.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

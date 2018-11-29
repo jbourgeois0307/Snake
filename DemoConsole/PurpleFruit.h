@@ -9,7 +9,7 @@ class PurpleFruit : public Fruit
 	int mPointPenalty;
 public:
 	PurpleFruit();
-	PurpleFruit(int x, int y, int pointVal);
+	PurpleFruit(Point &p, int pointVal);
 	~PurpleFruit();
 	int getPointPenaltyVal();
 };

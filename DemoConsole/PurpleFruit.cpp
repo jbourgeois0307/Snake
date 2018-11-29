@@ -6,8 +6,8 @@ PurpleFruit::PurpleFruit()
 {
 }
 
-PurpleFruit::PurpleFruit(int x, int y, int pointVal)
-	: Fruit (x,y,pointVal)
+PurpleFruit::PurpleFruit(Point &p, int pointVal)
+	: Fruit (p,pointVal)
 {
 }
 

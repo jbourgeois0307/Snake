@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Game.cpp
 c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.13.26128\include\ratio(15): error C2059: erreur de syntaxe : 'namespace'
 c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.13.26128\include\ratio(15): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré
@@ -88,4 +89,48 @@ y:\workspace b52\snake\democonsole\purplefruit.cpp(10): error C2661: 'Fruit::Fru
 y:\workspace b52\snake\democonsole\redfruit.cpp(9): error C2661: 'Fruit::Fruit' : aucune fonction surchargée ne nécessite 3 arguments
   YellowFruit.cpp
 y:\workspace b52\snake\democonsole\yellowfruit.cpp(17): error C2661: 'Fruit::Fruit' : aucune fonction surchargée ne nécessite 3 arguments
+=======
+﻿  Console.cpp
+  ConsoleColor.cpp
+  ConsoleContext.cpp
+  ConsoleImage.cpp
+  ConsoleKeyEvent.cpp
+  ConsoleKeyFilterDown.cpp
+  ConsoleKeyFilterModifiers.cpp
+  ConsoleKeyFilterUp.cpp
+  ConsoleKeyReader.cpp
+  ConsoleWriter.cpp
+  Fruit.cpp
+  Game.cpp
+y:\b52\snake\democonsole\gamesingleplayer.h(7): error C3646: 'f' : spécificateur de substitution inconnu
+y:\b52\snake\democonsole\gamesingleplayer.h(7): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+y:\b52\snake\democonsole\game.cpp(18): warning C4018: '<' : incompatibilité signed/unsigned
+y:\b52\snake\democonsole\game.cpp(19): warning C4018: '<' : incompatibilité signed/unsigned
+y:\b52\snake\democonsole\game.cpp(20): warning C4018: '<' : incompatibilité signed/unsigned
+  GameArea.cpp
+y:\b52\snake\democonsole\gamearea.cpp(35): warning C4309: 'argument' : troncation de valeur de constante
+y:\b52\snake\democonsole\gamearea.cpp(49): warning C4309: 'argument' : troncation de valeur de constante
+y:\b52\snake\democonsole\gamearea.cpp(62): warning C4309: 'argument' : troncation de valeur de constante
+  GameMultiPlayer.cpp
+  GamePlateformer.cpp
+  GameSinglePlayer.cpp
+y:\b52\snake\democonsole\gamesingleplayer.h(7): error C3646: 'f' : spécificateur de substitution inconnu
+y:\b52\snake\democonsole\gamesingleplayer.h(7): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+y:\b52\snake\democonsole\gamesingleplayer.cpp(7): error C2065: 'f' : identificateur non déclaré
+y:\b52\snake\democonsole\gamesingleplayer.cpp(35): error C2065: 'f' : identificateur non déclaré
+  GreenFruit.cpp
+y:\b52\snake\democonsole\greenfruit.cpp(16): error C2661: 'Fruit::Fruit' : aucune fonction surchargée ne nécessite 3 arguments
+  main.cpp
+  Point.cpp
+  PurpleFruit.cpp
+y:\b52\snake\democonsole\purplefruit.cpp(10): error C2661: 'Fruit::Fruit' : aucune fonction surchargée ne nécessite 3 arguments
+  Génération de code en cours...
+  Compilation en cours...
+  RedFruit.cpp
+y:\b52\snake\democonsole\redfruit.cpp(9): error C2661: 'Fruit::Fruit' : aucune fonction surchargée ne nécessite 3 arguments
+  Snake.cpp
+y:\b52\snake\democonsole\snake.cpp(31): warning C4018: '<' : incompatibilité signed/unsigned
+  YellowFruit.cpp
+y:\b52\snake\democonsole\yellowfruit.cpp(17): error C2661: 'Fruit::Fruit' : aucune fonction surchargée ne nécessite 3 arguments
+>>>>>>> 3b4230f0b01de03c012b8a9b23578f938f77f6a8
   Génération de code en cours...

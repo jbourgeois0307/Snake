@@ -24,5 +24,3 @@ private:
 	void generateSnake();
 	void generateApple();
 };
-
-#endif

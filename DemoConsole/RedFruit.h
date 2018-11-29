@@ -7,7 +7,7 @@ class RedFruit : public Fruit
 {
 public:
 	RedFruit();
-	RedFruit(int x, int y, int pointVal);
+	RedFruit(Point &p, int pointVal);
 	~RedFruit();
 };
 
