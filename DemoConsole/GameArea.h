@@ -1,3 +1,6 @@
+#ifndef GAME_H
+#define GAME_H
+
 #include "Console.h"
 #include "Fruit.h"
 class GameArea
@@ -28,3 +31,4 @@ public:
 
 };
 
+#endif

@@ -1,3 +1,6 @@
+#ifndef GAME_H
+#define GAME_H
+
 #include "Console.h"
 
 
@@ -22,3 +25,4 @@ private:
 	void generateApple();
 };
 
+#endif

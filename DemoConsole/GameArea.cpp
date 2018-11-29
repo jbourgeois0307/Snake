@@ -84,5 +84,5 @@ bool GameArea::welcomeMenu() {
 }
 
 void GameArea::showFruit(Fruit f) {
-	currentImage_m.drawLine(f.getMX, f.getMY, f.getMX, f.getMY, '0', ConsoleColor::bR + ConsoleColor::tR);
+	//currentImage_m.drawLine(f.getMX, f.getMY, f.getMX, f.getMY, '0', ConsoleColor::bR + ConsoleColor::tR);
 }

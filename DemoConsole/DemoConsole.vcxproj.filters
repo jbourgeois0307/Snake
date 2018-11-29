@@ -1,248 +1,188 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Fichiers sources">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Header">
+      <UniqueIdentifier>{a0e8f315-6f76-4a0f-8eb3-60dfa0e3aad9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="CPP">
+      <UniqueIdentifier>{85a18a1a-71c4-40aa-bfbe-fb395641acc2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers de ressources">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Header\Console">
+      <UniqueIdentifier>{795c69de-73c3-4d9d-a382-30ffb0e8e45b}</UniqueIdentifier>
     </Filter>
-<<<<<<< HEAD
-    <Filter Include="Fichiers d%27en-tête\Game">
-      <UniqueIdentifier>{410e6134-0776-4386-a9d8-271b43c382d8}</UniqueIdentifier>
+    <Filter Include="Header\Game">
+      <UniqueIdentifier>{83f4ba65-ae88-4eaf-9212-a9befbd958ec}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête\Console">
-      <UniqueIdentifier>{aa63a1b5-0304-4bf5-ac41-60ea3f570635}</UniqueIdentifier>
+    <Filter Include="Header\Autre">
+      <UniqueIdentifier>{e91b3462-bc8c-422e-bd92-66272f18b345}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers sources\Console">
-      <UniqueIdentifier>{4ce8d852-a310-4dcf-8f35-14332c039341}</UniqueIdentifier>
+    <Filter Include="CPP\Console">
+      <UniqueIdentifier>{c8dfe1d0-5e2c-4bdc-b3cc-8b530e1bbd80}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers sources\Jeu">
-      <UniqueIdentifier>{17c1da4d-9337-4668-afc8-6a2edee4885c}</UniqueIdentifier>
-=======
-    <Filter Include="Fichiers sources\Console">
-      <UniqueIdentifier>{f05d5709-c930-4f5a-af1c-95fb01c72a60}</UniqueIdentifier>
+    <Filter Include="CPP\Game">
+      <UniqueIdentifier>{0ccbb3da-1a97-4fc0-b636-d23dbb178875}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête\Console">
-      <UniqueIdentifier>{541371bb-d23d-48b5-b29b-3dc29a077aa5}</UniqueIdentifier>
+    <Filter Include="CPP\Autre">
+      <UniqueIdentifier>{3fab2a27-ada8-4fd8-8c7e-2c5e9ee265c5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers sources\Game">
-      <UniqueIdentifier>{b4bc0de7-1ee9-4ab0-a31c-af98c270827d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers d%27en-tête\Game">
-      <UniqueIdentifier>{0adbdd21-d6ce-4265-8b31-9140e6431a37}</UniqueIdentifier>
->>>>>>> 31308e8bcffa158dbc74a66544f86c863f76ed43
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Console.cpp">
-      <Filter>Fichiers sources\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsoleColor.cpp">
-      <Filter>Fichiers sources\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsoleContext.cpp">
-      <Filter>Fichiers sources\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsoleImage.cpp">
-      <Filter>Fichiers sources\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsoleKeyEvent.cpp">
-      <Filter>Fichiers sources\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsoleKeyFilterDown.cpp">
-      <Filter>Fichiers sources\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsoleKeyFilterModifiers.cpp">
-      <Filter>Fichiers sources\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsoleKeyFilterUp.cpp">
-      <Filter>Fichiers sources\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsoleKeyReader.cpp">
-      <Filter>Fichiers sources\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsoleWriter.cpp">
-      <Filter>Fichiers sources\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="Fruit.cpp">
-<<<<<<< HEAD
-      <Filter>Fichiers sources\Jeu</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Fichiers sources\Jeu</Filter>
-    </ClCompile>
-    <ClCompile Include="GameArea.cpp">
-      <Filter>Fichiers sources\Jeu</Filter>
-    </ClCompile>
-    <ClCompile Include="GameMultiPlayer.cpp">
-      <Filter>Fichiers sources\Jeu</Filter>
-    </ClCompile>
-    <ClCompile Include="GamePlateformer.cpp">
-      <Filter>Fichiers sources\Jeu</Filter>
-    </ClCompile>
-    <ClCompile Include="GameSinglePlayer.cpp">
-      <Filter>Fichiers sources\Jeu</Filter>
-    </ClCompile>
-    <ClCompile Include="GreenFruit.cpp">
-      <Filter>Fichiers sources\Jeu</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Fichiers sources\Jeu</Filter>
-    </ClCompile>
-    <ClCompile Include="PurpleFruit.cpp">
-      <Filter>Fichiers sources\Jeu</Filter>
-    </ClCompile>
-    <ClCompile Include="RedFruit.cpp">
-      <Filter>Fichiers sources\Jeu</Filter>
-    </ClCompile>
-    <ClCompile Include="Snake.cpp">
-      <Filter>Fichiers sources\Jeu</Filter>
-    </ClCompile>
-    <ClCompile Include="YellowFruit.cpp">
-      <Filter>Fichiers sources\Jeu</Filter>
-    </ClCompile>
-    <ClCompile Include="Point.cpp">
-      <Filter>Fichiers sources\Jeu</Filter>
-=======
-      <Filter>Fichiers sources\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Fichiers sources\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="GameArea.cpp">
-      <Filter>Fichiers sources\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="GameMultiPlayer.cpp">
-      <Filter>Fichiers sources\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="GamePlateformer.cpp">
-      <Filter>Fichiers sources\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="GameSinglePlayer.cpp">
-      <Filter>Fichiers sources\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="GreenFruit.cpp">
-      <Filter>Fichiers sources\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Fichiers sources\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="PurpleFruit.cpp">
-      <Filter>Fichiers sources\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="RedFruit.cpp">
-      <Filter>Fichiers sources\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Snake.cpp">
-      <Filter>Fichiers sources\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="YellowFruit.cpp">
-      <Filter>Fichiers sources\Game</Filter>
->>>>>>> 31308e8bcffa158dbc74a66544f86c863f76ed43
-    </ClCompile>
-    <ClCompile Include="Random.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Point.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h">
-      <Filter>Fichiers d%27en-tête\Console</Filter>
+      <Filter>Header\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleColor.h">
-      <Filter>Fichiers d%27en-tête\Console</Filter>
+      <Filter>Header\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleContext.h">
-      <Filter>Fichiers d%27en-tête\Console</Filter>
+      <Filter>Header\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleImage.h">
-      <Filter>Fichiers d%27en-tête\Console</Filter>
+      <Filter>Header\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyEvent.h">
-      <Filter>Fichiers d%27en-tête\Console</Filter>
+      <Filter>Header\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyFilter.h">
-      <Filter>Fichiers d%27en-tête\Console</Filter>
+      <Filter>Header\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyFilterAny.h">
-      <Filter>Fichiers d%27en-tête\Console</Filter>
+      <Filter>Header\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyFilterDown.h">
-      <Filter>Fichiers d%27en-tête\Console</Filter>
+      <Filter>Header\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyFilterModifiers.h">
-      <Filter>Fichiers d%27en-tête\Console</Filter>
+      <Filter>Header\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyFilterUp.h">
-      <Filter>Fichiers d%27en-tête\Console</Filter>
+      <Filter>Header\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyReader.h">
-      <Filter>Fichiers d%27en-tête\Console</Filter>
+      <Filter>Header\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleWriter.h">
-      <Filter>Fichiers d%27en-tête\Console</Filter>
+      <Filter>Header\Console</Filter>
     </ClInclude>
     <ClInclude Include="ElapsedTimer.h">
-      <Filter>Fichiers d%27en-tête\Console</Filter>
+      <Filter>Header\Console</Filter>
     </ClInclude>
     <ClInclude Include="Fruit.h">
-      <Filter>Fichiers d%27en-tête\Game</Filter>
+      <Filter>Header\Game</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
-      <Filter>Fichiers d%27en-tête\Game</Filter>
+      <Filter>Header\Game</Filter>
     </ClInclude>
     <ClInclude Include="GameArea.h">
-      <Filter>Fichiers d%27en-tête\Game</Filter>
+      <Filter>Header\Game</Filter>
     </ClInclude>
     <ClInclude Include="GameMultiPlayer.h">
-      <Filter>Fichiers d%27en-tête\Game</Filter>
+      <Filter>Header\Game</Filter>
     </ClInclude>
     <ClInclude Include="GamePlateformer.h">
-      <Filter>Fichiers d%27en-tête\Game</Filter>
+      <Filter>Header\Game</Filter>
     </ClInclude>
     <ClInclude Include="GameSinglePlayer.h">
-      <Filter>Fichiers d%27en-tête\Game</Filter>
+      <Filter>Header\Game</Filter>
     </ClInclude>
     <ClInclude Include="GreenFruit.h">
-      <Filter>Fichiers d%27en-tête\Game</Filter>
+      <Filter>Header\Game</Filter>
     </ClInclude>
     <ClInclude Include="PurpleFruit.h">
-      <Filter>Fichiers d%27en-tête\Game</Filter>
+      <Filter>Header\Game</Filter>
     </ClInclude>
     <ClInclude Include="RedFruit.h">
-      <Filter>Fichiers d%27en-tête\Game</Filter>
+      <Filter>Header\Game</Filter>
     </ClInclude>
     <ClInclude Include="Snake.h">
-      <Filter>Fichiers d%27en-tête\Game</Filter>
+      <Filter>Header\Game</Filter>
     </ClInclude>
     <ClInclude Include="YellowFruit.h">
-      <Filter>Fichiers d%27en-tête\Game</Filter>
-<<<<<<< HEAD
-    </ClInclude>
-    <ClInclude Include="Point.h">
-      <Filter>Fichiers d%27en-tête\Game</Filter>
-=======
->>>>>>> 31308e8bcffa158dbc74a66544f86c863f76ed43
+      <Filter>Header\Game</Filter>
     </ClInclude>
     <ClInclude Include="Random.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Header\Autre</Filter>
     </ClInclude>
     <ClInclude Include="Point.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Header\Autre</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Console.cpp">
+      <Filter>CPP\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleColor.cpp">
+      <Filter>CPP\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleContext.cpp">
+      <Filter>CPP\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleImage.cpp">
+      <Filter>CPP\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleKeyEvent.cpp">
+      <Filter>CPP\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleKeyFilterDown.cpp">
+      <Filter>CPP\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleKeyFilterModifiers.cpp">
+      <Filter>CPP\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleKeyFilterUp.cpp">
+      <Filter>CPP\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleKeyReader.cpp">
+      <Filter>CPP\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleWriter.cpp">
+      <Filter>CPP\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="Fruit.cpp">
+      <Filter>CPP\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>CPP\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameArea.cpp">
+      <Filter>CPP\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMultiPlayer.cpp">
+      <Filter>CPP\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePlateformer.cpp">
+      <Filter>CPP\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameSinglePlayer.cpp">
+      <Filter>CPP\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GreenFruit.cpp">
+      <Filter>CPP\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="PurpleFruit.cpp">
+      <Filter>CPP\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="RedFruit.cpp">
+      <Filter>CPP\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Snake.cpp">
+      <Filter>CPP\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="YellowFruit.cpp">
+      <Filter>CPP\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>CPP\Autre</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>CPP\Autre</Filter>
+    </ClCompile>
+    <ClCompile Include="Random.cpp">
+      <Filter>CPP\Autre</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Console">
-      <Filter>Fichiers d%27en-tête\Console</Filter>
+      <Filter>Header\Console</Filter>
     </None>
   </ItemGroup>
 </Project>

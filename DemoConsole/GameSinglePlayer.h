@@ -4,7 +4,7 @@ private:
 	GameSinglePlayer();
 	~GameSinglePlayer();
 	bool haveFruit_m;
-	Fruit f;
+	//Fruit fruit_m;
 public:
 	static GameSinglePlayer& getInstance()
 	{
