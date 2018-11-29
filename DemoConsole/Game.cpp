@@ -1,6 +1,6 @@
 #include "Game.h"
 
-Game::Game() :slow_m{ 500 }, reader_m{ Console::getInstance().keyReader() };
+Game::Game() :slow_m{ 500 }, reader_m{ Console::getInstance().keyReader() }
 {
 
 }
@@ -10,7 +10,7 @@ Game::~Game()
 {
 }
 void Game::boucleDeJeu(int state) {
-
+	//FAIRE ENUM!
 	reader_m.read(keyEvents);
 
 	for (int i{ 0 }; i < slow_m; i++) {

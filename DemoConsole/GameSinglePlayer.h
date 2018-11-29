@@ -1,6 +1,7 @@
 #ifndef SINGLEPLAYER_H
 #define SINGLEPLAYER_H
 
+#include "Console.h"
 class GameSinglePlayer
 {
 private:
@@ -15,7 +16,7 @@ public:
 		return instance;
 	}
 
-	bool play();
+	bool play(ConsoleKeyReader::KeyEvents& keyEvents);
 	void generateFruit();
 
 };

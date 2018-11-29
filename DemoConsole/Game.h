@@ -23,7 +23,7 @@ private:
 	void boucleDeJeu(int state = 1);
 	size_t slow_m;
 	ConsoleKeyReader & reader_m;
-
+	ConsoleKeyReader::KeyEvents keyEvents;
 };
 
 #endif

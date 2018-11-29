@@ -11,18 +11,18 @@ GameSinglePlayer::GameSinglePlayer() {
 GameSinglePlayer::~GameSinglePlayer()
 {
 }
-bool GameSinglePlayer::play()
+bool GameSinglePlayer::play(ConsoleKeyReader::KeyEvents& keyEvents)
 {
 	if (haveFruit_m) {
 	}
 	else {
-		generateFruit();
+		getInstance().generateFruit();
 	}
 	GameArea::getInstance().singleplayer();
 	return false;
 }
 void GameSinglePlayer::generateFruit() {
-//Point p{ Random::getInstance().bernoulliRandomize(90),Random::getInstance().bernoulliRandomize(90) };
+	//Point p{ Random::getInstance().bernoulliRandomize(90),Random::getInstance().bernoulliRandomize(90) };
 	//fruit_m = Fruit(p, 1);
 	
 	haveFruit_m = true ;

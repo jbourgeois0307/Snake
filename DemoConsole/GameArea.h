@@ -9,7 +9,6 @@ private:
 	GameArea();
 	~GameArea();
 
-	ConsoleImage currentImage_m;
 public:
 
 	static GameArea& getInstance()
@@ -19,13 +18,13 @@ public:
 	}
 
 	bool singleplayer();
-	bool multiplayer();
-	bool plateformer();
-	bool welcomeMenu();
-	bool newGameMenu();
-	bool optionMenu();
-	bool gameModeChooser();
-	bool gameOverMenu();
+	bool multiplayer(ConsoleKeyReader::KeyEvents& keyEvents);
+	bool plateformer(ConsoleKeyReader::KeyEvents& keyEvents);
+	bool welcomeMenu(ConsoleKeyReader::KeyEvents& keyEvents);
+	bool newGameMenu(ConsoleKeyReader::KeyEvents& keyEvents);
+	bool optionMenu(ConsoleKeyReader::KeyEvents& keyEvents);
+	bool gameModeChooser(ConsoleKeyReader::KeyEvents& keyEvents);
+	bool gameOverMenu(ConsoleKeyReader::KeyEvents& keyEvents);
 
 	void showFruit(Fruit f);
 

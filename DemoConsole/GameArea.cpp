@@ -1,6 +1,6 @@
 #include "GameArea.h"
 
-GameArea::GameArea() :currentImage_m{ ConsoleImage image() }
+GameArea::GameArea()
 {
 }
 
@@ -40,7 +40,7 @@ bool GameArea::singleplayer() {
 	return false;
 }
 
-bool GameArea::multiplayer() {
+bool GameArea::multiplayer(ConsoleKeyReader::KeyEvents& keyEvents) {
 	ConsoleWriter & writer{ Console::getInstance().writer() };
 	ConsoleImage & multiPlayerArea{ writer.createImage("multiplayer") };
 	writer.push("multiplayer");
@@ -53,7 +53,7 @@ bool GameArea::multiplayer() {
 
 	return false;
 }
-bool GameArea::plateformer() {
+bool GameArea::plateformer(ConsoleKeyReader::KeyEvents& keyEvents) {
 	ConsoleWriter & writer{ Console::getInstance().writer() };
 	ConsoleImage & plateformerArea{ writer.createImage("plateformer") };
 	writer.push("plateformer");
@@ -64,19 +64,19 @@ bool GameArea::plateformer() {
 	showInfo(plateformerArea, 100, "plateformer", "Ludovic", 0, 4, 0, 0, 0);
 	return false;
 }
-bool GameArea::gameModeChooser() {
+bool GameArea::gameModeChooser(ConsoleKeyReader::KeyEvents& keyEvents) {
 	return true;
 }
-bool GameArea::gameOverMenu() {
+bool GameArea::gameOverMenu(ConsoleKeyReader::KeyEvents& keyEvents) {
 	return true;
 }
-bool GameArea::newGameMenu() {
+bool GameArea::newGameMenu(ConsoleKeyReader::KeyEvents& keyEvents) {
 	return true;
 }
-bool GameArea::optionMenu() {
+bool GameArea::optionMenu(ConsoleKeyReader::KeyEvents& keyEvents) {
 	return true;
 }
-bool GameArea::welcomeMenu() {
+bool GameArea::welcomeMenu(ConsoleKeyReader::KeyEvents& keyEvents) {
 
 
 	return true;
