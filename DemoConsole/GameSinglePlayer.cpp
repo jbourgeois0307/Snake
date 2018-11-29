@@ -3,7 +3,6 @@
 #include "Fruit.h"
 
 
-
 void Game::generateGameArea() {
 	GameArea::getInstance().singleplayer();
 }

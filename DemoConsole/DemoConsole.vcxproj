@@ -135,6 +135,7 @@
     <ClCompile Include="GameSinglePlayer.cpp" />
     <ClCompile Include="GreenFruit.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Point.cpp" />
     <ClCompile Include="PurpleFruit.cpp" />
     <ClCompile Include="RedFruit.cpp" />
     <ClCompile Include="Snake.cpp" />
@@ -164,6 +165,7 @@
     <ClInclude Include="GamePlateformer.h" />
     <ClInclude Include="GameSinglePlayer.h" />
     <ClInclude Include="GreenFruit.h" />
+    <ClInclude Include="Point.h" />
     <ClInclude Include="PurpleFruit.h" />
     <ClInclude Include="RedFruit.h" />
     <ClInclude Include="Snake.h" />

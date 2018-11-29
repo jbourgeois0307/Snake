@@ -1,5 +1,15 @@
-﻿  main.cpp
-y:\b52\democonsole\democonsole\main.cpp(39): warning C4018: '<' : incompatibilité signed/unsigned
-y:\b52\democonsole\democonsole\main.cpp(40): warning C4018: '<' : incompatibilité signed/unsigned
-y:\b52\democonsole\democonsole\main.cpp(41): warning C4018: '<' : incompatibilité signed/unsigned
-  DemoConsole.vcxproj -> Y:\B52\DemoConsole\Debug\DemoConsole.exe
+﻿  Game.cpp
+  Point.cpp
+y:\b52\snake\democonsole\point.h(12): error C2365: 'Point::mX' : redéfinition ; la précédente définition était 'données membres'
+  y:\b52\snake\democonsole\point.h(7): note: voir la déclaration de 'Point::mX'
+y:\b52\snake\democonsole\point.h(13): error C2365: 'Point::mY' : redéfinition ; la précédente définition était 'données membres'
+  y:\b52\snake\democonsole\point.h(7): note: voir la déclaration de 'Point::mY'
+y:\b52\snake\democonsole\point.cpp(12): error C2063: 'Point::mX' : n'est pas une fonction
+y:\b52\snake\democonsole\point.cpp(17): error C2063: 'Point::mY' : n'est pas une fonction
+y:\b52\snake\democonsole\point.cpp(22): error C2143: erreur de syntaxe : absence de ';' avant '}'
+y:\b52\snake\democonsole\point.cpp(22): error C2059: erreur de syntaxe : ','
+y:\b52\snake\democonsole\point.cpp(23): error C2143: erreur de syntaxe : absence de ';' avant '{'
+y:\b52\snake\democonsole\point.cpp(23): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+y:\b52\snake\democonsole\point.cpp(24): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+y:\b52\snake\democonsole\point.cpp(28): error C2063: 'Point::mX' : n'est pas une fonction
+  Génération de code en cours...

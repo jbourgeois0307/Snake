@@ -14,6 +14,7 @@ public:
 	~Fruit();
 	void setPoint(Point &p);
 	int pointVal();
+	Point point();
 	void destroyFruit();
 };
 
