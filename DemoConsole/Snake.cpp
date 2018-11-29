@@ -28,7 +28,7 @@ Snake::~Snake()
 void Snake::slither(Point &p)
 {
 	//avance la queue du serpent en premier
-	for (int b{ 1 };b<mBodPart.size();++b)
+	for (int b{ 1 };b<=static_cast<int>(mBodPart.size());++b)
 	{	
 		(mBodPart.begin() + b) = (mBodPart.begin()-b);
 	}
