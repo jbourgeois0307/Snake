@@ -127,8 +127,18 @@
     <ClCompile Include="ConsoleKeyFilterUp.cpp" />
     <ClCompile Include="ConsoleKeyReader.cpp" />
     <ClCompile Include="ConsoleWriter.cpp" />
+    <ClCompile Include="Fruit.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameArea.cpp" />
+    <ClCompile Include="GameMultiPlayer.cpp" />
+    <ClCompile Include="GamePlateformer.cpp" />
+    <ClCompile Include="GameSinglePlayer.cpp" />
+    <ClCompile Include="GreenFruit.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PurpleFruit.cpp" />
+    <ClCompile Include="RedFruit.cpp" />
+    <ClCompile Include="Snake.cpp" />
+    <ClCompile Include="YellowFruit.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Console" />
@@ -147,7 +157,17 @@
     <ClInclude Include="ConsoleKeyReader.h" />
     <ClInclude Include="ConsoleWriter.h" />
     <ClInclude Include="ElapsedTimer.h" />
+    <ClInclude Include="Fruit.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameArea.h" />
+    <ClInclude Include="GameMultiPlayer.h" />
+    <ClInclude Include="GamePlateformer.h" />
+    <ClInclude Include="GameSinglePlayer.h" />
+    <ClInclude Include="GreenFruit.h" />
+    <ClInclude Include="PurpleFruit.h" />
+    <ClInclude Include="RedFruit.h" />
+    <ClInclude Include="Snake.h" />
+    <ClInclude Include="YellowFruit.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
