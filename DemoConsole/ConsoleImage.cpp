@@ -6,8 +6,8 @@
 #include <algorithm>
 #include <cassert>
 
-using namespace std;
 
+using namespace std;
 
 ConsoleImage::ConsoleImage(ConsoleWriter & consoleWriter, char outputChar, ConsoleColor color)
 	:	mConsoleWriter{ consoleWriter },

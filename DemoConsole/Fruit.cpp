@@ -2,7 +2,8 @@
 
 Fruit::Fruit()
 	: mX {50},
-	  mY {50}
+	  mY {50},
+	mPointVal{ 0 }
 {
 }
 
