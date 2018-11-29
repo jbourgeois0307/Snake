@@ -2,7 +2,8 @@
 #define GAME_H
 
 #include "Console.h"
-
+#include "GameSinglePlayer.h"
+#include "GameArea.h"
 
 class Game
 {
@@ -21,6 +22,7 @@ public:
 private:
 	void boucleDeJeu(int state = 1);
 	size_t slow_m;
+	ConsoleKeyReader & reader_m;
 
 };
 

@@ -1,7 +1,6 @@
 #include "Game.h"
-#include "GameSinglePlayer.h"
-#include "GameArea.h"
-Game::Game() :slow_m{ 500 }
+
+Game::Game() :slow_m{ 500 }, reader_m{ Console::getInstance().keyReader() };
 {
 
 }
@@ -11,42 +10,44 @@ Game::~Game()
 {
 }
 void Game::boucleDeJeu(int state) {
-	//ConsoleKeyReader & reader{ Console::getInstance().keyReader() };
+
+	reader_m.read(keyEvents);
+
 	for (int i{ 0 }; i < slow_m; i++) {
 		for (int j{ 0 }; j < slow_m; j++) {
-			for (int k{ 0 }; k< slow; k++);
+			for (int k{ 0 }; k< slow_m; k++);
 		}
 	}
 	switch (state) {
-	case 1: if (GameArea::getInstance().welcomeMenu()) {
+	case 1: if (GameArea::getInstance().welcomeMenu(keyEvents)) {
 		boucleDeJeu(state + 1);
 	}
 			else {
 		boucleDeJeu(state);
 	}
 			break;
-	case 2: if (GameArea::getInstance().newGameMenu()) {
+	case 2: if (GameArea::getInstance().newGameMenu(keyEvents)) {
 		boucleDeJeu(state + 1);
 	}
 			else {
 		boucleDeJeu(state);
 	}
 			break;
-	case 3: if (GameArea::getInstance().gameModeChooser()) {
+	case 3: if (GameArea::getInstance().gameModeChooser(keyEvents)) {
 		boucleDeJeu(state + 1);
 	}
 			else {
 		boucleDeJeu(state);
 	}
 			break;
-	case 4: if (GameArea::getInstance().optionMenu()) {
+	case 4: if (GameArea::getInstance().optionMenu(keyEvents)) {
 		boucleDeJeu(state + 1);
 	}
 			else {
 		boucleDeJeu(state);
 	}
 			break;
-	case 5: if (GameArea::getInstance().welcomeMenu()) {
+	case 5: if (GameArea::getInstance().welcomeMenu(keyEvents)) {
 		boucleDeJeu(state + 1);
 	}
 			else {
@@ -54,28 +55,28 @@ void Game::boucleDeJeu(int state) {
 	}
 			break;
 	case 6: GameSinglePlayer::getInstance();
-		if (GameSinglePlayer::getInstance().play()) {
+		if (GameSinglePlayer::getInstance().play(keyEvents)) {
 		boucleDeJeu(state + 1);
 	}
 			else {
 		boucleDeJeu(state);
 	}
 			break;
-	case 7: if (GameArea::getInstance().multiplayer()) {
+	case 7: if (GameArea::getInstance().multiplayer(keyEvents)) {
 		boucleDeJeu(state + 1);
 	}
 			else {
 		boucleDeJeu(state);
 	}
 			break;
-	case 8: if (GameArea::getInstance().plateformer()) {
+	case 8: if (GameArea::getInstance().plateformer(keyEvents)) {
 		boucleDeJeu(state + 1);
 	}
 			else {
 		boucleDeJeu(state);
 	}
 			break;
-	case 9: if (GameArea::getInstance().gameOverMenu()) {
+	case 9: if (GameArea::getInstance().gameOverMenu(keyEvents)) {
 		boucleDeJeu(state + 1);
 	}
 			else {
