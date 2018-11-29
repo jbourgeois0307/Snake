@@ -13,6 +13,19 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+<<<<<<< HEAD
+    <Filter Include="Fichiers d%27en-tête\Game">
+      <UniqueIdentifier>{410e6134-0776-4386-a9d8-271b43c382d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Console">
+      <UniqueIdentifier>{aa63a1b5-0304-4bf5-ac41-60ea3f570635}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Console">
+      <UniqueIdentifier>{4ce8d852-a310-4dcf-8f35-14332c039341}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Jeu">
+      <UniqueIdentifier>{17c1da4d-9337-4668-afc8-6a2edee4885c}</UniqueIdentifier>
+=======
     <Filter Include="Fichiers sources\Console">
       <UniqueIdentifier>{f05d5709-c930-4f5a-af1c-95fb01c72a60}</UniqueIdentifier>
     </Filter>
@@ -24,6 +37,7 @@
     </Filter>
     <Filter Include="Fichiers d%27en-tête\Game">
       <UniqueIdentifier>{0adbdd21-d6ce-4265-8b31-9140e6431a37}</UniqueIdentifier>
+>>>>>>> 31308e8bcffa158dbc74a66544f86c863f76ed43
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +72,45 @@
       <Filter>Fichiers sources\Console</Filter>
     </ClCompile>
     <ClCompile Include="Fruit.cpp">
+<<<<<<< HEAD
+      <Filter>Fichiers sources\Jeu</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Fichiers sources\Jeu</Filter>
+    </ClCompile>
+    <ClCompile Include="GameArea.cpp">
+      <Filter>Fichiers sources\Jeu</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMultiPlayer.cpp">
+      <Filter>Fichiers sources\Jeu</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePlateformer.cpp">
+      <Filter>Fichiers sources\Jeu</Filter>
+    </ClCompile>
+    <ClCompile Include="GameSinglePlayer.cpp">
+      <Filter>Fichiers sources\Jeu</Filter>
+    </ClCompile>
+    <ClCompile Include="GreenFruit.cpp">
+      <Filter>Fichiers sources\Jeu</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Fichiers sources\Jeu</Filter>
+    </ClCompile>
+    <ClCompile Include="PurpleFruit.cpp">
+      <Filter>Fichiers sources\Jeu</Filter>
+    </ClCompile>
+    <ClCompile Include="RedFruit.cpp">
+      <Filter>Fichiers sources\Jeu</Filter>
+    </ClCompile>
+    <ClCompile Include="Snake.cpp">
+      <Filter>Fichiers sources\Jeu</Filter>
+    </ClCompile>
+    <ClCompile Include="YellowFruit.cpp">
+      <Filter>Fichiers sources\Jeu</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>Fichiers sources\Jeu</Filter>
+=======
       <Filter>Fichiers sources\Game</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
@@ -92,6 +145,7 @@
     </ClCompile>
     <ClCompile Include="YellowFruit.cpp">
       <Filter>Fichiers sources\Game</Filter>
+>>>>>>> 31308e8bcffa158dbc74a66544f86c863f76ed43
     </ClCompile>
     <ClCompile Include="Random.cpp">
       <Filter>Fichiers sources</Filter>
@@ -172,6 +226,12 @@
     </ClInclude>
     <ClInclude Include="YellowFruit.h">
       <Filter>Fichiers d%27en-tête\Game</Filter>
+<<<<<<< HEAD
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>Fichiers d%27en-tête\Game</Filter>
+=======
+>>>>>>> 31308e8bcffa158dbc74a66544f86c863f76ed43
     </ClInclude>
     <ClInclude Include="Random.h">
       <Filter>Fichiers d%27en-tête</Filter>

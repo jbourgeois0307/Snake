@@ -12,7 +12,6 @@ GameSinglePlayer::~GameSinglePlayer()
 bool GameSinglePlayer::play()
 {
 	if (haveFruit_m) {
-
 	}
 	else {
 		generateFruit();

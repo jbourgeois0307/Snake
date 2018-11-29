@@ -1,7 +1,6 @@
 #include "GameMultiPlayer.h"
 
 
-
 GameMultiPlayer::GameMultiPlayer()
 {
 }

@@ -1,2 +1,6 @@
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.16299.0
+<<<<<<< HEAD
+Debug|Win32|Y:\B52\Snake\|
+=======
 Debug|Win32|Y:\workspace b52\Snake\|
+>>>>>>> 31308e8bcffa158dbc74a66544f86c863f76ed43

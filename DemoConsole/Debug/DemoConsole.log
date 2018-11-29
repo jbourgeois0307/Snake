@@ -1,4 +1,19 @@
 ﻿  Game.cpp
+<<<<<<< HEAD
+  Point.cpp
+y:\b52\snake\democonsole\point.h(12): error C2365: 'Point::mX' : redéfinition ; la précédente définition était 'données membres'
+  y:\b52\snake\democonsole\point.h(7): note: voir la déclaration de 'Point::mX'
+y:\b52\snake\democonsole\point.h(13): error C2365: 'Point::mY' : redéfinition ; la précédente définition était 'données membres'
+  y:\b52\snake\democonsole\point.h(7): note: voir la déclaration de 'Point::mY'
+y:\b52\snake\democonsole\point.cpp(12): error C2063: 'Point::mX' : n'est pas une fonction
+y:\b52\snake\democonsole\point.cpp(17): error C2063: 'Point::mY' : n'est pas une fonction
+y:\b52\snake\democonsole\point.cpp(22): error C2143: erreur de syntaxe : absence de ';' avant '}'
+y:\b52\snake\democonsole\point.cpp(22): error C2059: erreur de syntaxe : ','
+y:\b52\snake\democonsole\point.cpp(23): error C2143: erreur de syntaxe : absence de ';' avant '{'
+y:\b52\snake\democonsole\point.cpp(23): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+y:\b52\snake\democonsole\point.cpp(24): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+y:\b52\snake\democonsole\point.cpp(28): error C2063: 'Point::mX' : n'est pas une fonction
+=======
 y:\workspace b52\snake\democonsole\gamesingleplayer.h(7): error C3646: 'f' : spécificateur de substitution inconnu
 y:\workspace b52\snake\democonsole\gamesingleplayer.h(7): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
 y:\workspace b52\snake\democonsole\game.cpp(19): warning C4018: '<' : incompatibilité signed/unsigned
@@ -9,4 +24,5 @@ y:\workspace b52\snake\democonsole\gamesingleplayer.h(7): error C3646: 'f' : sp
 y:\workspace b52\snake\democonsole\gamesingleplayer.h(7): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
 y:\workspace b52\snake\democonsole\gamesingleplayer.cpp(6): error C2065: 'f' : identificateur non déclaré
 y:\workspace b52\snake\democonsole\gamesingleplayer.cpp(23): error C2065: 'f' : identificateur non déclaré
+>>>>>>> 31308e8bcffa158dbc74a66544f86c863f76ed43
   Génération de code en cours...

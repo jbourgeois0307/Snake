@@ -1,15 +1,13 @@
 #include "Fruit.h"
 
 Fruit::Fruit()
-	: mX {50},
-	  mY {50},
+	: mPoint(0,0),
 	mPointVal{ 0 }
 {
 }
 
-Fruit::Fruit(int x, int y, int pointVal)
-	: mX{x},
-	mY{y},
+Fruit::Fruit(Point &p, int pointVal)
+	: mPoint{p},
 	mPointVal{pointVal}
 {
 }
@@ -18,29 +16,19 @@ Fruit::~Fruit()
 {
 }
 
-void Fruit::setX(int x)
+void Fruit::setPoint(Point &p)
 {
-	Fruit::mX = x;
+	mPoint=p;
 }
 
-void Fruit::setY(int y)
-{
-	Fruit::mY = y;
-}
-
-int Fruit::getMX()
-{
-	return mX;
-}
-
-int Fruit::getMY()
-{
-	return mY;
-}
-
-int Fruit::getMPointVal()
+int Fruit::pointVal()
 {
 	return mPointVal;
+}
+
+Point Fruit::point()
+{
+	return mPoint;
 }
 
 
