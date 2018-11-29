@@ -147,6 +147,12 @@
       <Filter>Fichiers sources\Game</Filter>
 >>>>>>> 31308e8bcffa158dbc74a66544f86c863f76ed43
     </ClCompile>
+    <ClCompile Include="Random.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h">
@@ -226,6 +232,12 @@
       <Filter>Fichiers d%27en-tête\Game</Filter>
 =======
 >>>>>>> 31308e8bcffa158dbc74a66544f86c863f76ed43
+    </ClInclude>
+    <ClInclude Include="Random.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

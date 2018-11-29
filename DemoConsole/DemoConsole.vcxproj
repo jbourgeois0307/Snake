@@ -137,6 +137,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="PurpleFruit.cpp" />
+    <ClCompile Include="Random.cpp" />
     <ClCompile Include="RedFruit.cpp" />
     <ClCompile Include="Snake.cpp" />
     <ClCompile Include="YellowFruit.cpp" />
@@ -167,6 +168,7 @@
     <ClInclude Include="GreenFruit.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="PurpleFruit.h" />
+    <ClInclude Include="Random.h" />
     <ClInclude Include="RedFruit.h" />
     <ClInclude Include="Snake.h" />
     <ClInclude Include="YellowFruit.h" />

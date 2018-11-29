@@ -1,5 +1,5 @@
 #include "GameArea.h"
-#include "Console.h"
+
 GameArea::GameArea()
 {
 	
@@ -81,4 +81,8 @@ bool GameArea::welcomeMenu() {
 
 
 	return true;
+}
+
+void GameArea::showFruit(Fruit f) {
+	currentImage_m.drawLine(f.getMX, f.getMY, f.getMX, f.getMY, '0', ConsoleColor::bR + ConsoleColor::tR);
 }
