@@ -18,6 +18,9 @@ public:
 
 	bool play(ConsoleKeyReader::KeyEvents& keyEvents);
 	void generateFruit();
+	void generateSnake();
+	void showSnake();
+	void showApple();
 
 };
 

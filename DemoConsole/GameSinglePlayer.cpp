@@ -13,12 +13,10 @@ GameSinglePlayer::~GameSinglePlayer()
 }
 bool GameSinglePlayer::play(ConsoleKeyReader::KeyEvents& keyEvents)
 {
-	if (haveFruit_m) {
-	}
-	else {
+	if (!haveFruit_m) {
 		getInstance().generateFruit();
 	}
-	GameArea::getInstance().singleplayer();
+	
 	return false;
 }
 void GameSinglePlayer::generateFruit() {
@@ -26,4 +24,16 @@ void GameSinglePlayer::generateFruit() {
 	//fruit_m = Fruit(p, 1);
 	
 	haveFruit_m = true ;
+}
+
+void GameSinglePlayer::generateSnake()
+{
+}
+
+void GameSinglePlayer::showSnake()
+{
+}
+
+void GameSinglePlayer::showApple()
+{
 }
