@@ -30,56 +30,17 @@ void Game::gameLoop(State state) {
 void Game::processInput() {
 	(*reader_m).read(keyEvents);
 }
-int pos;
 void Game::render(State state) {
 	switch (state) {
 	case State::Welcome: GameArea::getInstance().welcomeMenu();
 		break;
 	case State::StartMenu:GameArea::getInstance().newGameMenu("hello");
 		break;
-	case State::GameModeChooser:
-		
-		if (keyEvents.size() > 0) {
-			for (auto &event : keyEvents) {
-				if (event.keyA() == (int) '1')
-				{
-					pos = 1;
-					GameArea::getInstance().gameModeChooser(1);
-				}
-				if (event.keyA() == (int) '2')
-				{
-					pos = 2;
-					GameArea::getInstance().gameModeChooser(2);
-				}
-				if (event.keyA() == (int) '3')
-				{
-					pos = 3;
-					GameArea::getInstance().gameModeChooser(3);
-				}
-
-				if (event.keyA() == 13) {
-					if (pos == 1) {
-						GameArea::getInstance().gameModeChooser(1);
-					}
-					if (pos == 2) {
-						GameArea::getInstance().gameModeChooser(1);
-					}
-					if (pos == 3) {
-						GameArea::getInstance().gameModeChooser(1);
-					}
-				}
-
-
-
-				
-			}
-		}
-		
+	case State::GameModeChooser:GameArea::getInstance().gameModeChooser(positonChooser);
 		break;
 	case State::Options:GameArea::getInstance().optionMenu();
 		break;
 	case State::SinglePlayer:GameArea::getInstance().singleplayer();
-
 		break;
 	case State::Multiplayer:GameArea::getInstance().multiplayer();
 		break;
@@ -89,7 +50,36 @@ void Game::render(State state) {
 		break;
 	}
 }
-
+void Game::gamemodechooser(State& state){
+	if (keyEvents.size() > 0) {
+		for (auto &event : keyEvents) {
+			if (event.keyA() == (int) '1')
+			{
+				positonChooser = 1;
+			}
+			if (event.keyA() == (int) '2')
+			{
+				positonChooser = 2;
+			}
+			if (event.keyA() == (int) '3')
+			{
+				positonChooser = 3;
+			}
+			int keyevent = event.keyA();
+			if (event.keyA() == 13) {
+				if (positonChooser == 1) {
+					state = State::SinglePlayer;
+				}
+				if (positonChooser == 2) {
+					state = State::Multiplayer;
+				}
+				if (positonChooser == 3) {
+					state = State::Plateformer;
+				}
+			}
+		}
+	}
+}
 Game::State Game::update(State state) {
 	switch (state) {
 	case State::Welcome:
@@ -109,12 +99,8 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::GameModeChooser:
-		if (Transaction::getInstance().conditionSinglePlayer()) {
-			return nextState(state);
-		}
-		else {
-			return state;
-		}
+		gamemodechooser(state);
+		return state;
 		break;
 	case State::Options:
 		if (false) {
@@ -168,6 +154,6 @@ void Game::start(size_t width, size_t height) {
 	ConsoleContext context(800, 800, "The Snake Game", 8, 8, L"Consolas");
 	Console::defineContext(context);
 	Game::getInstance().reader_m = &( Console::getInstance().keyReader());
-	Game::getInstance().gameLoop(State::Multiplayer);
+	Game::getInstance().gameLoop(State::GameModeChooser);
 }
 

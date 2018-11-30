@@ -26,6 +26,7 @@ private:
 	State nextState(State state);
 	void gameLoop(State state = State::Welcome);
 	void processInput();
+	void gamemodechooser(State & state);
 	State update(State state);
 	void render(State state);
 
@@ -35,6 +36,8 @@ private:
 	size_t slow_m;
 	ConsoleKeyReader * reader_m;
 	ConsoleKeyReader::KeyEvents keyEvents;
+	int positonChooser = 1;
+
 };
 
 
