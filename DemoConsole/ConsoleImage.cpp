@@ -166,12 +166,12 @@ void ConsoleImage::calib()
 
 size_t ConsoleImage::width() const
 {
-	return size_t();
+	return mConsoleWriter.width();
 }
 
 size_t ConsoleImage::height() const
 {
-	return size_t();
+	return mConsoleWriter.height();
 }
 
 //template <> exception_management

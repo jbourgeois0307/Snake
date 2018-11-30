@@ -1,7 +1,6 @@
 #include "Game.h"
-Game::Game() :slow_m{ 500 }, reader_m{ nullptr }
+Game::Game() :slow_m{ 500 }, reader_m{ nullptr }, writer{ nullptr }, gamezone{nullptr}
 {
-
 }
 
 
@@ -23,6 +22,7 @@ void Game::gameLoop(State state) {
 		double current = timer.elapsed();
 
 		//double elapsed = current - lastTime;
+
 		processInput();
 		update(state);
 		render(state);
@@ -43,8 +43,14 @@ void Game::render(State state) {
 	case State::Options:GameArea::getInstance().optionMenu();
 		break;
 	case State::SinglePlayer:GameArea::getInstance().singleplayer();
+		for (int i = 0; i < 1000; i++)
+			for (int j = 0; j < 1000; j++)
+				for (int k = 0; k < 1000; k++);
 		GameSinglePlayer::getInstance().showSnake();
-		GameSinglePlayer::getInstance().showApple();
+		GameSinglePlayer::getInstance().showFruit();
+		for (int i = 0; i < 1000; i++)
+			for (int j = 0; j < 1000; j++)
+				for (int k = 0; k < 1000; k++);
 		break;
 	case State::Multiplayer:GameArea::getInstance().multiplayer();
 		break;
@@ -93,6 +99,7 @@ Game::State Game::update(State state) {
 			return nextState(state);
 		}
 		else {
+			GameSinglePlayer::getInstance().generateFruit();
 			return State::GameOver;
 		}
 		break;
@@ -125,8 +132,11 @@ Game::State Game::update(State state) {
 
 void Game::start(size_t width, size_t height) {
 
+
 	ConsoleContext context(2000, 2000, "The Snake Game", 8, 8, L"Consolas");
 	Console::defineContext(context);
+
+	ConsoleWriter & write{ Console::getInstance().writer() };
 
 	Game::getInstance().gameLoop(State::SinglePlayer);
 }

@@ -25,6 +25,6 @@ int Random::poissonRandomize(double mean)
 
 int Random::bernoulliRandomize(double proportion)
 {
-	std::bernoulli_distribution distribution(proportion);
+	std::bernoulli_distribution distribution(0.5);
 	return distribution(generator);
 }

@@ -9,17 +9,17 @@ Point::~Point()
 }
 
 
-int Point::x()
+double Point::x()
 {
 	return mX;
 }
 
-int Point::y()
+double Point::y()
 {
 	return mY;
 }
 
-Point::Point(int x, int y)
+Point::Point(double x, double y)
 	: mX{ x },
 	  mY{ y }
 {
