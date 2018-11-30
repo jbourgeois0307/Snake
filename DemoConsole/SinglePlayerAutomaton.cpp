@@ -17,7 +17,7 @@ SinglePlayerAutomation::State SinglePlayerAutomation::nextState(State state)
 void SinglePlayerAutomation::startSinglePlayerAutomation(State state)
 {
 	//Part le timer de l'automate
-	mTimer.start();
+//	mTimer.start();
 }
 
 SinglePlayerAutomation::State SinglePlayerAutomation::update(State state)
