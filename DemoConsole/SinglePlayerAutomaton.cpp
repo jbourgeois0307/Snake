@@ -20,7 +20,7 @@ void SinglePlayerAutomation::startSinglePlayerAutomation(State state)
 //	mTimer.start();
 }
 
-SinglePlayerAutomation::State SinglePlayerAutomation::update(State state)
+/*SinglePlayerAutomation::State SinglePlayerAutomation::update(State state)
 {
 	switch (state) {
 	case State::Idle:
@@ -72,4 +72,4 @@ SinglePlayerAutomation::State SinglePlayerAutomation::update(State state)
 		}
 		break;
 }
-}
+}*/
