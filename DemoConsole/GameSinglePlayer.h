@@ -6,14 +6,17 @@
 #include "GameArea.h"
 #include "Random.h"
 #include "Point.h"
-
+#include "Snake.h"
 class GameSinglePlayer
 {
 private:
 	GameSinglePlayer();
 	~GameSinglePlayer();
 	bool haveFruit_m;
-	Fruit *fruit_m;
+	bool snakeExist_m;
+	Fruit fruit_m;
+	Snake snake;
+
 public:
 	static GameSinglePlayer& getInstance()
 	{
@@ -24,8 +27,8 @@ public:
 	bool play(ConsoleKeyReader::KeyEvents& keyEvents);
 	void generateFruit();
 	void generateSnake();
-	void showSnake();
-	void showFruit();
+	void showSnake(ConsoleImage & image);
+	void showFruit(ConsoleImage & image);
 
 };
 

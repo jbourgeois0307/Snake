@@ -1,5 +1,5 @@
 #include "GameArea.h"
-
+#include "GameSinglePlayer.h"
 GameArea::GameArea()
 {
 }
@@ -35,6 +35,8 @@ bool GameArea::singleplayer() {
 	singlePlayerArea.fill(5.0, 5.0, 90.0, 90.0, (char)176, ConsoleColor::bg + ConsoleColor::tw);
 
 	showInfo(singlePlayerArea, 100, "singleplayer","Ludovic", 0, 4, 0, 0, 0);
+	GameSinglePlayer::getInstance().showFruit(singlePlayerArea);
+	GameSinglePlayer::getInstance().showSnake(singlePlayerArea);
 	return false;
 }
 
@@ -48,7 +50,7 @@ bool GameArea::multiplayer() {
 
 	showInfo(multiPlayerArea, 100, "multiplayer", "Ludovic", 0, 4, 0, 0, 0);
 	showInfo(multiPlayerArea, 150, "", "Joé", 0, 4, 0, 0, 0);
-
+	
 	return false;
 }
 bool GameArea::plateformer() {
@@ -80,7 +82,18 @@ bool GameArea::welcomeMenu() {
 	writer.push("Welcome");
 
 	welcomeArea.fill(178, ConsoleColor::bK + ConsoleColor::tG);
-	welcomeArea.drawText(50, 50, "WELCOME TO SNAKE GAME!!",ConsoleColor::bK + ConsoleColor::tr);
-	welcomeArea.drawText(50, 60, "Press any key to start",ConsoleColor::bK + ConsoleColor::tw);
+	welcomeArea.drawText(50, 20, ".----------------. .---------------- - ..----------------. .----------------. .----------------.", ConsoleColor::br + ConsoleColor::tk);
+	welcomeArea.drawText(50, 21, "| .--------------. | .--------------. | .--------------. | .--------------. | .--------------. |", ConsoleColor::br + ConsoleColor::tk);
+	welcomeArea.drawText(50, 22, "| |    _______   | | | ____  _____  | | |      __      | | |  ___  ____   | | |  _________   | |", ConsoleColor::br + ConsoleColor::tk);
+	welcomeArea.drawText(50, 23, "| |   /  ___  |  | | ||_   \ |  _|   | | |	   /  \     | | | |_ || _  _|  | | | |_   ___  |  | |", ConsoleColor::br + ConsoleColor::tk);
+	welcomeArea.drawText(50, 24, "| |  |  (__ \_|   | | |  |   \ | |    | | |    / /\ \    | | |   | |_/ /    | | |   | |_  \_|  | |", ConsoleColor::br + ConsoleColor::tk);
+	welcomeArea.drawText(50, 25, "| |   '.___`-.   | | |  | |\ \|  |    | | |   / ____\   | | |   |  __'.    | | |   |  _ | _   | |", ConsoleColor::br + ConsoleColor::tk);
+	welcomeArea.drawText(50, 26, "| |  |`\____) |   | | | _| |_\   |_   | | | _/ /    \ \_ | | |  _| |  \ \_  | | |  _| |___/ |  | |", ConsoleColor::br + ConsoleColor::tk);
+	welcomeArea.drawText(50, 27, "| |  |_______.'  | | ||_____|\____|  | | ||____|  |____|| | | |____||____| | | | |_________|  | |", ConsoleColor::br + ConsoleColor::tk);
+	welcomeArea.drawText(50, 28, "| |              | | |              | | |              | | |              | | |              | |", ConsoleColor::br + ConsoleColor::tk);
+	welcomeArea.drawText(50, 29, "| '--------------' | '--------------' | '--------------' | '--------------' | '--------------' |", ConsoleColor::br + ConsoleColor::tk);
+	welcomeArea.drawText(50, 20, "'----------------' '----------------' '----------------' '----------------' '----------------'", ConsoleColor::br + ConsoleColor::tk);
+
+	welcomeArea.drawText(75, 65, "Press any key to start",ConsoleColor::bK + ConsoleColor::tw);
 	return true;
 }

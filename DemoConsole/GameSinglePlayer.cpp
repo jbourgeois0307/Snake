@@ -1,9 +1,9 @@
 #include "GameSinglePlayer.h"
+#include <vector>
 
+GameSinglePlayer::GameSinglePlayer() :haveFruit_m{ false }, snakeExist_m{ false }, fruit_m { Fruit(Point(5, 5), 5) } {
 
-GameSinglePlayer::GameSinglePlayer() :haveFruit_m{ false }, fruit_m{ nullptr } {
 }
-
 GameSinglePlayer::~GameSinglePlayer()
 {
 }
@@ -17,30 +17,39 @@ bool GameSinglePlayer::play(ConsoleKeyReader::KeyEvents& keyEvents)
 	return false;
 }
 void GameSinglePlayer::generateFruit() {
-	//Point p( Random::getInstance().bernoulliRandomize(90),Random::getInstance().bernoulliRandomize(90) );
-	Point p(5, 5);
-	fruit_m = &(Fruit(p, 1));
-	haveFruit_m = true ;
+	if (!haveFruit_m) {
+		Point p(Random::getInstance().uniformRandomize(1, 90)+5, Random::getInstance().uniformRandomize(1, 90)+5);
+		fruit_m.setPoint(p);
+		haveFruit_m = true;
+	}
+	
 }
 
 void GameSinglePlayer::generateSnake()
 {
+	Point p(Random::getInstance().uniformRandomize(1, 90) + 5, Random::getInstance().uniformRandomize(1, 90) + 5);
+	snake= Snake(0.5, p );
+
 }
 
-void GameSinglePlayer::showSnake()
+void GameSinglePlayer::showSnake(ConsoleImage & image)
 {
+	if (snakeExist_m)
+	{
+		std::vector<Point>snakePart{ snake.bodPart() };
+		for (int i{ 0 }; i < static_cast<int> (snakePart.size()); ++i) {
+			image.drawPoint(snakePart.at(i).x(), snakePart.at(i).y(), (char)178, ConsoleColor::bk + ConsoleColor::ty);
+		}
+	}
+		
 }
 
-void GameSinglePlayer::showFruit()
+void GameSinglePlayer::showFruit(ConsoleImage & image)
 {
-	ConsoleWriter & writer{ Console::getInstance().writer() };
-	ConsoleImage & fruitImage{ writer.createImage("fruit") };
-	writer.push("fruit");
-	Point p(5, 5);
-	Fruit f(p, 1);
-	fruitImage.drawLine(f.point().x(), f.point().y(), f.point().x(), f.point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tr);
-	fruitImage.drawLine(10.0,10.0, 10.0, 10.0, (char)178, ConsoleColor::bk + ConsoleColor::tr);
 
-	//if(haveFruit_m)
-	//	fruitImage.drawLine((*fruit_m).point().x(), (*fruit_m).point().y(), (*fruit_m).point().x(), (*fruit_m).point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tr);
+	if(haveFruit_m){
+		image.drawPoint(fruit_m.point().x(), fruit_m.point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tr);
+
+	}
+	
 }

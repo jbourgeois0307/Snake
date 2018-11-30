@@ -14,17 +14,17 @@ Game::State Game::nextState(State state)
 
 void Game::gameLoop(State state) {
 
-	timer.start();
-	double lastTime = timer.elapsed();
+	//timer.start();
+//	double lastTime = timer.elapsed();
 	while (true)
 	{
-		double current = timer.elapsed();
+	//	double current = timer.elapsed();
 
-		//double elapsed = current - lastTime;
+//double elapsed = current - lastTime;
 		processInput();
 		update(state);
 		render(state);
-		lastTime = current;
+	//	lastTime = current;
 	}
 }
 void Game::processInput() {
@@ -41,14 +41,7 @@ void Game::render(State state) {
 	case State::Options:GameArea::getInstance().optionMenu();
 		break;
 	case State::SinglePlayer:GameArea::getInstance().singleplayer();
-		for (int i = 0; i < 1000; i++)
-			for (int j = 0; j < 1000; j++)
-				for (int k = 0; k < 1000; k++);
-		GameSinglePlayer::getInstance().showSnake();
-		GameSinglePlayer::getInstance().showFruit();
-		for (int i = 0; i < 1000; i++)
-			for (int j = 0; j < 1000; j++)
-				for (int k = 0; k < 1000; k++);
+
 		break;
 	case State::Multiplayer:GameArea::getInstance().multiplayer();
 		break;
@@ -132,8 +125,6 @@ void Game::start(size_t width, size_t height) {
 
 	ConsoleContext context(2000, 2000, "The Snake Game", 8, 8, L"Consolas");
 	Console::defineContext(context);
-
-	&writer = Console::getInstance().writer() ;
 
 	Game::getInstance().gameLoop(State::SinglePlayer);
 }

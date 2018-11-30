@@ -4,7 +4,6 @@
 #include "Console.h"
 #include "GameSinglePlayer.h"
 #include "GameArea.h"
-#include "ElapsedTimer.h"
 
 class Game
 {
@@ -29,7 +28,7 @@ private:
 
 	ConsoleWriter *writer;
 	ConsoleImage *gamezone;
-	ElapsedTimer <>timer;
+	//ElapsedTimer <>timer;
 	size_t slow_m;
 	ConsoleKeyReader * reader_m;
 	ConsoleKeyReader::KeyEvents keyEvents;

@@ -24,12 +24,11 @@
     <ClCompile Include="PurpleFruit.cpp" />
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="RedFruit.cpp" />
+    <ClCompile Include="SinglePlayerAutomaton.cpp" />
     <ClCompile Include="Snake.cpp" />
     <ClCompile Include="YellowFruit.cpp" />
-    <ClCompile Include="SinglePlayerAutomaton.cpp" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <ClInclude Include="Console.h" />
     <ClInclude Include="ConsoleColor.h" />
     <ClInclude Include="ConsoleContext.h" />
@@ -43,7 +42,6 @@
     <ClInclude Include="ConsoleKeyReader.h" />
     <ClInclude Include="ConsoleWriter.h" />
     <ClInclude Include="Controller.h" />
-    <ClInclude Include="ElapsedTimer.h" />
     <ClInclude Include="Fruit.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameArea.h" />
@@ -56,172 +54,11 @@
     <ClInclude Include="PurpleFruit.h" />
     <ClInclude Include="Random.h" />
     <ClInclude Include="RedFruit.h" />
+    <ClInclude Include="SinglePlayerAutomaton.h" />
     <ClInclude Include="Snake.h" />
     <ClInclude Include="YellowFruit.h" />
-    <ClInclude Include="SinglePlayerAutomaton.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Console" />
-=======
-    <ClInclude Include="Console.h">
-      <Filter>Header\Console</Filter>
-    </ClInclude>
-    <ClInclude Include="ConsoleColor.h">
-      <Filter>Header\Console</Filter>
-    </ClInclude>
-    <ClInclude Include="ConsoleContext.h">
-      <Filter>Header\Console</Filter>
-    </ClInclude>
-    <ClInclude Include="ConsoleImage.h">
-      <Filter>Header\Console</Filter>
-    </ClInclude>
-    <ClInclude Include="ConsoleKeyEvent.h">
-      <Filter>Header\Console</Filter>
-    </ClInclude>
-    <ClInclude Include="ConsoleKeyFilter.h">
-      <Filter>Header\Console</Filter>
-    </ClInclude>
-    <ClInclude Include="ConsoleKeyFilterAny.h">
-      <Filter>Header\Console</Filter>
-    </ClInclude>
-    <ClInclude Include="ConsoleKeyFilterDown.h">
-      <Filter>Header\Console</Filter>
-    </ClInclude>
-    <ClInclude Include="ConsoleKeyFilterModifiers.h">
-      <Filter>Header\Console</Filter>
-    </ClInclude>
-    <ClInclude Include="ConsoleKeyFilterUp.h">
-      <Filter>Header\Console</Filter>
-    </ClInclude>
-    <ClInclude Include="ConsoleKeyReader.h">
-      <Filter>Header\Console</Filter>
-    </ClInclude>
-    <ClInclude Include="ConsoleWriter.h">
-      <Filter>Header\Console</Filter>
-    </ClInclude>
-    <ClInclude Include="ElapsedTimer.h">
-      <Filter>Header\Console</Filter>
-    </ClInclude>
-    <ClInclude Include="Fruit.h">
-      <Filter>Header\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Header\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="GameArea.h">
-      <Filter>Header\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="GameMultiPlayer.h">
-      <Filter>Header\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="GamePlateformer.h">
-      <Filter>Header\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="GameSinglePlayer.h">
-      <Filter>Header\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="GreenFruit.h">
-      <Filter>Header\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="PurpleFruit.h">
-      <Filter>Header\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="RedFruit.h">
-      <Filter>Header\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Snake.h">
-      <Filter>Header\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="YellowFruit.h">
-      <Filter>Header\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Random.h">
-      <Filter>Header\Autre</Filter>
-    </ClInclude>
-    <ClInclude Include="Point.h">
-      <Filter>Header\Autre</Filter>
-    </ClInclude>
-    <ClInclude Include="Controller.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Console.cpp">
-      <Filter>CPP\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsoleColor.cpp">
-      <Filter>CPP\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsoleContext.cpp">
-      <Filter>CPP\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsoleImage.cpp">
-      <Filter>CPP\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsoleKeyEvent.cpp">
-      <Filter>CPP\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsoleKeyFilterDown.cpp">
-      <Filter>CPP\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsoleKeyFilterModifiers.cpp">
-      <Filter>CPP\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsoleKeyFilterUp.cpp">
-      <Filter>CPP\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsoleKeyReader.cpp">
-      <Filter>CPP\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsoleWriter.cpp">
-      <Filter>CPP\Console</Filter>
-    </ClCompile>
-    <ClCompile Include="Fruit.cpp">
-      <Filter>CPP\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>CPP\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="GameArea.cpp">
-      <Filter>CPP\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="GameMultiPlayer.cpp">
-      <Filter>CPP\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="GamePlateformer.cpp">
-      <Filter>CPP\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="GameSinglePlayer.cpp">
-      <Filter>CPP\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="GreenFruit.cpp">
-      <Filter>CPP\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="PurpleFruit.cpp">
-      <Filter>CPP\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="RedFruit.cpp">
-      <Filter>CPP\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Snake.cpp">
-      <Filter>CPP\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="YellowFruit.cpp">
-      <Filter>CPP\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>CPP\Autre</Filter>
-    </ClCompile>
-    <ClCompile Include="Point.cpp">
-      <Filter>CPP\Autre</Filter>
-    </ClCompile>
-    <ClCompile Include="Random.cpp">
-      <Filter>CPP\Autre</Filter>
-    </ClCompile>
-    <ClCompile Include="Controller.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Console">
-      <Filter>Header\Console</Filter>
-    </None>
->>>>>>> 92c265cd9b1b2a2afd8f800616cc4eb148a00642
   </ItemGroup>
 </Project>

@@ -60,6 +60,11 @@ void Snake::speed(float speedModifier)
 	mSpeed *= speedModifier;
 }
 
+std::vector<Point> Snake::bodPart()
+{
+	return std::vector<Point>();
+}
+
 void Snake::slitherHead(Point &p)
 {
 	mBodPart.front() = p;

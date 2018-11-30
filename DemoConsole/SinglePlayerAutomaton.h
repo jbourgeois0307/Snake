@@ -1,7 +1,7 @@
 #ifndef SINGLEPLAYER_AUTOMATON_H
 #define SINGLEPLAYER_AUTOMATON_H
 
-#include "ElapsedTimer.h"
+//#include "ElapsedTimer.h"
 
 class SinglePlayerAutomation
 {
@@ -19,7 +19,7 @@ private:
 	State nextState(State state);
 	void startSinglePlayerAutomation();
 	State update(State state);
-	ElapsedTimer<> mTimer;
+//	ElapsedTimer<> mTimer;
 	size_t slow_m;
 };
 
