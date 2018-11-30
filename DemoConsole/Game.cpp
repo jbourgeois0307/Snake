@@ -86,7 +86,7 @@ void Game::render(State state) {
 Game::State Game::update(State state) {
 	switch (state) {
 	case State::Welcome:
-		if (true) {
+		if (false) {
 			return nextState(state);
 		}
 		else {
@@ -94,7 +94,7 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::StartMenu:
-		if (true) {
+		if (false) {
 			return nextState(state);
 		}
 		else {
@@ -110,7 +110,7 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::Options:
-		if (true) {
+		if (false) {
 			return nextState(state);
 		}
 		else {
@@ -119,31 +119,31 @@ Game::State Game::update(State state) {
 		break;
 	case State::SinglePlayer:
 		if (Transaction::getInstance().conditionGameOver(GameSinglePlayer::getInstance().snake())) {
-			return nextState(state);
+			return State::GameOver;
 		}
 		else {
 			GameSinglePlayer::getInstance().generateFruit();
-			return State::GameOver;
+			return State::SinglePlayer;
 		}
 		break;
 	case State::Multiplayer:
-		if (true) {
-			gameLoop(nextState(state));
+		if (false) {
+			return State::GameOver;
 		}
 		else {
-			return State::GameOver;
+			return State::Multiplayer;
 		}
 		break;
 	case State::Plateformer:
-		if (true) {
-			gameLoop(nextState(state));
+		if (false) {
+			return State::GameOver;
 		}
 		else {
-			return State::GameOver;
+			return State::Plateformer;
 		}
 		break;
 	case State::GameOver:
-		if (true) {
+		if (false) {
 			return State::GameOver;
 		}
 		else {
@@ -159,6 +159,6 @@ void Game::start(size_t width, size_t height) {
 	Console::defineContext(context);
 	Game::getInstance().reader_m = &( Console::getInstance().keyReader());
 
-	Game::getInstance().gameLoop(State::GameOver);
+	Game::getInstance().gameLoop(State::Plateformer);
 }
 

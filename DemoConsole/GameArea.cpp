@@ -93,6 +93,7 @@ bool GameArea::gameOverMenu() {
 	gameoverArea.drawText(50, 24, "#     # ####### #     # #      ", ConsoleColor::bk + ConsoleColor::tr);
 	gameoverArea.drawText(50, 25, "#     # #     # #     # #      ", ConsoleColor::bk + ConsoleColor::tr);
 	gameoverArea.drawText(50, 26, " #####  #     # #     # ####### ", ConsoleColor::bk + ConsoleColor::tr);
+
 	gameoverArea.drawText(50, 30, "####### #     # ####### ######  ", ConsoleColor::bk + ConsoleColor::tr);
 	gameoverArea.drawText(50, 31, "#     # #     # #       #     # ", ConsoleColor::bk + ConsoleColor::tr);
 	gameoverArea.drawText(50, 32, "#     # #     # #       #     # ", ConsoleColor::bk + ConsoleColor::tr);
