@@ -17,7 +17,7 @@ void Game::gameLoop(State state) {
 	timer.start();
 	while (true)
 	{
-
+		ConsoleKeyEvent::KeyState::KeyDown;
 
 		processInput();
 		state = update(state);
@@ -82,6 +82,9 @@ void Game::gamemodechooser(State& state){
 				positonChooser = 3;
 			}
 			int keyevent = event.keyA();
+			if (event.keyV() == VK_UP) {
+				test();
+			}
 			if (event.keyA() == 13) {
 				if (positonChooser == 1) {
 					state = State::SinglePlayer;
@@ -170,6 +173,11 @@ void Game::start(size_t width, size_t height) {
 	ConsoleContext context(800, 800, "The Snake Game", 8, 8, L"Consolas");
 	Console::defineContext(context);
 	Game::getInstance().reader_m = &( Console::getInstance().keyReader());
-	Game::getInstance().gameLoop(State::GameOver);
+	Game::getInstance().gameLoop(State::GameModeChooser);
 }
 
+void Game::test() {
+	while (true) {
+		writer->randomize();
+	}
+}

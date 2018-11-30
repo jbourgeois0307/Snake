@@ -2,5 +2,5 @@
 y:\workspace b52\snake\democonsole\game.cpp(26): warning C4244: 'initialisation' : conversion de 'int64_t' en 'int', perte possible de données
 y:\workspace b52\snake\democonsole\game.cpp(28): warning C4244: '=' : conversion de 'int64_t' en 'int', perte possible de données
 y:\workspace b52\snake\democonsole\game.cpp(60): warning C4018: '<' : incompatibilité signed/unsigned
-y:\workspace b52\snake\democonsole\game.cpp(166): warning C4715: 'Game::update' : les chemins de contrôle ne retournent pas tous une valeur
+y:\workspace b52\snake\democonsole\game.cpp(169): warning C4715: 'Game::update' : les chemins de contrôle ne retournent pas tous une valeur
   DemoConsole.vcxproj -> Y:\workspace b52\Snake\Debug\SnakeGame.exe
