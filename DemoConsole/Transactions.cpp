@@ -1,8 +1,4 @@
 #include "Transactions.h"
-<<<<<<< HEAD
-=======
-
->>>>>>> 0736c66a493ca93c6554587d8fdc12d6235e684b
 Transaction::Transaction()
 {
 }
