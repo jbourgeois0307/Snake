@@ -10,6 +10,10 @@ Snake::Snake(float speed)
 	mBodLength { 4 }
 {
 	mBodPart.insert(mBodPart.begin(), Point(50,50));
+	for (int b{ 1 }; b <= mBodLength; ++b)
+	{
+		mBodPart.insert((mBodPart.begin() + b), Point(p.x(), p.y() + b));
+	}
 }
 
 //Constructeur qui requiert vitesse et positions de la tête initiales
