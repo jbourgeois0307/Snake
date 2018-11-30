@@ -38,6 +38,15 @@ bool Transaction::conditionPlatformer()
 }
 bool Transaction::conditionGameOver(Snake snake)
 {
+	return false;
+}
+bool Transaction::conditionSnakeMove(Snake snake)
+{
+	return false;
+}
+
+bool Transaction::conditionSnakeCollision(Snake snake) 
+{
 	//Si la tête touche à la queue
 	for (int i{ 1 }; i < snake.bodLength() - 1; ++i) {
 		if (snake.bodPart().at(0).x() == snake.bodPart().at(i).x())
@@ -48,11 +57,5 @@ bool Transaction::conditionGameOver(Snake snake)
 	//Sinon, continue la partie
 	return false;
 }
-bool conditionMultiPlayer()
-{
-	return false;
-}
-bool conditionPlatformer()
-{
-	return false;
-}
+
+
