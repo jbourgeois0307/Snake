@@ -38,7 +38,7 @@ bool Transaction::conditionPlatformer()
 bool Transaction::conditionGameOver(Snake snake)
 {
 	//Si la tête touche à la queue
-	for (int i{ 1 }; i < snake.bodLength - 1; ++i) {
+	for (int i{ 1 }; i < snake.bodLength() - 1; ++i) {
 		if (snake.bodPart().at(0).x() == snake.bodPart().at(i).x())
 			if (snake.bodPart().at(0).y() == snake.bodPart().at(i).y())
 				//le Game over aura lieu

@@ -1,5 +1,5 @@
 #include "Game.h"
-Game::Game() :slow_m{ 500 }, reader_m{ nullptr }, writer{ nullptr }, gamezone{ nullptr }, testTransaction{nullptr}
+Game::Game() :slow_m{ 500 }, reader_m{ nullptr }, writer{ nullptr }, gamezone{ nullptr }
 {
 }
 

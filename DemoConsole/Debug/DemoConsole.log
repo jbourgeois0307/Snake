@@ -1,9 +1,3 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: Le répertoire intermédiaire (Debug\) contient des fichiers partagés provenant d'un autre projet (DemoConsole.vcxproj). Cela peut entraîner un comportement de nettoyage et de régénération incorrect.
   SinglePlayerAutomaton.cpp
-y:\b52\snake\democonsole\elapsedtimer.h(35): error C3646: 'elapsed' : spécificateur de substitution inconnu
-  y:\b52\snake\democonsole\elapsedtimer.h(43): note: voir la référence à l'instanciation de classe modèle 'ElapsedTimer<TimeT>' en cours de compilation
-y:\b52\snake\democonsole\elapsedtimer.h(35): error C2059: erreur de syntaxe : '('
-y:\b52\snake\democonsole\elapsedtimer.h(35): error C2334: jetons inattendus avant '{' ; corps apparent de la fonction ignoré
-  Transactions.cpp
-y:\b52\snake\democonsole\transactions.cpp(1): fatal error C1083: Impossible d'ouvrir le fichier include : 'Transaction.h' : No such file or directory
-  Génération de code en cours...
+  DemoConsole.vcxproj -> Y:\B52\Snake\Debug\SnakeGame.exe
