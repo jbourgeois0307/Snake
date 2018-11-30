@@ -1,2 +1,3 @@
-﻿  GameSinglePlayer.cpp
+﻿  SinglePlayerAutomaton.cpp
+y:\workspace b52\snake\democonsole\singleplayerautomaton.cpp(75): warning C4715: 'SinglePlayerAutomaton::update' : les chemins de contrôle ne retournent pas tous une valeur
   DemoConsole.vcxproj -> Y:\workspace b52\Snake\Debug\SnakeGame.exe
