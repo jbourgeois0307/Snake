@@ -1,20 +1,15 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: Le répertoire intermédiaire (Debug\) contient des fichiers partagés provenant d'un autre projet (DemoConsole.vcxproj). Cela peut entraîner un comportement de nettoyage et de régénération incorrect.
-  Game.cpp
-  GameArea.cpp
+﻿  GameArea.cpp
 y:\workspace b52\snake\democonsole\gamearea.cpp(34): warning C4309: 'argument' : troncation de valeur de constante
 y:\workspace b52\snake\democonsole\gamearea.cpp(48): warning C4309: 'argument' : troncation de valeur de constante
 y:\workspace b52\snake\democonsole\gamearea.cpp(61): warning C4309: 'argument' : troncation de valeur de constante
-y:\workspace b52\snake\democonsole\gamearea.cpp(84): warning C4309: 'argument' : troncation de valeur de constante
-y:\workspace b52\snake\democonsole\gamearea.cpp(88): warning C4129: ' ' : caractère de séquence d'échappement non reconnu
-y:\workspace b52\snake\democonsole\gamearea.cpp(89): warning C4129: '_' : caractère de séquence d'échappement non reconnu
-y:\workspace b52\snake\democonsole\gamearea.cpp(89): warning C4129: ' ' : caractère de séquence d'échappement non reconnu
-y:\workspace b52\snake\democonsole\gamearea.cpp(90): warning C4129: ' ' : caractère de séquence d'échappement non reconnu
-y:\workspace b52\snake\democonsole\gamearea.cpp(90): warning C4129: '|' : caractère de séquence d'échappement non reconnu
-y:\workspace b52\snake\democonsole\gamearea.cpp(91): warning C4129: '_' : caractère de séquence d'échappement non reconnu
-y:\workspace b52\snake\democonsole\gamearea.cpp(91): warning C4129: ' ' : caractère de séquence d'échappement non reconnu
-y:\workspace b52\snake\democonsole\gamearea.cpp(92): warning C4129: '_' : caractère de séquence d'échappement non reconnu
-  GameSinglePlayer.cpp
-  main.cpp
-  Génération de code en cours...
-y:\workspace b52\snake\democonsole\game.cpp(122): warning C4715: 'Game::update' : les chemins de contrôle ne retournent pas tous une valeur
+y:\workspace b52\snake\democonsole\gamearea.cpp(73): warning C4309: 'argument' : troncation de valeur de constante
+y:\workspace b52\snake\democonsole\gamearea.cpp(119): warning C4309: 'argument' : troncation de valeur de constante
+y:\workspace b52\snake\democonsole\gamearea.cpp(123): warning C4129: ' ' : caractère de séquence d'échappement non reconnu
+y:\workspace b52\snake\democonsole\gamearea.cpp(124): warning C4129: '_' : caractère de séquence d'échappement non reconnu
+y:\workspace b52\snake\democonsole\gamearea.cpp(124): warning C4129: ' ' : caractère de séquence d'échappement non reconnu
+y:\workspace b52\snake\democonsole\gamearea.cpp(125): warning C4129: ' ' : caractère de séquence d'échappement non reconnu
+y:\workspace b52\snake\democonsole\gamearea.cpp(125): warning C4129: '|' : caractère de séquence d'échappement non reconnu
+y:\workspace b52\snake\democonsole\gamearea.cpp(126): warning C4129: '_' : caractère de séquence d'échappement non reconnu
+y:\workspace b52\snake\democonsole\gamearea.cpp(126): warning C4129: ' ' : caractère de séquence d'échappement non reconnu
+y:\workspace b52\snake\democonsole\gamearea.cpp(127): warning C4129: '_' : caractère de séquence d'échappement non reconnu
   DemoConsole.vcxproj -> Y:\workspace b52\Snake\Debug\SnakeGame.exe

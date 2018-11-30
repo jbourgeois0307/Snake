@@ -23,10 +23,9 @@ public:
 	bool welcomeMenu();
 	bool newGameMenu();
 	bool optionMenu();
-	bool gameModeChooser();
+	bool gameModeChooser(int pos);
 	bool gameOverMenu();
 
-	void showFruit(Fruit f);
 
 };
 
