@@ -1,5 +1,9 @@
 #ifndef TRANSACTIONS_H
 #define TRANSACTIONS_H
+
+#include "Snake.h"
+#include "Game.h"
+
 class Transaction
 {
 private:
@@ -11,7 +15,6 @@ public:
 		static Transaction instance;
 		return instance;
 	}
-private:
 	bool conditionStartMenu();
 	bool conditionGameModeChooser();
 	bool conditionOptions();
@@ -19,6 +22,6 @@ private:
 	bool conditionSinglePlayer();
 	bool conditionMultiPlayer();
 	bool conditionPlatformer();
-	bool conditionGameOver();
+	bool conditionGameOver(Snake snake);
 };
 #endif //TRANSACTIONS_H

@@ -4,6 +4,7 @@
 #include "Console.h"
 #include "GameSinglePlayer.h"
 #include "GameArea.h"
+#include "Transactions.h"
 
 class Game
 {
@@ -26,6 +27,7 @@ private:
 	State update(State state);
 	void render(State state);
 
+	Transaction *testTransaction;
 	ConsoleWriter *writer;
 	ConsoleImage *gamezone;
 	//ElapsedTimer <>timer;

@@ -16,7 +16,7 @@ private:
 	bool haveFruit_m;
 	bool snakeExist_m;
 	Fruit fruit_m;
-	Snake snake;
+	Snake snake_m;
 	
 
 public:
@@ -31,6 +31,7 @@ public:
 	void generateSnake();
 	void showSnake(ConsoleImage & image);
 	void showFruit(ConsoleImage & image);
+	Snake snake() const;
 
 };
 

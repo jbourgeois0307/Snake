@@ -1,5 +1,5 @@
 #include "Game.h"
-Game::Game() :slow_m{ 500 }, reader_m{ nullptr }, writer{ nullptr }, gamezone{nullptr}
+Game::Game() :slow_m{ 500 }, reader_m{ nullptr }, writer{ nullptr }, gamezone{ nullptr }, testTransaction{nullptr}
 {
 }
 
@@ -86,7 +86,7 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::SinglePlayer:
-		if (false) {
+		if (Transaction::getInstance().conditionGameOver(GameSinglePlayer::getInstance().snake())) {
 			return nextState(state);
 		}
 		else {
