@@ -1,6 +1,5 @@
 #include "Game.h"
-
-Game::Game() :slow_m{ 500 }, reader_m{ Console::getInstance().keyReader() }
+Game::Game() :slow_m{ 500 },reader_m{nullptr}
 {
 
 }
@@ -9,86 +8,109 @@ Game::Game() :slow_m{ 500 }, reader_m{ Console::getInstance().keyReader() }
 Game::~Game()
 {
 }
-void Game::boucleDeJeu(int state) {
-	//FAIRE ENUM!
-	reader_m.read(keyEvents);
+Game::State Game::nextState(State state)
+{
 
-	for (int i{ 0 }; i < slow_m; i++) {
-		for (int j{ 0 }; j < slow_m; j++) {
-			for (int k{ 0 }; k< slow_m; k++);
-		}
+	return (State)((int) state + 1);
+}
+
+void Game::gameLoop(State state) {
+	
+	timer.start();
+	double lastTime = timer.elapsed();
+	while (true)
+	{
+		double current = timer.elapsed();
+		
+		//double elapsed = current - lastTime;
+		processInput();
+		update(state);
+		render();
+		lastTime = current;
 	}
+}
+void Game::processInput() {
+	//(*reader_m).read(keyEvents);
+}
+void Game::render() {
+
+}
+Game::State Game::update(State state) {
+	//FAIRE ENUM
+	
+	
+
+	//for (int i{ 0 }; i < slow_m; i++) {
+	//	for (int j{ 0 }; j < slow_m; j++) {
+	//		for (int k{ 0 }; k< slow_m; k++);
+	//	}
+	//}
 	switch (state) {
-	case 1: if (GameArea::getInstance().welcomeMenu(keyEvents)) {
-		boucleDeJeu(state + 1);
+	case State::Welcome: if (GameArea::getInstance().welcomeMenu(keyEvents)) {
+		return nextState(state);
 	}
 			else {
-		boucleDeJeu(state);
+		return state;
 	}
 			break;
-	case 2: if (GameArea::getInstance().newGameMenu(keyEvents)) {
-		boucleDeJeu(state + 1);
+	case State::StartMenu: if (GameArea::getInstance().newGameMenu(keyEvents)) {
+		return nextState(state);
 	}
 			else {
-		boucleDeJeu(state);
+				return state;
 	}
 			break;
-	case 3: if (GameArea::getInstance().gameModeChooser(keyEvents)) {
-		boucleDeJeu(state + 1);
+	case State::GameModeChooser: if (GameArea::getInstance().gameModeChooser(keyEvents)) {
+			return nextState(state);
 	}
 			else {
-		boucleDeJeu(state);
+			return state;
 	}
 			break;
-	case 4: if (GameArea::getInstance().optionMenu(keyEvents)) {
-		boucleDeJeu(state + 1);
+	case State::Options: if (GameArea::getInstance().optionMenu(keyEvents)) {
+			return nextState(state);
 	}
 			else {
-		boucleDeJeu(state);
+			return state;
 	}
 			break;
-	case 5: if (GameArea::getInstance().welcomeMenu(keyEvents)) {
-		boucleDeJeu(state + 1);
-	}
-			else {
-		boucleDeJeu(state);
-	}
-			break;
-	case 6: GameSinglePlayer::getInstance();
+	case State::SinglePlayer: GameSinglePlayer::getInstance();
 		if (GameSinglePlayer::getInstance().play(keyEvents)) {
-		boucleDeJeu(state + 1);
+			return nextState(state);
 	}
 			else {
-		boucleDeJeu(state);
+return state;
 	}
 			break;
-	case 7: if (GameArea::getInstance().multiplayer(keyEvents)) {
-		boucleDeJeu(state + 1);
+	case State::Multiplayer: if (GameArea::getInstance().multiplayer(keyEvents)) {
+  gameLoop(nextState(state));
 	}
 			else {
-		boucleDeJeu(state);
+return state;
 	}
 			break;
-	case 8: if (GameArea::getInstance().plateformer(keyEvents)) {
-		boucleDeJeu(state + 1);
+	case State::Plateformer: if (GameArea::getInstance().plateformer(keyEvents)) {
+  gameLoop(nextState(state));
 	}
 			else {
-		boucleDeJeu(state);
+return state;
 	}
 			break;
-	case 9: if (GameArea::getInstance().gameOverMenu(keyEvents)) {
-		boucleDeJeu(state + 1);
+	case State::GameOver: if (GameArea::getInstance().gameOverMenu(keyEvents)) {
+  gameLoop(nextState(state));
 	}
 			else {
-		boucleDeJeu(state);
+return state;
 	}
 			break;
 	}
 }
 
 void Game::start(size_t width, size_t height) {
-	ConsoleContext context(width, height, "The Snake Game", 8, 8, L"Consolas");
+	
+	ConsoleContext context(2000, 2000, "The Snake Game", 8, 8, L"Consolas");
 	Console::defineContext(context);
-	Game::getInstance().boucleDeJeu(7);
+
+	Game::getInstance().gameLoop(State::SinglePlayer);
 }
 
