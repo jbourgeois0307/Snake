@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿  Console.cpp
   ConsoleColor.cpp
   ConsoleContext.cpp
@@ -41,3 +42,15 @@ y:\workspace b52\snake\democonsole\gamearea.cpp(48): warning C4309: 'argument' 
 y:\workspace b52\snake\democonsole\gamearea.cpp(61): warning C4309: 'argument' : troncation de valeur de constante
   DemoConsole.vcxproj -> Y:\workspace b52\Snake\Debug\SnakeGame.exe
 >>>>>>> 189ae58e967af88392037ad398147ac19934fa9d
+=======
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: Le répertoire intermédiaire (Debug\) contient des fichiers partagés provenant d'un autre projet (DemoConsole.vcxproj). Cela peut entraîner un comportement de nettoyage et de régénération incorrect.
+  ConsoleImage.cpp
+  Game.cpp
+y:\workspace b52\snake\democonsole\game.cpp(19): warning C4244: 'initialisation' : conversion de 'int64_t' en 'double', perte possible de données
+y:\workspace b52\snake\democonsole\game.cpp(22): warning C4244: 'initialisation' : conversion de 'int64_t' en 'double', perte possible de données
+y:\workspace b52\snake\democonsole\game.cpp(141): error C2597: référence non conforme à un membre non static 'Game::writer'
+y:\workspace b52\snake\democonsole\game.cpp(142): error C2228: la partie gauche de '.createImage' doit avoir un class/struct/union
+y:\workspace b52\snake\democonsole\game.cpp(143): error C2228: la partie gauche de '.push' doit avoir un class/struct/union
+  main.cpp
+  Génération de code en cours...
+>>>>>>> 92c265cd9b1b2a2afd8f800616cc4eb148a00642

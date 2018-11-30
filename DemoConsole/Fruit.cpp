@@ -6,7 +6,7 @@ Fruit::Fruit()
 {
 }
 
-Fruit::Fruit(Point &p, int pointVal)
+Fruit::Fruit(Point p, int pointVal)
 	: mPoint{p},
 	mPointVal{pointVal}
 {
@@ -16,7 +16,7 @@ Fruit::~Fruit()
 {
 }
 
-void Fruit::setPoint(Point &p)
+void Fruit::setPoint(Point p)
 {
 	mPoint=p;
 }

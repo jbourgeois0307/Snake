@@ -10,9 +10,9 @@ class Fruit
 	int  mPointVal;
 public:
 	Fruit();
-	Fruit(Point &p, int pointVal);
+	Fruit(Point p, int pointVal);
 	~Fruit();
-	void setPoint(Point &p);
+	void setPoint(Point p);
 	int pointVal();
 	Point point();
 	void destroyFruit();
