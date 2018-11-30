@@ -46,10 +46,7 @@ void GameSinglePlayer::showSnake(ConsoleImage & image)
 
 void GameSinglePlayer::showFruit(ConsoleImage & image)
 {
-
 	if(haveFruit_m){
 		image.drawPoint(fruit_m.point().x(), fruit_m.point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tr);
-
 	}
-	
 }
