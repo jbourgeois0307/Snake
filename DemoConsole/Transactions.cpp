@@ -23,9 +23,9 @@ bool Transaction::conditionWelcome()
 {
 	return false;
 }
-bool Transaction::conditionSinglePlayer()
+bool Transaction::conditionSinglePlayer(Snake snake)
 {
-	SinglePlayerAutomaton::getInstance();
+	SinglePlayerAutomaton::getInstance(snake);
 	return false;
 }
 bool Transaction::conditionMultiPlayer()

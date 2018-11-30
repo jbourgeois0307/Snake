@@ -56,13 +56,13 @@ void GameSinglePlayer::showFruit(ConsoleImage & image)
 	}
 }
 
-Snake GameSinglePlayer::snake() const
+Snake GameSinglePlayer::snake()
 {
 	//getter du snake dans le jeu pour le test des conditions(transactions)
 	return snake_m;
 }
 
-Fruit GameSinglePlayer::fruit() const
+Fruit GameSinglePlayer::fruit()
 {
 	//getter du fruit dans le jeu pour le test des conditions(transactions)
 	return fruit_m;

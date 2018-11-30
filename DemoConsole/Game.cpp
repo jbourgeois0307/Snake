@@ -144,6 +144,7 @@ Game::State Game::update(State state) {
 		else {
 			GameSinglePlayer::getInstance().generateFruit();
 			GameSinglePlayer::getInstance().generateSnake();
+			SinglePlayerAutomaton::getInstance(GameSinglePlayer::getInstance().snake()).startSinglePlayerAutomaton();
 			return State::SinglePlayer;
 		}
 		break;

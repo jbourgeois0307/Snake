@@ -8,8 +8,6 @@ SinglePlayerAutomaton::SinglePlayerAutomaton(Snake snake)
 	: mSnake{snake},
 	slow_m{500}
 {
-	//Entame la machine de Single Player
-	startSinglePlayerAutomaton();
 }
 
 SinglePlayerAutomaton::~SinglePlayerAutomaton()
@@ -17,17 +15,18 @@ SinglePlayerAutomaton::~SinglePlayerAutomaton()
 }
 
 
+void SinglePlayerAutomaton::startSinglePlayerAutomaton(SinglePlayerState state)
+{
+
+	//Part le timer de l'automate
+	//	mTimer.start();
+	update(mCurState);
+}
+
 SinglePlayerAutomaton::SinglePlayerState SinglePlayerAutomaton::nextSinglePlayerState(SinglePlayerState mCurState)
 {
 	//Change l'état prochain 
 	return (SinglePlayerState)((int)mCurState +1);
-}
-
-void SinglePlayerAutomaton::startSinglePlayerAutomaton(SinglePlayerState mCurState)
-{
-	//Part le timer de l'automate
-	//	mTimer.start();
-	update(mCurState);
 }
 
 SinglePlayerAutomaton::SinglePlayerState SinglePlayerAutomaton::update(SinglePlayerState mCurState)
