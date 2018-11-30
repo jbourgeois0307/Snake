@@ -1,33 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Header">
-      <UniqueIdentifier>{1a361a8f-737f-4c7d-8075-7c406836c409}</UniqueIdentifier>
-    </Filter>
     <Filter Include="CPP">
-      <UniqueIdentifier>{726c4c01-570a-4127-b70d-cbc21de7e2ea}</UniqueIdentifier>
+      <UniqueIdentifier>{19931b4a-dc00-44a1-9963-fad15a49a5a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headder">
+      <UniqueIdentifier>{c5bf5cd9-5c35-469d-b226-91035e219f1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headder\Autre">
+      <UniqueIdentifier>{3be23ad1-4fe3-496f-a211-2e1a319aabe6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headder\Game">
+      <UniqueIdentifier>{dd0b0de7-17a6-4969-8b0c-cbe91f7d829c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headder\Console">
+      <UniqueIdentifier>{a0d4b39c-7bec-409d-ba57-5ed3ce375a28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CPP\Auter">
+      <UniqueIdentifier>{1e1447d1-1fd3-4bbc-8292-04886bc1bd42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CPP\Game">
+      <UniqueIdentifier>{8b9760e4-cf24-48b7-8577-89985e82a7ea}</UniqueIdentifier>
     </Filter>
     <Filter Include="CPP\Console">
-      <UniqueIdentifier>{e3fa76b5-6d8b-476f-8ca6-9961b3712351}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CPP\Object">
-      <UniqueIdentifier>{1b3f06be-8399-4e47-a7dd-97e923fd9018}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CPP\Autre">
-      <UniqueIdentifier>{bfdc654f-5c9c-4f71-ae56-e48c2eeeea3c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header\Console">
-      <UniqueIdentifier>{949bc582-5537-441f-bf82-66c8f696ab35}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header\Autre">
-      <UniqueIdentifier>{9a83b2ef-eb2d-4234-861c-d925ce97d540}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header\Object">
-      <UniqueIdentifier>{cdccc6b1-12ce-4d0a-97d6-cc572b1617f6}</UniqueIdentifier>
+      <UniqueIdentifier>{e3462f00-ea9f-445d-8d3a-b7d534a960d0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <ClCompile Include="Console.cpp">
       <Filter>CPP\Console</Filter>
     </ClCompile>
@@ -59,183 +58,155 @@
       <Filter>CPP\Console</Filter>
     </ClCompile>
     <ClCompile Include="Fruit.cpp">
-      <Filter>CPP\Object</Filter>
+      <Filter>CPP\Game</Filter>
     </ClCompile>
     <ClCompile Include="GameArea.cpp">
-      <Filter>CPP\Object</Filter>
+      <Filter>CPP\Game</Filter>
     </ClCompile>
     <ClCompile Include="GameMultiPlayer.cpp">
-      <Filter>CPP\Object</Filter>
+      <Filter>CPP\Game</Filter>
     </ClCompile>
     <ClCompile Include="GamePlateformer.cpp">
-      <Filter>CPP\Object</Filter>
+      <Filter>CPP\Game</Filter>
     </ClCompile>
     <ClCompile Include="GameSinglePlayer.cpp">
-      <Filter>CPP\Object</Filter>
+      <Filter>CPP\Game</Filter>
     </ClCompile>
     <ClCompile Include="GreenFruit.cpp">
-      <Filter>CPP\Object</Filter>
+      <Filter>CPP\Game</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>CPP\Object</Filter>
+      <Filter>CPP\Game</Filter>
     </ClCompile>
     <ClCompile Include="Point.cpp">
-      <Filter>CPP\Object</Filter>
+      <Filter>CPP\Game</Filter>
     </ClCompile>
     <ClCompile Include="PurpleFruit.cpp">
-      <Filter>CPP\Object</Filter>
+      <Filter>CPP\Game</Filter>
     </ClCompile>
     <ClCompile Include="RedFruit.cpp">
-      <Filter>CPP\Object</Filter>
+      <Filter>CPP\Game</Filter>
     </ClCompile>
     <ClCompile Include="SinglePlayerAutomaton.cpp">
-      <Filter>CPP\Object</Filter>
+      <Filter>CPP\Game</Filter>
     </ClCompile>
     <ClCompile Include="Snake.cpp">
-      <Filter>CPP\Object</Filter>
+      <Filter>CPP\Game</Filter>
     </ClCompile>
     <ClCompile Include="Transactions.cpp">
-      <Filter>CPP\Object</Filter>
+      <Filter>CPP\Game</Filter>
     </ClCompile>
     <ClCompile Include="YellowFruit.cpp">
-      <Filter>CPP\Object</Filter>
+      <Filter>CPP\Game</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
-      <Filter>CPP\Object</Filter>
+      <Filter>CPP\Game</Filter>
     </ClCompile>
     <ClCompile Include="Controller.cpp">
-      <Filter>CPP\Autre</Filter>
+      <Filter>CPP\Auter</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>CPP\Autre</Filter>
+      <Filter>CPP\Auter</Filter>
     </ClCompile>
     <ClCompile Include="Random.cpp">
-      <Filter>CPP\Autre</Filter>
+      <Filter>CPP\Auter</Filter>
     </ClCompile>
-=======
-    <ClInclude Include="Console.h" />
-    <ClInclude Include="ConsoleColor.h" />
-    <ClInclude Include="ConsoleContext.h" />
-    <ClInclude Include="ConsoleImage.h" />
-    <ClInclude Include="ConsoleKeyEvent.h" />
-    <ClInclude Include="ConsoleKeyFilter.h" />
-    <ClInclude Include="ConsoleKeyFilterAny.h" />
-    <ClInclude Include="ConsoleKeyFilterDown.h" />
-    <ClInclude Include="ConsoleKeyFilterModifiers.h" />
-    <ClInclude Include="ConsoleKeyFilterUp.h" />
-    <ClInclude Include="ConsoleKeyReader.h" />
-    <ClInclude Include="ConsoleWriter.h" />
-    <ClInclude Include="Controller.h" />
-    <ClInclude Include="Fruit.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="GameArea.h" />
-    <ClInclude Include="GameMultiPlayer.h" />
-    <ClInclude Include="GamePlateformer.h" />
-    <ClInclude Include="GameSinglePlayer.h" />
-    <ClInclude Include="GreenFruit.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="Point.h" />
-    <ClInclude Include="PurpleFruit.h" />
-    <ClInclude Include="Random.h" />
-    <ClInclude Include="RedFruit.h" />
-    <ClInclude Include="SinglePlayerAutomaton.h" />
-    <ClInclude Include="Snake.h" />
-    <ClInclude Include="YellowFruit.h" />
-    <ClInclude Include="Transactions.h" />
->>>>>>> 0736c66a493ca93c6554587d8fdc12d6235e684b
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h">
-      <Filter>Header\Console</Filter>
+      <Filter>Headder\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleColor.h">
-      <Filter>Header\Console</Filter>
+      <Filter>Headder\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleContext.h">
-      <Filter>Header\Console</Filter>
+      <Filter>Headder\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleImage.h">
-      <Filter>Header\Console</Filter>
+      <Filter>Headder\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyEvent.h">
-      <Filter>Header\Console</Filter>
+      <Filter>Headder\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyFilter.h">
-      <Filter>Header\Console</Filter>
+      <Filter>Headder\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyFilterAny.h">
-      <Filter>Header\Console</Filter>
+      <Filter>Headder\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyFilterDown.h">
-      <Filter>Header\Console</Filter>
+      <Filter>Headder\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyFilterModifiers.h">
-      <Filter>Header\Console</Filter>
+      <Filter>Headder\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyFilterUp.h">
-      <Filter>Header\Console</Filter>
+      <Filter>Headder\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleKeyReader.h">
-      <Filter>Header\Console</Filter>
+      <Filter>Headder\Console</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleWriter.h">
-      <Filter>Header\Console</Filter>
+      <Filter>Headder\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="ElapsedTimer.h">
+      <Filter>Headder\Game</Filter>
     </ClInclude>
     <ClInclude Include="Fruit.h">
-      <Filter>Header\Object</Filter>
+      <Filter>Headder\Game</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
-      <Filter>Header\Object</Filter>
+      <Filter>Headder\Game</Filter>
     </ClInclude>
     <ClInclude Include="GameArea.h">
-      <Filter>Header\Object</Filter>
+      <Filter>Headder\Game</Filter>
     </ClInclude>
     <ClInclude Include="GameMultiPlayer.h">
-      <Filter>Header\Object</Filter>
+      <Filter>Headder\Game</Filter>
     </ClInclude>
     <ClInclude Include="GamePlateformer.h">
-      <Filter>Header\Object</Filter>
+      <Filter>Headder\Game</Filter>
     </ClInclude>
     <ClInclude Include="GameSinglePlayer.h">
-      <Filter>Header\Object</Filter>
+      <Filter>Headder\Game</Filter>
     </ClInclude>
     <ClInclude Include="GreenFruit.h">
-      <Filter>Header\Object</Filter>
+      <Filter>Headder\Game</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>Header\Object</Filter>
+      <Filter>Headder\Game</Filter>
     </ClInclude>
     <ClInclude Include="Point.h">
-      <Filter>Header\Object</Filter>
+      <Filter>Headder\Game</Filter>
     </ClInclude>
     <ClInclude Include="PurpleFruit.h">
-      <Filter>Header\Object</Filter>
+      <Filter>Headder\Game</Filter>
     </ClInclude>
     <ClInclude Include="RedFruit.h">
-      <Filter>Header\Object</Filter>
+      <Filter>Headder\Game</Filter>
     </ClInclude>
     <ClInclude Include="SinglePlayerAutomaton.h">
-      <Filter>Header\Object</Filter>
+      <Filter>Headder\Game</Filter>
     </ClInclude>
     <ClInclude Include="Snake.h">
-      <Filter>Header\Object</Filter>
+      <Filter>Headder\Game</Filter>
     </ClInclude>
     <ClInclude Include="Transactions.h">
-      <Filter>Header\Object</Filter>
+      <Filter>Headder\Game</Filter>
     </ClInclude>
     <ClInclude Include="YellowFruit.h">
-      <Filter>Header\Object</Filter>
+      <Filter>Headder\Game</Filter>
     </ClInclude>
     <ClInclude Include="Random.h">
-      <Filter>Header\Autre</Filter>
+      <Filter>Headder\Autre</Filter>
     </ClInclude>
     <ClInclude Include="Controller.h">
-      <Filter>Header\Autre</Filter>
+      <Filter>Headder\Autre</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Console">
-      <Filter>Header\Console</Filter>
+      <Filter>Headder\Console</Filter>
     </None>
   </ItemGroup>
 </Project>

@@ -1,12 +1,27 @@
 #ifndef MULTI_H
 #define MULTI_H
-
-#pragma once
-class GameMultiPlayer
+#include "GameSinglePlayer.h"
+#include "Snake.h"
+class GameMultiPlayer : public GameSinglePlayer
 {
-public:
+private:
 	GameMultiPlayer();
+	GameMultiPlayer(Point p);
 	~GameMultiPlayer();
+public:
+	static GameMultiPlayer& getInstance()
+	{
+		static GameMultiPlayer instance;
+		return instance;
+	}
+
+	void generateSnake();
+
+	void showSnake(ConsoleImage & image);
+
+private:
+
+	Snake adversary_m;
 };
 
 #endif

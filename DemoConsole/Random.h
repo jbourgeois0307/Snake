@@ -2,7 +2,7 @@
 class Random
 {
 private:
-	std::default_random_engine generator;
+	std::random_device generator;
 	Random();
 	~Random();
 public:

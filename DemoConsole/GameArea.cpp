@@ -1,5 +1,6 @@
 #include "GameArea.h"
 #include "GameSinglePlayer.h"
+#include "GameMultiPlayer.h"
 GameArea::GameArea()
 {
 }
@@ -42,15 +43,15 @@ bool GameArea::singleplayer() {
 
 bool GameArea::multiplayer() {
 	ConsoleWriter & writer{ Console::getInstance().writer() };
-	ConsoleImage & singlePlayerArea{ writer.createImage("singleplayer") };
-	writer.push("singleplayer");
+	ConsoleImage & multiPlayerArea{ writer.createImage("multiplayer") };
+	writer.push("multiplayer");
 
-	singlePlayerArea.fill(178, ConsoleColor::bK + ConsoleColor::tC);
-	singlePlayerArea.fill(5.0, 5.0, 90.0, 90.0, (char)176, ConsoleColor::bg + ConsoleColor::tw);
+	multiPlayerArea.fill(178, ConsoleColor::bK + ConsoleColor::tC);
+	multiPlayerArea.fill(5.0, 5.0, 90.0, 90.0, (char)176, ConsoleColor::bg + ConsoleColor::tw);
 
-	showInfo(singlePlayerArea, 100, "singleplayer", "Ludovic", 0, 4, 0, 0, 0);
-	GameSinglePlayer::getInstance().showFruit(singlePlayerArea);
-	GameSinglePlayer::getInstance().showSnake(singlePlayerArea);
+	showInfo(multiPlayerArea, 100, "multiplayer", "Ludovic", 0, 4, 0, 0, 0);
+	GameMultiPlayer::getInstance().showFruit(multiPlayerArea);
+	GameMultiPlayer::getInstance().showSnake(multiPlayerArea);
 	return false;
 }
 bool GameArea::plateformer() {
@@ -106,8 +107,15 @@ bool GameArea::gameOverMenu() {
 
 	return false;
 }
-bool GameArea::newGameMenu() {
-	return true;
+bool GameArea::newGameMenu(std::string name) {
+	ConsoleWriter & writer{ Console::getInstance().writer() };
+	ConsoleImage & gameoverArea{ writer.createImage("GameOver") };
+	writer.push("GameOver");
+
+	gameoverArea.drawText(50, 20, "Entrez-votre nom :", ConsoleColor::bk + ConsoleColor::tr);
+	gameoverArea.drawText(50, 25, name, ConsoleColor::bk + ConsoleColor::tr);
+	return false;
+	
 }
 bool GameArea::optionMenu() {
 	return true;

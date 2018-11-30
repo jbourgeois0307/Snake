@@ -21,10 +21,11 @@ public:
 	bool multiplayer();
 	bool plateformer();
 	bool welcomeMenu();
-	bool newGameMenu();
 	bool optionMenu();
 	bool gameModeChooser(int pos);
 	bool gameOverMenu();
+
+	bool newGameMenu(std::string name);
 
 
 };

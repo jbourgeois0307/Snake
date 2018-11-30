@@ -3,6 +3,8 @@
 
 #include "Console.h"
 #include "GameSinglePlayer.h"
+#include "GameMultiPlayer.h"
+
 #include "GameArea.h"
 #include "Transactions.h"
 

@@ -9,7 +9,7 @@
 #include "Snake.h"
 class GameSinglePlayer
 {
-private:
+protected:
 	GameSinglePlayer();
 	~GameSinglePlayer();
 
