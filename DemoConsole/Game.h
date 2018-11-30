@@ -25,7 +25,7 @@ private:
 	void gameLoop(State state = State::Welcome);
 	void processInput();
 	State update(State state);
-	void render();
+	void render(State state);
 	ElapsedTimer <>timer;
 	size_t slow_m;
 	ConsoleKeyReader * reader_m;

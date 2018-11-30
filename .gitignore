@@ -5,7 +5,9 @@
 
 DemoConsole/Debug/
 DemoConsole/x64/
-
+.vs/
+Debug/
+x64/
 # User-specific files
 *.rsuser
 *.suo

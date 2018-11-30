@@ -35,12 +35,11 @@ bool GameArea::singleplayer() {
 	singlePlayerArea.fill(5.0, 5.0, 90.0, 90.0, (char)176, ConsoleColor::bg + ConsoleColor::tw);
 
 	showInfo(singlePlayerArea, 100, "singleplayer","Ludovic", 0, 4, 0, 0, 0);
-	
 
 	return false;
 }
 
-bool GameArea::multiplayer(ConsoleKeyReader::KeyEvents& keyEvents) {
+bool GameArea::multiplayer() {
 	ConsoleWriter & writer{ Console::getInstance().writer() };
 	ConsoleImage & multiPlayerArea{ writer.createImage("multiplayer") };
 	writer.push("multiplayer");
@@ -53,7 +52,7 @@ bool GameArea::multiplayer(ConsoleKeyReader::KeyEvents& keyEvents) {
 
 	return false;
 }
-bool GameArea::plateformer(ConsoleKeyReader::KeyEvents& keyEvents) {
+bool GameArea::plateformer() {
 	ConsoleWriter & writer{ Console::getInstance().writer() };
 	ConsoleImage & plateformerArea{ writer.createImage("plateformer") };
 	writer.push("plateformer");
@@ -64,19 +63,19 @@ bool GameArea::plateformer(ConsoleKeyReader::KeyEvents& keyEvents) {
 	showInfo(plateformerArea, 100, "plateformer", "Ludovic", 0, 4, 0, 0, 0);
 	return false;
 }
-bool GameArea::gameModeChooser(ConsoleKeyReader::KeyEvents& keyEvents) {
+bool GameArea::gameModeChooser() {
 	return true;
 }
-bool GameArea::gameOverMenu(ConsoleKeyReader::KeyEvents& keyEvents) {
+bool GameArea::gameOverMenu() {
 	return true;
 }
-bool GameArea::newGameMenu(ConsoleKeyReader::KeyEvents& keyEvents) {
+bool GameArea::newGameMenu() {
 	return true;
 }
-bool GameArea::optionMenu(ConsoleKeyReader::KeyEvents& keyEvents) {
+bool GameArea::optionMenu() {
 	return true;
 }
-bool GameArea::welcomeMenu(ConsoleKeyReader::KeyEvents& keyEvents) {
+bool GameArea::welcomeMenu() {
 
 
 	return true;

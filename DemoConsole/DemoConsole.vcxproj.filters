@@ -105,6 +105,7 @@
     <ClInclude Include="Point.h">
       <Filter>Header\Autre</Filter>
     </ClInclude>
+    <ClInclude Include="Controller.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Console.cpp">
@@ -179,6 +180,7 @@
     <ClCompile Include="Random.cpp">
       <Filter>CPP\Autre</Filter>
     </ClCompile>
+    <ClCompile Include="Controller.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Console">
