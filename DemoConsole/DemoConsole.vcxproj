@@ -32,6 +32,7 @@
     <ClInclude Include="ConsoleKeyReader.h" />
     <ClInclude Include="ConsoleWriter.h" />
     <ClInclude Include="Controller.h" />
+    <ClInclude Include="ElapsedTimer.h" />
     <ClInclude Include="Fruit.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameArea.h" />
@@ -46,6 +47,7 @@
     <ClInclude Include="RedFruit.h" />
     <ClInclude Include="SinglePlayerAutomaton.h" />
     <ClInclude Include="Snake.h" />
+    <ClInclude Include="Transactions.h" />
     <ClInclude Include="YellowFruit.h" />
   </ItemGroup>
   <ItemGroup>
@@ -77,6 +79,7 @@
     <ClCompile Include="RedFruit.cpp" />
     <ClCompile Include="SinglePlayerAutomaton.cpp" />
     <ClCompile Include="Snake.cpp" />
+    <ClCompile Include="Transactions.cpp" />
     <ClCompile Include="YellowFruit.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
