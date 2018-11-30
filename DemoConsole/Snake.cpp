@@ -64,6 +64,11 @@ void Snake::speed(float speedModifier)
 	mSpeed *= speedModifier;
 }
 
+int Snake::bodLength()
+{
+	return mBodLength;
+}
+
 std::vector<Point> Snake::bodPart()
 {
 	return std::vector<Point>();

@@ -12,6 +12,7 @@ class GameSinglePlayer
 private:
 	GameSinglePlayer();
 	~GameSinglePlayer();
+
 	bool haveFruit_m;
 	bool snakeExist_m;
 	Fruit fruit_m;

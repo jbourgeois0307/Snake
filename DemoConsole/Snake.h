@@ -21,6 +21,7 @@ public:
 	void addTail(int addedLength);
 	void cutTail(int cuttedLength);
 	void speed(float speedModifier);
+	int bodLength();
 	std::vector<Point> bodPart();
 };
 
