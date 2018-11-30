@@ -1,3 +1,48 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+﻿  Console.cpp
+  ConsoleColor.cpp
+  ConsoleContext.cpp
+  ConsoleImage.cpp
+  ConsoleKeyEvent.cpp
+  ConsoleKeyFilterDown.cpp
+  ConsoleKeyFilterModifiers.cpp
+  ConsoleKeyFilterUp.cpp
+  ConsoleKeyReader.cpp
+  ConsoleWriter.cpp
+  Fruit.cpp
+  Game.cpp
+y:\b52\snake\democonsole\game.cpp(16): warning C4018: '<' : incompatibilité signed/unsigned
+y:\b52\snake\democonsole\game.cpp(17): warning C4018: '<' : incompatibilité signed/unsigned
+y:\b52\snake\democonsole\game.cpp(18): warning C4018: '<' : incompatibilité signed/unsigned
+  GameArea.cpp
+y:\b52\snake\democonsole\gamearea.cpp(34): warning C4309: 'argument' : troncation de valeur de constante
+y:\b52\snake\democonsole\gamearea.cpp(48): warning C4309: 'argument' : troncation de valeur de constante
+y:\b52\snake\democonsole\gamearea.cpp(61): warning C4309: 'argument' : troncation de valeur de constante
+  GameMultiPlayer.cpp
+  GamePlateformer.cpp
+  GameSinglePlayer.cpp
+  GreenFruit.cpp
+  main.cpp
+  Point.cpp
+  PurpleFruit.cpp
+  Génération de code en cours...
+  Compilation en cours...
+  Random.cpp
+  RedFruit.cpp
+  Snake.cpp
+  YellowFruit.cpp
+  Génération de code en cours...
+  DemoConsole.vcxproj -> Y:\B52\Snake\Debug\DemoConsole.exe
+=======
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: Le répertoire intermédiaire (Debug\) contient des fichiers partagés provenant d'un autre projet (DemoConsole.vcxproj). Cela peut entraîner un comportement de nettoyage et de régénération incorrect.
+  GameArea.cpp
+y:\workspace b52\snake\democonsole\gamearea.cpp(34): warning C4309: 'argument' : troncation de valeur de constante
+y:\workspace b52\snake\democonsole\gamearea.cpp(48): warning C4309: 'argument' : troncation de valeur de constante
+y:\workspace b52\snake\democonsole\gamearea.cpp(61): warning C4309: 'argument' : troncation de valeur de constante
+  DemoConsole.vcxproj -> Y:\workspace b52\Snake\Debug\SnakeGame.exe
+>>>>>>> 189ae58e967af88392037ad398147ac19934fa9d
+=======
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: Le répertoire intermédiaire (Debug\) contient des fichiers partagés provenant d'un autre projet (DemoConsole.vcxproj). Cela peut entraîner un comportement de nettoyage et de régénération incorrect.
   ConsoleImage.cpp
   Game.cpp
@@ -8,3 +53,4 @@ y:\workspace b52\snake\democonsole\game.cpp(142): error C2228: la partie gauche 
 y:\workspace b52\snake\democonsole\game.cpp(143): error C2228: la partie gauche de '.push' doit avoir un class/struct/union
   main.cpp
   Génération de code en cours...
+>>>>>>> 92c265cd9b1b2a2afd8f800616cc4eb148a00642

@@ -40,10 +40,12 @@
     <ClInclude Include="GamePlateformer.h" />
     <ClInclude Include="GameSinglePlayer.h" />
     <ClInclude Include="GreenFruit.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="PurpleFruit.h" />
     <ClInclude Include="Random.h" />
     <ClInclude Include="RedFruit.h" />
+    <ClInclude Include="SinglePlayerAutomaton.h" />
     <ClInclude Include="Snake.h" />
     <ClInclude Include="YellowFruit.h" />
   </ItemGroup>
@@ -74,6 +76,7 @@
     <ClCompile Include="PurpleFruit.cpp" />
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="RedFruit.cpp" />
+    <ClCompile Include="SinglePlayerAutomaton.cpp" />
     <ClCompile Include="Snake.cpp" />
     <ClCompile Include="YellowFruit.cpp" />
   </ItemGroup>

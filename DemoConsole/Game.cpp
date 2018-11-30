@@ -1,5 +1,5 @@
 #include "Game.h"
-Game::Game() :slow_m{ 500 }, reader_m{ nullptr }, writer{ NULL }, gamezone{ NULL }
+Game::Game() :slow_m{ 500 }, reader_m{ nullptr }, writer{ nullptr }, gamezone{nullptr}
 {
 }
 
@@ -9,7 +9,6 @@ Game::~Game()
 }
 Game::State Game::nextState(State state)
 {
-
 	return (State)((int)state + 1);
 }
 
@@ -22,7 +21,6 @@ void Game::gameLoop(State state) {
 		double current = timer.elapsed();
 
 		//double elapsed = current - lastTime;
-
 		processInput();
 		update(state);
 		render(state);
@@ -131,7 +129,6 @@ Game::State Game::update(State state) {
 }
 
 void Game::start(size_t width, size_t height) {
-
 
 	ConsoleContext context(2000, 2000, "The Snake Game", 8, 8, L"Consolas");
 	Console::defineContext(context);

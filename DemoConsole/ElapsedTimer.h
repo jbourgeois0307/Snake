@@ -32,7 +32,7 @@ public:
 
 	// Return the elapsed time since the last referential point without 
 	// reseting the referential point. 
-	int64_t elapsed() const { return (TimeT::now() - mRefTimePoint).count(); }
+	i0 elapsed() const { return (TimeT::now() - mRefTimePoint).count(); }
 
 	// Return the base of time (tic per second).
 	constexpr int64_t baseTime() const { return std::chrono::high_resolution_clock::period::den; }
