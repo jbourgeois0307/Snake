@@ -8,6 +8,7 @@
 #include "GameArea.h"
 #include "Transactions.h"
 #include "ElapsedTimer.h"
+
 class Game
 {
 private:

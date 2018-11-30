@@ -130,7 +130,7 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::Multiplayer:
-		if (false) {
+		if (Transaction::getInstance().conditionGameOver(GameSinglePlayer::getInstance().snake())) {
 			return State::GameOver;
 		}
 		else {
@@ -140,7 +140,7 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::Plateformer:
-		if (false) {
+		if (Transaction::getInstance().conditionGameOver(GameSinglePlayer::getInstance().snake())) {
 			return State::GameOver;
 		}
 		else {
@@ -148,8 +148,8 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::GameOver:
-		if (false) {
-			return State::GameOver;
+		if (anyTouch()) {
+			return State::GameModeChooser;
 		}
 		else {
 			return State::GameOver;
@@ -163,6 +163,6 @@ void Game::start(size_t width, size_t height) {
 	ConsoleContext context(800, 800, "The Snake Game", 8, 8, L"Consolas");
 	Console::defineContext(context);
 	Game::getInstance().reader_m = &( Console::getInstance().keyReader());
-	Game::getInstance().gameLoop(State::Welcome);
+	Game::getInstance().gameLoop(State::GameOver);
 }
 
