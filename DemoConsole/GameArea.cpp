@@ -42,15 +42,15 @@ bool GameArea::singleplayer() {
 
 bool GameArea::multiplayer() {
 	ConsoleWriter & writer{ Console::getInstance().writer() };
-	ConsoleImage & multiPlayerArea{ writer.createImage("multiplayer") };
-	writer.push("multiplayer");
+	ConsoleImage & singlePlayerArea{ writer.createImage("singleplayer") };
+	writer.push("singleplayer");
 
-	multiPlayerArea.fill(178, ConsoleColor::bK + ConsoleColor::tC);
-	multiPlayerArea.fill(5.0, 5.0, 90.0, 90.0, (char)176, ConsoleColor::bR + ConsoleColor::tw);
+	singlePlayerArea.fill(178, ConsoleColor::bK + ConsoleColor::tC);
+	singlePlayerArea.fill(5.0, 5.0, 90.0, 90.0, (char)176, ConsoleColor::bg + ConsoleColor::tw);
 
-	showInfo(multiPlayerArea, 100, "multiplayer", "Ludovic", 0, 4, 0, 0, 0);
-	showInfo(multiPlayerArea, 150, "", "Joé", 0, 4, 0, 0, 0);
-	
+	showInfo(singlePlayerArea, 100, "singleplayer", "Ludovic", 0, 4, 0, 0, 0);
+	GameSinglePlayer::getInstance().showFruit(singlePlayerArea);
+	GameSinglePlayer::getInstance().showSnake(singlePlayerArea);
 	return false;
 }
 bool GameArea::plateformer() {
@@ -59,16 +59,51 @@ bool GameArea::plateformer() {
 	writer.push("plateformer");
 
 	plateformerArea.fill(178, ConsoleColor::bK + ConsoleColor::tC);
-	plateformerArea.fill(5.0, 0.0, 90.0, 100.0, (char)176, ConsoleColor::bk + ConsoleColor::tw);
+	plateformerArea.fill(5.0, 0.0, 90.0, 100.0, (char)176, ConsoleColor::bg + ConsoleColor::tw);
 
 	showInfo(plateformerArea, 100, "plateformer", "Ludovic", 0, 4, 0, 0, 0);
+	GameSinglePlayer::getInstance().showFruit(plateformerArea);
+	GameSinglePlayer::getInstance().showSnake(plateformerArea);
 	return false;
 }
-bool GameArea::gameModeChooser() {
+bool GameArea::gameModeChooser(int pos) {
+	ConsoleWriter & writer{ Console::getInstance().writer() };
+	ConsoleImage & gameModeChooserArea{ writer.createImage("GameMode") };
+	writer.push("GameMode");
+	gameModeChooserArea.fill(178, ConsoleColor::bw + ConsoleColor::tk);
+	gameModeChooserArea.drawText(30, 10, "Choose your Game Mode :", ConsoleColor::bw + ConsoleColor::tk);
+	gameModeChooserArea.drawText(30, 15, "SinglePlayer", ConsoleColor::bw + ConsoleColor::tk);
+	gameModeChooserArea.drawText(30, 20 , "Multiplayer ", ConsoleColor::bw + ConsoleColor::tk);
+	gameModeChooserArea.drawText(30, 25, "Plateformer", ConsoleColor::bw + ConsoleColor::tk);
+
+	//draw arrow
+	gameModeChooserArea.drawText(26, 10+(pos*5),"-->", ConsoleColor::bw + ConsoleColor::tk);
 	return true;
 }
 bool GameArea::gameOverMenu() {
-	return true;
+
+	ConsoleWriter & writer{ Console::getInstance().writer() };
+	ConsoleImage & gameoverArea{ writer.createImage("GameOver") };
+	writer.push("GameOver");
+
+	gameoverArea.drawText(50, 20, "#####     #    #     # ####### ", ConsoleColor::bk + ConsoleColor::tr);
+	gameoverArea.drawText(50, 21, "#     #   # #   ##   ## #      ", ConsoleColor::bk + ConsoleColor::tr);
+	gameoverArea.drawText(50, 22, "#        #   #  # # # # #      ", ConsoleColor::bk + ConsoleColor::tr);
+	gameoverArea.drawText(50, 23, "#  #### #     # #  #  # #####  ", ConsoleColor::bk + ConsoleColor::tr);
+	gameoverArea.drawText(50, 24, "#     # ####### #     # #      ", ConsoleColor::bk + ConsoleColor::tr);
+	gameoverArea.drawText(50, 25, "#     # #     # #     # #      ", ConsoleColor::bk + ConsoleColor::tr);
+	gameoverArea.drawText(50, 26, " #####  #     # #     # ####### ", ConsoleColor::bk + ConsoleColor::tr);
+	gameoverArea.drawText(50, 30, "####### #     # ####### ######  ", ConsoleColor::bk + ConsoleColor::tr);
+	gameoverArea.drawText(50, 31, "#     # #     # #       #     # ", ConsoleColor::bk + ConsoleColor::tr);
+	gameoverArea.drawText(50, 32, "#     # #     # #       #     # ", ConsoleColor::bk + ConsoleColor::tr);
+	gameoverArea.drawText(50, 33, "#     # #     # #####   ######  ", ConsoleColor::bk + ConsoleColor::tr);
+	gameoverArea.drawText(50, 34, "#     #  #   #  #       #   #   ", ConsoleColor::bk + ConsoleColor::tr);
+	gameoverArea.drawText(50, 35, "#     #   # #   #       #    #  ", ConsoleColor::bk + ConsoleColor::tr);
+	gameoverArea.drawText(50, 36, "#######    #    ####### #     # ", ConsoleColor::bk + ConsoleColor::tr);
+
+	gameoverArea.drawText(50, 45, "Press Any Key to Restart", ConsoleColor::bk + ConsoleColor::tw);
+
+	return false;
 }
 bool GameArea::newGameMenu() {
 	return true;

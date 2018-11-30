@@ -19,6 +19,39 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Console.cpp" />
+    <ClCompile Include="ConsoleColor.cpp" />
+    <ClCompile Include="ConsoleContext.cpp" />
+    <ClCompile Include="ConsoleImage.cpp" />
+    <ClCompile Include="ConsoleKeyEvent.cpp" />
+    <ClCompile Include="ConsoleKeyFilterDown.cpp" />
+    <ClCompile Include="ConsoleKeyFilterModifiers.cpp" />
+    <ClCompile Include="ConsoleKeyFilterUp.cpp" />
+    <ClCompile Include="ConsoleKeyReader.cpp" />
+    <ClCompile Include="ConsoleWriter.cpp" />
+    <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="Fruit.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameArea.cpp" />
+    <ClCompile Include="GameMultiPlayer.cpp" />
+    <ClCompile Include="GamePlateformer.cpp" />
+    <ClCompile Include="GameSinglePlayer.cpp" />
+    <ClCompile Include="GreenFruit.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="PurpleFruit.cpp" />
+    <ClCompile Include="Random.cpp" />
+    <ClCompile Include="RedFruit.cpp" />
+    <ClCompile Include="SinglePlayerAutomaton.cpp" />
+    <ClCompile Include="Snake.cpp" />
+    <ClCompile Include="Transactions.cpp" />
+    <ClCompile Include="YellowFruit.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Console" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="Console.h" />
     <ClInclude Include="ConsoleColor.h" />
     <ClInclude Include="ConsoleContext.h" />
@@ -48,38 +81,6 @@
     <ClInclude Include="Snake.h" />
     <ClInclude Include="Transactions.h" />
     <ClInclude Include="YellowFruit.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Console" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Console.cpp" />
-    <ClCompile Include="ConsoleColor.cpp" />
-    <ClCompile Include="ConsoleContext.cpp" />
-    <ClCompile Include="ConsoleImage.cpp" />
-    <ClCompile Include="ConsoleKeyEvent.cpp" />
-    <ClCompile Include="ConsoleKeyFilterDown.cpp" />
-    <ClCompile Include="ConsoleKeyFilterModifiers.cpp" />
-    <ClCompile Include="ConsoleKeyFilterUp.cpp" />
-    <ClCompile Include="ConsoleKeyReader.cpp" />
-    <ClCompile Include="ConsoleWriter.cpp" />
-    <ClCompile Include="Controller.cpp" />
-    <ClCompile Include="Fruit.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GameArea.cpp" />
-    <ClCompile Include="GameMultiPlayer.cpp" />
-    <ClCompile Include="GamePlateformer.cpp" />
-    <ClCompile Include="GameSinglePlayer.cpp" />
-    <ClCompile Include="GreenFruit.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Point.cpp" />
-    <ClCompile Include="PurpleFruit.cpp" />
-    <ClCompile Include="Random.cpp" />
-    <ClCompile Include="RedFruit.cpp" />
-    <ClCompile Include="SinglePlayerAutomaton.cpp" />
-    <ClCompile Include="Snake.cpp" />
-    <ClCompile Include="Transactions.cpp" />
-    <ClCompile Include="YellowFruit.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
