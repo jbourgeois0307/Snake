@@ -1,5 +1,5 @@
 #include "Game.h"
-Game::Game() :slow_m{ 500 }, reader_m{ nullptr }, writer{ nullptr }, gamezone{nullptr}
+Game::Game() :slow_m{ 500 }, reader_m{ nullptr }, writer{ NULL }, gamezone{ NULL }
 {
 }
 
@@ -136,7 +136,7 @@ void Game::start(size_t width, size_t height) {
 	ConsoleContext context(2000, 2000, "The Snake Game", 8, 8, L"Consolas");
 	Console::defineContext(context);
 
-	ConsoleWriter & write{ Console::getInstance().writer() };
+	&writer = Console::getInstance().writer() ;
 
 	Game::getInstance().gameLoop(State::SinglePlayer);
 }

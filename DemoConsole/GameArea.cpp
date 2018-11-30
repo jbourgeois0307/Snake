@@ -75,7 +75,12 @@ bool GameArea::optionMenu() {
 	return true;
 }
 bool GameArea::welcomeMenu() {
+	ConsoleWriter & writer{ Console::getInstance().writer() };
+	ConsoleImage & welcomeArea{ writer.createImage("Welcome") };
+	writer.push("Welcome");
 
-
+	welcomeArea.fill(178, ConsoleColor::bK + ConsoleColor::tG);
+	welcomeArea.drawText(50, 50, "WELCOME TO SNAKE GAME!!",ConsoleColor::bK + ConsoleColor::tr);
+	welcomeArea.drawText(50, 60, "Press any key to start",ConsoleColor::bK + ConsoleColor::tw);
 	return true;
 }

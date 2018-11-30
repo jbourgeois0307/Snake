@@ -27,8 +27,8 @@ private:
 	State update(State state);
 	void render(State state);
 
-	ConsoleWriter * writer;
-	ConsoleImage * gamezone;
+	ConsoleWriter *writer;
+	ConsoleImage *gamezone;
 	ElapsedTimer <>timer;
 	size_t slow_m;
 	ConsoleKeyReader * reader_m;
