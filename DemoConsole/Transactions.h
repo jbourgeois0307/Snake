@@ -22,7 +22,7 @@ public:
 	bool conditionGameModeChooser();
 	bool conditionOptions();
 	bool conditionWelcome();
-	bool conditionSinglePlayer();
+	bool conditionSinglePlayer(Snake snake);
 	bool conditionSnakeCollision(Snake snake);
 	bool conditionMultiPlayer();
 	bool conditionPlatformer();
