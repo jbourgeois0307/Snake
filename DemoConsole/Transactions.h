@@ -4,6 +4,9 @@
 #include "Snake.h"
 #include "Game.h"
 #include "SinglePlayerAutomaton.h"
+#include "Fruit.h"
+#include "ConsoleKeyEvent.h"
+
 class Transaction
 {
 private:
@@ -25,5 +28,7 @@ public:
 	bool conditionPlatformer();
 	bool conditionGameOver(Snake snake);
 	bool conditionSnakeMove(Snake snake);
+	bool conditionSnakeEat(Snake snake, Fruit fruit);
+	bool conditionMoveInput(std::list<ConsoleKeyEvent> ke);
 };
 #endif //TRANSACTIONS_H

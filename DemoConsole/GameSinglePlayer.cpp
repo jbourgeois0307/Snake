@@ -61,3 +61,9 @@ Snake GameSinglePlayer::snake() const
 	//getter du snake dans le jeu pour le test des conditions(transactions)
 	return snake_m;
 }
+
+Fruit GameSinglePlayer::fruit() const
+{
+	//getter du fruit dans le jeu pour le test des conditions(transactions)
+	return fruit_m;
+}

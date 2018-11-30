@@ -7,7 +7,8 @@ Snake::Snake()
 //Constructeur qui demande la vitesse et positionne la tête à (50,50)
 Snake::Snake(float speed)
 	: mSpeed{ speed },
-	mBodLength { 4 }
+	mBodLength{ 4 },
+	mCurDirection{ Direction::Up }
 {
 	Point p = Point(50, 50);
 	mBodPart.insert(mBodPart.begin(), p);
@@ -20,7 +21,8 @@ Snake::Snake(float speed)
 //Constructeur qui requiert vitesse et positions de la tête initiales
 Snake::Snake(float speed, Point &p)
 	: mSpeed{speed},
-	mBodLength { 4 }
+	mBodLength { 4 },
+	mCurDirection{ Direction::Up }
 {
 	mBodPart.insert(mBodPart.begin(), p);
 	for (int b{ 1 }; b <= mBodLength; ++b)
@@ -34,7 +36,7 @@ Snake::~Snake()
 }
 
 //Fait avancer le serpent ainsi que sa queue
-void Snake::slither(Point &p)
+void Snake::slither()
 {
 	//avance la queue du serpent en premier
 	for (int b{ 1 };b<=static_cast<int>(mBodPart.size());++b)
@@ -42,7 +44,7 @@ void Snake::slither(Point &p)
 		(mBodPart.begin() + b) = (mBodPart.begin()-b);
 	}
 	//La tête se place au point demandé
-	slitherHead(p);
+	slitherHead();
 }
 
 void Snake::eatFruit(Fruit &fruit)
@@ -69,6 +71,16 @@ void Snake::speed(float speedModifier)
 	mSpeed *= speedModifier;
 }
 
+void Snake::setCurDirection(Direction direction)
+{
+	mCurDirection = direction;
+}
+
+Snake::Direction Snake::curDirection()
+{
+	return mCurDirection;
+}
+
 int Snake::bodLength()
 {
 	return mBodLength;
@@ -79,7 +91,20 @@ std::vector<Point> Snake::bodPart()
 	return mBodPart;
 }
 
-void Snake::slitherHead(Point &p)
+void Snake::slitherHead()
 {
-	mBodPart.front() = p;
+	nextPoint(mBodPart.front());
+}
+
+void Snake::nextPoint(Point &point) 
+{
+	//Un point à additionner pour le déplacement
+	if (mCurDirection == Direction::Up)
+		point.setY((int)point.y()-1);
+	else if (mCurDirection == Direction::Down)
+		point.setY((int)point.y() + 1);
+	else if (mCurDirection == Direction::Left)
+		point.setX((int)point.x() - 1);
+	else
+		point.setX((int)point.x() + 1);
 }

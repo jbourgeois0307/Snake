@@ -1,18 +1,6 @@
-<<<<<<< HEAD
-﻿  Transactions.cpp
-YellowFruit.obj : warning LNK4099: PDB 'vc141.pdb' n'a pu Ûtre trouvÚ avec 'YellowFruit.obj' ou sur 'Y:\B52\Snake\Debug\vc141.pdb'á; l'objet sera liÚ sans informations de dÚbogage
-Snake.obj : warning LNK4099: PDB 'vc141.pdb' n'a pu Ûtre trouvÚ avec 'Snake.obj' ou sur 'Y:\B52\Snake\Debug\vc141.pdb'á; l'objet sera liÚ sans informations de dÚbogage
-RedFruit.obj : warning LNK4099: PDB 'vc141.pdb' n'a pu Ûtre trouvÚ avec 'RedFruit.obj' ou sur 'Y:\B52\Snake\Debug\vc141.pdb'á; l'objet sera liÚ sans informations de dÚbogage
-Random.obj : warning LNK4099: PDB 'vc141.pdb' n'a pu Ûtre trouvÚ avec 'Random.obj' ou sur 'Y:\B52\Snake\Debug\vc141.pdb'á; l'objet sera liÚ sans informations de dÚbogage
-PurpleFruit.obj : warning LNK4099: PDB 'vc141.pdb' n'a pu Ûtre trouvÚ avec 'PurpleFruit.obj' ou sur 'Y:\B52\Snake\Debug\vc141.pdb'á; l'objet sera liÚ sans informations de dÚbogage
-Point.obj : warning LNK4099: PDB 'vc141.pdb' n'a pu Ûtre trouvÚ avec 'Point.obj' ou sur 'Y:\B52\Snake\Debug\vc141.pdb'á; l'objet sera liÚ sans informations de dÚbogage
-GreenFruit.obj : warning LNK4099: PDB 'vc141.pdb' n'a pu Ûtre trouvÚ avec 'GreenFruit.obj' ou sur 'Y:\B52\Snake\Debug\vc141.pdb'á; l'objet sera liÚ sans informations de dÚbogage
-GamePlateformer.obj : warning LNK4099: PDB 'vc141.pdb' n'a pu Ûtre trouvÚ avec 'GamePlateformer.obj' ou sur 'Y:\B52\Snake\Debug\vc141.pdb'á; l'objet sera liÚ sans informations de dÚbogage
-GameMultiPlayer.obj : warning LNK4099: PDB 'vc141.pdb' n'a pu Ûtre trouvÚ avec 'GameMultiPlayer.obj' ou sur 'Y:\B52\Snake\Debug\vc141.pdb'á; l'objet sera liÚ sans informations de dÚbogage
-Fruit.obj : warning LNK4099: PDB 'vc141.pdb' n'a pu Ûtre trouvÚ avec 'Fruit.obj' ou sur 'Y:\B52\Snake\Debug\vc141.pdb'á; l'objet sera liÚ sans informations de dÚbogage
-Controller.obj : warning LNK4099: PDB 'vc141.pdb' n'a pu Ûtre trouvÚ avec 'Controller.obj' ou sur 'Y:\B52\Snake\Debug\vc141.pdb'á; l'objet sera liÚ sans informations de dÚbogage
-  DemoConsole.vcxproj -> Y:\B52\Snake\Debug\SnakeGame.exe
-=======
-﻿  GameSinglePlayer.cpp
-  DemoConsole.vcxproj -> Y:\workspace b52\Snake\Debug\SnakeGame.exe
->>>>>>> 37822d918c01a9f5b546588139bde9b3639d60c8
+﻿  SinglePlayerAutomaton.cpp
+y:\b52\snake\democonsole\singleplayerautomaton.cpp(47): error C2248: 'Game::keyEvents' : impossible d'accéder à private membre déclaré(e) dans la classe 'Game'
+  y:\b52\snake\democonsole\game.h(37): note: voir la déclaration de 'Game::keyEvents'
+  y:\b52\snake\democonsole\game.h(12): note: voir la déclaration de 'Game'
+  Transactions.cpp
+  Génération de code en cours...

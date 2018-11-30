@@ -9,20 +9,25 @@ class Snake
 	int mBodLength;
 	float mSpeed;
 	std::vector<Point> mBodPart;
-
 public:
 	Snake();
 	Snake(float speed);
 	Snake(float speed, Point &initP);
 	~Snake();
-	void slither(Point &p);
-	void slitherHead(Point &p);
+	enum class Direction { Up, Down, Left, Right };
+	void slither();
+	void slitherHead();
 	void eatFruit(Fruit &fruit);
 	void addTail(int addedLength);
 	void cutTail(int cuttedLength);
 	void speed(float speedModifier);
+	void setCurDirection(Direction direction);
+	Direction curDirection();
 	int bodLength();
 	std::vector<Point> bodPart();
+	void nextPoint(Point &point);
+private:
+	Direction mCurDirection;
 };
 
 

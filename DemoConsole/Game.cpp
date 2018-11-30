@@ -90,6 +90,11 @@ void Game::render(State state) {
 	}
 }
 
+ConsoleKeyReader::KeyEvents Game::getKeyEvents() const
+{
+	return keyEvents;
+}
+
 Game::State Game::update(State state) {
 	switch (state) {
 	case State::Welcome:

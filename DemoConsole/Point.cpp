@@ -21,6 +21,16 @@ double Point::y()
 
 Point::Point(double x, double y)
 	: mX{ x },
-	  mY{ y }
+	mY{ y }
 {
+}
+
+void Point::setX(int x) 
+{
+	mX=x;
+}
+
+void Point::setY(int y)
+{
+	mY = y;
 }

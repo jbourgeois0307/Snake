@@ -21,7 +21,7 @@ public:
 		static Game instance;
 		return instance;
 	}
-
+	ConsoleKeyReader::KeyEvents getKeyEvents() const;
 private:
 	State nextState(State state);
 	void gameLoop(State state = State::Welcome);

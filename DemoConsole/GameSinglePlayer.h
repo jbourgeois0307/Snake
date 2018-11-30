@@ -32,6 +32,7 @@ public:
 	void showSnake(ConsoleImage & image);
 	void showFruit(ConsoleImage & image);
 	Snake snake() const;
+	Fruit fruit() const;
 
 };
 
