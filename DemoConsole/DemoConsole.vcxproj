@@ -39,6 +39,7 @@
     <ClInclude Include="GamePlateformer.h" />
     <ClInclude Include="GameSinglePlayer.h" />
     <ClInclude Include="GreenFruit.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="PurpleFruit.h" />
     <ClInclude Include="Random.h" />

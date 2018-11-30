@@ -105,6 +105,9 @@
     <ClInclude Include="Point.h">
       <Filter>Header\Autre</Filter>
     </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header\Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Console.cpp">
