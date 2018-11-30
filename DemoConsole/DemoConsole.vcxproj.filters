@@ -27,6 +27,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ClCompile Include="Console.cpp">
       <Filter>CPP\Console</Filter>
     </ClCompile>
@@ -111,6 +112,37 @@
     <ClCompile Include="Random.cpp">
       <Filter>CPP\Autre</Filter>
     </ClCompile>
+=======
+    <ClInclude Include="Console.h" />
+    <ClInclude Include="ConsoleColor.h" />
+    <ClInclude Include="ConsoleContext.h" />
+    <ClInclude Include="ConsoleImage.h" />
+    <ClInclude Include="ConsoleKeyEvent.h" />
+    <ClInclude Include="ConsoleKeyFilter.h" />
+    <ClInclude Include="ConsoleKeyFilterAny.h" />
+    <ClInclude Include="ConsoleKeyFilterDown.h" />
+    <ClInclude Include="ConsoleKeyFilterModifiers.h" />
+    <ClInclude Include="ConsoleKeyFilterUp.h" />
+    <ClInclude Include="ConsoleKeyReader.h" />
+    <ClInclude Include="ConsoleWriter.h" />
+    <ClInclude Include="Controller.h" />
+    <ClInclude Include="Fruit.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameArea.h" />
+    <ClInclude Include="GameMultiPlayer.h" />
+    <ClInclude Include="GamePlateformer.h" />
+    <ClInclude Include="GameSinglePlayer.h" />
+    <ClInclude Include="GreenFruit.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="PurpleFruit.h" />
+    <ClInclude Include="Random.h" />
+    <ClInclude Include="RedFruit.h" />
+    <ClInclude Include="SinglePlayerAutomaton.h" />
+    <ClInclude Include="Snake.h" />
+    <ClInclude Include="YellowFruit.h" />
+    <ClInclude Include="Transactions.h" />
+>>>>>>> 0736c66a493ca93c6554587d8fdc12d6235e684b
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h">

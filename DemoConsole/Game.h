@@ -4,6 +4,7 @@
 #include "Console.h"
 #include "GameSinglePlayer.h"
 #include "GameArea.h"
+#include "Transactions.h"
 
 class Game
 {

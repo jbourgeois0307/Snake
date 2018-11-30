@@ -3,7 +3,7 @@
 
 GameSinglePlayer::GameSinglePlayer() :haveFruit_m{ false }, snakeExist_m{ true }, fruit_m{ Fruit(Point(5, 5), 5) }
 {
-	snake = Snake(0.5f);
+	snake_m = Snake(0.5f);
 }
 GameSinglePlayer::~GameSinglePlayer()
 {
@@ -29,7 +29,7 @@ void GameSinglePlayer::generateFruit() {
 void GameSinglePlayer::generateSnake()
 {
 	Point p(Random::getInstance().uniformRandomize(1, 90) + 5, Random::getInstance().uniformRandomize(1, 90) + 5);
-	snake = Snake(0.5, p );
+	snake_m = Snake(0.5, p );
 
 }
 
@@ -37,9 +37,9 @@ void GameSinglePlayer::showSnake(ConsoleImage & image)
 {
 	if (snakeExist_m)
 	{
-		std::vector<Point>snakePart{snake.bodPart() };
-		for (int i{ 0 }; i < snake.bodLength()-1; ++i) {
-			image.drawPoint(snake.bodPart().at(i).x(), snake.bodPart().at(i).y(), (char)178, ConsoleColor::bk + ConsoleColor::ty);
+		std::vector<Point>snakePart{ snake_m.bodPart() };
+		for (int i{ 0 }; i < snake_m.bodLength()-1; ++i) {
+			image.drawPoint(snake_m.bodPart().at(i).x(), snake_m.bodPart().at(i).y(), (char)178, ConsoleColor::bk + ConsoleColor::ty);
 		}
 	}
 		
@@ -50,4 +50,10 @@ void GameSinglePlayer::showFruit(ConsoleImage & image)
 	if(haveFruit_m){
 		image.drawPoint(fruit_m.point().x(), fruit_m.point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tr);
 	}
+}
+
+Snake GameSinglePlayer::snake() const
+{
+	//getter du snake dans le jeu pour le test des conditions(transactions)
+	return snake_m;
 }

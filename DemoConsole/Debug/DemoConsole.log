@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  GameArea.cpp
 y:\workspace b52\snake\democonsole\gamearea.cpp(34): warning C4309: 'argument' : troncation de valeur de constante
 y:\workspace b52\snake\democonsole\gamearea.cpp(48): warning C4309: 'argument' : troncation de valeur de constante
@@ -13,3 +14,8 @@ y:\workspace b52\snake\democonsole\gamearea.cpp(126): warning C4129: '_' : cara
 y:\workspace b52\snake\democonsole\gamearea.cpp(126): warning C4129: ' ' : caractère de séquence d'échappement non reconnu
 y:\workspace b52\snake\democonsole\gamearea.cpp(127): warning C4129: '_' : caractère de séquence d'échappement non reconnu
   DemoConsole.vcxproj -> Y:\workspace b52\Snake\Debug\SnakeGame.exe
+=======
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: Le répertoire intermédiaire (Debug\) contient des fichiers partagés provenant d'un autre projet (DemoConsole.vcxproj). Cela peut entraîner un comportement de nettoyage et de régénération incorrect.
+  SinglePlayerAutomaton.cpp
+  DemoConsole.vcxproj -> Y:\B52\Snake\Debug\SnakeGame.exe
+>>>>>>> 0736c66a493ca93c6554587d8fdc12d6235e684b

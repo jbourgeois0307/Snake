@@ -1,7 +1,12 @@
 #include "Transactions.h"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0736c66a493ca93c6554587d8fdc12d6235e684b
 Transaction::Transaction()
 {
 }
+
 Transaction::~Transaction()
 {
 }
@@ -33,8 +38,16 @@ bool Transaction::conditionPlatformer()
 {
 	return false;
 }
-bool Transaction::conditionGameOver()
+bool Transaction::conditionGameOver(Snake snake)
 {
+	//Si la tête touche à la queue
+	for (int i{ 1 }; i < snake.bodLength() - 1; ++i) {
+		if (snake.bodPart().at(0).x() == snake.bodPart().at(i).x())
+			if (snake.bodPart().at(0).y() == snake.bodPart().at(i).y())
+				//le Game over aura lieu
+				return true;
+	}
+	//Sinon, continue la partie
 	return false;
 }
 bool conditionMultiPlayer()
