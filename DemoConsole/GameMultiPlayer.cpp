@@ -38,5 +38,4 @@ void GameMultiPlayer::showSnake(ConsoleImage & image)
 			image.drawPoint(adversary_m.bodPart().at(i).x(), adversary_m.bodPart().at(i).y(), (char)178, ConsoleColor::bk + ConsoleColor::tb);
 		}
 	}
-
 }

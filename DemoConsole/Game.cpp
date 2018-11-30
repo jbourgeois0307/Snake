@@ -15,16 +15,19 @@ Game::State Game::nextState(State state)
 void Game::gameLoop(State state) {
 
 	timer.start();
-//	double lastTime = timer.elapsed();
 	while (true)
 	{
-	//	double current = timer.elapsed();
 
-//double elapsed = current - lastTime;
+
 		processInput();
 		state = update(state);
 		render(state);
-	//	lastTime = current;
+		timer.restart();
+		int timertime = timer.elapsed();
+		while (timertime <= 100000000) {
+			timertime = timer.elapsed();
+
+		}
 	}
 }
 void Game::processInput() {
@@ -53,6 +56,10 @@ void Game::render(State state) {
 bool Game::anyTouch() {
 	if (keyEvents.size() > 0)
 	{
+		size_t size = keyEvents.size();
+		for (int i = 0; i < size; ++i) {
+			keyEvents.pop_back();
+		}
 		return true;
 	}
 	else {
