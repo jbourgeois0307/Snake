@@ -7,7 +7,7 @@
 
 #include "GameArea.h"
 #include "Transactions.h"
-
+#include "ElapsedTimer.h"
 class Game
 {
 private:
@@ -30,9 +30,11 @@ private:
 	State update(State state);
 	void render(State state);
 
+	bool anyTouch();
+
 	ConsoleWriter *writer;
 	ConsoleImage *gamezone;
-	//ElapsedTimer <>timer;
+	ElapsedTimer <>timer;
 	size_t slow_m;
 	ConsoleKeyReader * reader_m;
 	ConsoleKeyReader::KeyEvents keyEvents;

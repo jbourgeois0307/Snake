@@ -14,7 +14,7 @@ Game::State Game::nextState(State state)
 
 void Game::gameLoop(State state) {
 
-	//timer.start();
+	timer.start();
 //	double lastTime = timer.elapsed();
 	while (true)
 	{
@@ -22,7 +22,7 @@ void Game::gameLoop(State state) {
 
 //double elapsed = current - lastTime;
 		processInput();
-		update(state);
+		state = update(state);
 		render(state);
 	//	lastTime = current;
 	}
@@ -48,6 +48,15 @@ void Game::render(State state) {
 		break;
 	case State::GameOver:GameArea::getInstance().gameOverMenu();
 		break;
+	}
+}
+bool Game::anyTouch() {
+	if (keyEvents.size() > 0)
+	{
+		return true;
+	}
+	else {
+	return false;
 	}
 }
 void Game::gamemodechooser(State& state){
@@ -83,8 +92,8 @@ void Game::gamemodechooser(State& state){
 Game::State Game::update(State state) {
 	switch (state) {
 	case State::Welcome:
-		if (false) {
-			return nextState(state);
+		if (anyTouch()) {
+			return State::GameModeChooser;
 		}
 		else {
 			return state;
@@ -154,6 +163,6 @@ void Game::start(size_t width, size_t height) {
 	ConsoleContext context(800, 800, "The Snake Game", 8, 8, L"Consolas");
 	Console::defineContext(context);
 	Game::getInstance().reader_m = &( Console::getInstance().keyReader());
-	Game::getInstance().gameLoop(State::GameModeChooser);
+	Game::getInstance().gameLoop(State::Welcome);
 }
 
