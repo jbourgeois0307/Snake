@@ -65,6 +65,7 @@
     <ClInclude Include="ConsoleKeyReader.h" />
     <ClInclude Include="ConsoleWriter.h" />
     <ClInclude Include="Controller.h" />
+    <ClInclude Include="ElapsedTimer.h" />
     <ClInclude Include="Fruit.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameArea.h" />

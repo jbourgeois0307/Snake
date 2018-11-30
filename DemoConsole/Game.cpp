@@ -30,14 +30,15 @@ void Game::gameLoop(State state) {
 void Game::processInput() {
 	(*reader_m).read(keyEvents);
 }
+int pos;
 void Game::render(State state) {
 	switch (state) {
 	case State::Welcome: GameArea::getInstance().welcomeMenu();
 		break;
-	case State::StartMenu:GameArea::getInstance().newGameMenu();
+	case State::StartMenu:GameArea::getInstance().newGameMenu("hello");
 		break;
 	case State::GameModeChooser:
-		int pos;
+		
 		if (keyEvents.size() > 0) {
 			for (auto &event : keyEvents) {
 				if (event.keyA() == (int) '1')
@@ -58,7 +59,13 @@ void Game::render(State state) {
 
 				if (event.keyA() == 13) {
 					if (pos == 1) {
-						GameArea::getInstance().gameModeChooser(3);
+						GameArea::getInstance().gameModeChooser(1);
+					}
+					if (pos == 2) {
+						GameArea::getInstance().gameModeChooser(1);
+					}
+					if (pos == 3) {
+						GameArea::getInstance().gameModeChooser(1);
 					}
 				}
 
@@ -123,6 +130,7 @@ Game::State Game::update(State state) {
 		}
 		else {
 			GameSinglePlayer::getInstance().generateFruit();
+			GameSinglePlayer::getInstance().generateSnake();
 			return State::SinglePlayer;
 		}
 		break;
@@ -131,6 +139,8 @@ Game::State Game::update(State state) {
 			return State::GameOver;
 		}
 		else {
+			GameMultiPlayer::getInstance().generateFruit();
+			GameMultiPlayer::getInstance().generateSnake();
 			return State::Multiplayer;
 		}
 		break;
@@ -155,10 +165,9 @@ Game::State Game::update(State state) {
 
 void Game::start(size_t width, size_t height) {
 
-	ConsoleContext context(2000, 2000, "The Snake Game", 8, 8, L"Consolas");
+	ConsoleContext context(800, 800, "The Snake Game", 8, 8, L"Consolas");
 	Console::defineContext(context);
 	Game::getInstance().reader_m = &( Console::getInstance().keyReader());
-
-	Game::getInstance().gameLoop(State::Plateformer);
+	Game::getInstance().gameLoop(State::Multiplayer);
 }
 

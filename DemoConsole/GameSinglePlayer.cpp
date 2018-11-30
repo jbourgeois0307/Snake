@@ -1,9 +1,9 @@
 #include "GameSinglePlayer.h"
 #include <vector>
 
-GameSinglePlayer::GameSinglePlayer() :haveFruit_m{ false }, snakeExist_m{ true }, fruit_m{ Fruit(Point(5, 5), 5) }
+GameSinglePlayer::GameSinglePlayer() :haveFruit_m{ false }, snakeExist_m{ false }, fruit_m{ Fruit(Point(5, 5), 5) }, snake_m{ Snake(0.5f) }
 {
-	snake_m = Snake(0.5f);
+	
 }
 GameSinglePlayer::~GameSinglePlayer()
 {
@@ -28,8 +28,12 @@ void GameSinglePlayer::generateFruit() {
 
 void GameSinglePlayer::generateSnake()
 {
-	Point p(Random::getInstance().uniformRandomize(1, 90) + 5, Random::getInstance().uniformRandomize(1, 90) + 5);
-	snake_m = Snake(0.5, p );
+	if (!snakeExist_m) {
+		Point p(Random::getInstance().uniformRandomize(1, 90) + 5, Random::getInstance().uniformRandomize(1, 90) + 5);
+		snake_m = Snake(0.5f, p);
+		GameSinglePlayer::snakeExist_m = true;
+	}
+
 
 }
 
