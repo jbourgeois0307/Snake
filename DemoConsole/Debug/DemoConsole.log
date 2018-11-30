@@ -14,7 +14,6 @@ y:\workspace b52\snake\democonsole\gamearea.cpp(91): warning C4129: '_' : carac
 y:\workspace b52\snake\democonsole\gamearea.cpp(91): warning C4129: ' ' : caractère de séquence d'échappement non reconnu
 y:\workspace b52\snake\democonsole\gamearea.cpp(92): warning C4129: '_' : caractère de séquence d'échappement non reconnu
   GameSinglePlayer.cpp
-  Snake.cpp
   main.cpp
   Génération de code en cours...
 y:\workspace b52\snake\democonsole\game.cpp(122): warning C4715: 'Game::update' : les chemins de contrôle ne retournent pas tous une valeur

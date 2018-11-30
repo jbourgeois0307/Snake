@@ -26,7 +26,7 @@ public:
 		return instance;
 	}
 
-	bool play(ConsoleKeyReader::KeyEvents& keyEvents);
+	bool play();
 	void generateFruit();
 	void generateSnake();
 	void showSnake(ConsoleImage & image);

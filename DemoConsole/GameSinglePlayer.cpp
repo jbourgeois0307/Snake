@@ -9,7 +9,7 @@ GameSinglePlayer::~GameSinglePlayer()
 {
 }
 
-bool GameSinglePlayer::play(ConsoleKeyReader::KeyEvents& keyEvents)
+bool GameSinglePlayer::play()
 {
 	if (!haveFruit_m) {
 		getInstance().generateFruit();
@@ -37,9 +37,9 @@ void GameSinglePlayer::showSnake(ConsoleImage & image)
 {
 	if (snakeExist_m)
 	{
-		std::vector<Point>snakePart{ snake.bodPart() };
-		for (int i{ 0 }; i < snake.bodLength(); ++i) {
-			image.drawPoint(snakePart.at(i).x(), snakePart.at(i).y(), (char)178, ConsoleColor::bk + ConsoleColor::ty);
+		std::vector<Point>snakePart{snake.bodPart() };
+		for (int i{ 0 }; i < snake.bodLength()-1; ++i) {
+			image.drawPoint(snake.bodPart().at(i).x(), snake.bodPart().at(i).y(), (char)178, ConsoleColor::bk + ConsoleColor::ty);
 		}
 	}
 		

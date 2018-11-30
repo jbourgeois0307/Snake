@@ -76,7 +76,7 @@ int Snake::bodLength()
 
 std::vector<Point> Snake::bodPart()
 {
-	return std::vector<Point>();
+	return mBodPart;
 }
 
 void Snake::slitherHead(Point &p)
