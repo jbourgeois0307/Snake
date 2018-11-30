@@ -35,7 +35,6 @@ bool GameArea::singleplayer() {
 	singlePlayerArea.fill(5.0, 5.0, 90.0, 90.0, (char)176, ConsoleColor::bg + ConsoleColor::tw);
 
 	showInfo(singlePlayerArea, 100, "singleplayer","Ludovic", 0, 4, 0, 0, 0);
-
 	return false;
 }
 
