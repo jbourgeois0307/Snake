@@ -149,9 +149,6 @@
     <ClInclude Include="ConsoleWriter.h">
       <Filter>Headder\Console</Filter>
     </ClInclude>
-    <ClInclude Include="ElapsedTimer.h">
-      <Filter>Headder\Game</Filter>
-    </ClInclude>
     <ClInclude Include="Fruit.h">
       <Filter>Headder\Game</Filter>
     </ClInclude>
@@ -201,6 +198,9 @@
       <Filter>Headder\Autre</Filter>
     </ClInclude>
     <ClInclude Include="Controller.h">
+      <Filter>Headder\Autre</Filter>
+    </ClInclude>
+    <ClInclude Include="ElapsedTimer.h">
       <Filter>Headder\Autre</Filter>
     </ClInclude>
   </ItemGroup>

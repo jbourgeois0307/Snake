@@ -7,6 +7,7 @@
 
 #include "GameArea.h"
 #include "Transactions.h"
+#include "ElapsedTimer.h"
 
 class Game
 {
@@ -15,6 +16,7 @@ private:
 	~Game();
 public:
 	void static start(size_t width=800, size_t height= 800);
+	void test();
 	enum class State {Welcome, StartMenu, GameModeChooser, Options, SinglePlayer, Multiplayer, Plateformer, GameOver};
 	static Game& getInstance()
 	{
@@ -26,15 +28,20 @@ private:
 	State nextState(State state);
 	void gameLoop(State state = State::Welcome);
 	void processInput();
+	void gamemodechooser(State & state);
 	State update(State state);
 	void render(State state);
 
+	bool anyTouch();
+
 	ConsoleWriter *writer;
 	ConsoleImage *gamezone;
-	//ElapsedTimer <>timer;
+	ElapsedTimer <>timer;
 	size_t slow_m;
 	ConsoleKeyReader * reader_m;
 	ConsoleKeyReader::KeyEvents keyEvents;
+	int positonChooser = 1;
+
 };
 
 

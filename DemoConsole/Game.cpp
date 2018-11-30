@@ -14,72 +14,36 @@ Game::State Game::nextState(State state)
 
 void Game::gameLoop(State state) {
 
-	//timer.start();
-//	double lastTime = timer.elapsed();
+	timer.start();
 	while (true)
 	{
-	//	double current = timer.elapsed();
+		ConsoleKeyEvent::KeyState::KeyDown;
 
-//double elapsed = current - lastTime;
 		processInput();
-		update(state);
+		state = update(state);
 		render(state);
-	//	lastTime = current;
+		timer.restart();
+		int timertime = timer.elapsed();
+		while (timertime <= 100000000) {
+			timertime = timer.elapsed();
+
+		}
 	}
 }
 void Game::processInput() {
 	(*reader_m).read(keyEvents);
 }
-int pos;
 void Game::render(State state) {
 	switch (state) {
 	case State::Welcome: GameArea::getInstance().welcomeMenu();
 		break;
 	case State::StartMenu:GameArea::getInstance().newGameMenu("hello");
 		break;
-	case State::GameModeChooser:
-		
-		if (keyEvents.size() > 0) {
-			for (auto &event : keyEvents) {
-				if (event.keyA() == (int) '1')
-				{
-					pos = 1;
-					GameArea::getInstance().gameModeChooser(1);
-				}
-				if (event.keyA() == (int) '2')
-				{
-					pos = 2;
-					GameArea::getInstance().gameModeChooser(2);
-				}
-				if (event.keyA() == (int) '3')
-				{
-					pos = 3;
-					GameArea::getInstance().gameModeChooser(3);
-				}
-
-				if (event.keyA() == 13) {
-					if (pos == 1) {
-						GameArea::getInstance().gameModeChooser(1);
-					}
-					if (pos == 2) {
-						GameArea::getInstance().gameModeChooser(1);
-					}
-					if (pos == 3) {
-						GameArea::getInstance().gameModeChooser(1);
-					}
-				}
-
-
-
-				
-			}
-		}
-		
+	case State::GameModeChooser:GameArea::getInstance().gameModeChooser(positonChooser);
 		break;
 	case State::Options:GameArea::getInstance().optionMenu();
 		break;
 	case State::SinglePlayer:GameArea::getInstance().singleplayer();
-
 		break;
 	case State::Multiplayer:GameArea::getInstance().multiplayer();
 		break;
@@ -90,16 +54,64 @@ void Game::render(State state) {
 	}
 }
 
+
 ConsoleKeyReader::KeyEvents Game::getKeyEvents() const
 {
 	return keyEvents;
 }
 
+bool Game::anyTouch() {
+	if (keyEvents.size() > 0)
+	{
+		size_t size = keyEvents.size();
+		for (int i = 0; i < size; ++i) {
+			keyEvents.pop_back();
+		}
+		return true;
+	}
+	else {
+	return false;
+	}
+}
+void Game::gamemodechooser(State& state){
+	if (keyEvents.size() > 0) {
+		for (auto &event : keyEvents) {
+			if (event.keyA() == (int) '1')
+			{
+				positonChooser = 1;
+			}
+			if (event.keyA() == (int) '2')
+			{
+				positonChooser = 2;
+			}
+			if (event.keyA() == (int) '3')
+			{
+				positonChooser = 3;
+			}
+			int keyevent = event.keyA();
+			if (event.keyV() == VK_UP) {
+				test();
+			}
+			if (event.keyA() == 13) {
+				if (positonChooser == 1) {
+					state = State::SinglePlayer;
+				}
+				if (positonChooser == 2) {
+					state = State::Multiplayer;
+				}
+				if (positonChooser == 3) {
+					state = State::Plateformer;
+				}
+			}
+		}
+	}
+}
+
 Game::State Game::update(State state) {
 	switch (state) {
 	case State::Welcome:
-		if (false) {
-			return nextState(state);
+		if (anyTouch()) {
+			return State::GameModeChooser;
 		}
 		else {
 			return state;
@@ -114,12 +126,8 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::GameModeChooser:
-		if (Transaction::getInstance().conditionSinglePlayer()) {
-			return nextState(state);
-		}
-		else {
-			return state;
-		}
+		gamemodechooser(state);
+		return state;
 		break;
 	case State::Options:
 		if (false) {
@@ -140,7 +148,7 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::Multiplayer:
-		if (false) {
+		if (Transaction::getInstance().conditionGameOver(GameSinglePlayer::getInstance().snake())) {
 			return State::GameOver;
 		}
 		else {
@@ -150,7 +158,7 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::Plateformer:
-		if (false) {
+		if (Transaction::getInstance().conditionGameOver(GameSinglePlayer::getInstance().snake())) {
 			return State::GameOver;
 		}
 		else {
@@ -158,8 +166,8 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::GameOver:
-		if (false) {
-			return State::GameOver;
+		if (anyTouch()) {
+			return State::GameModeChooser;
 		}
 		else {
 			return State::GameOver;
@@ -173,6 +181,11 @@ void Game::start(size_t width, size_t height) {
 	ConsoleContext context(800, 800, "The Snake Game", 8, 8, L"Consolas");
 	Console::defineContext(context);
 	Game::getInstance().reader_m = &( Console::getInstance().keyReader());
-	Game::getInstance().gameLoop(State::Multiplayer);
+	Game::getInstance().gameLoop(State::GameModeChooser);
 }
 
+void Game::test() {
+	while (true) {
+		writer->randomize();
+	}
+}

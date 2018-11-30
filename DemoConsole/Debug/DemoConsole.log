@@ -1,6 +1,29 @@
-﻿  SinglePlayerAutomaton.cpp
-y:\b52\snake\democonsole\singleplayerautomaton.cpp(47): error C2248: 'Game::keyEvents' : impossible d'accéder à private membre déclaré(e) dans la classe 'Game'
-  y:\b52\snake\democonsole\game.h(37): note: voir la déclaration de 'Game::keyEvents'
-  y:\b52\snake\democonsole\game.h(12): note: voir la déclaration de 'Game'
+﻿  Controller.cpp
+  Game.cpp
+y:\b52\snake\democonsole\game.cpp(26): warning C4244: 'initialisation' : conversion de 'int64_t' en 'int', perte possible de données
+y:\b52\snake\democonsole\game.cpp(28): warning C4244: '=' : conversion de 'int64_t' en 'int', perte possible de données
+y:\b52\snake\democonsole\game.cpp(67): warning C4018: '<' : incompatibilité signed/unsigned
+  GameArea.cpp
+y:\b52\snake\democonsole\gamearea.cpp(35): warning C4309: 'argument' : troncation de valeur de constante
+y:\b52\snake\democonsole\gamearea.cpp(49): warning C4309: 'argument' : troncation de valeur de constante
+y:\b52\snake\democonsole\gamearea.cpp(62): warning C4309: 'argument' : troncation de valeur de constante
+y:\b52\snake\democonsole\gamearea.cpp(74): warning C4309: 'argument' : troncation de valeur de constante
+y:\b52\snake\democonsole\gamearea.cpp(128): warning C4309: 'argument' : troncation de valeur de constante
+y:\b52\snake\democonsole\gamearea.cpp(132): warning C4129: ' ' : caractère de séquence d'échappement non reconnu
+y:\b52\snake\democonsole\gamearea.cpp(133): warning C4129: '_' : caractère de séquence d'échappement non reconnu
+y:\b52\snake\democonsole\gamearea.cpp(133): warning C4129: ' ' : caractère de séquence d'échappement non reconnu
+y:\b52\snake\democonsole\gamearea.cpp(134): warning C4129: ' ' : caractère de séquence d'échappement non reconnu
+y:\b52\snake\democonsole\gamearea.cpp(134): warning C4129: '|' : caractère de séquence d'échappement non reconnu
+y:\b52\snake\democonsole\gamearea.cpp(135): warning C4129: '_' : caractère de séquence d'échappement non reconnu
+y:\b52\snake\democonsole\gamearea.cpp(135): warning C4129: ' ' : caractère de séquence d'échappement non reconnu
+y:\b52\snake\democonsole\gamearea.cpp(136): warning C4129: '_' : caractère de séquence d'échappement non reconnu
+  GameMultiPlayer.cpp
+  GameSinglePlayer.cpp
+  SinglePlayerAutomaton.cpp
+  Snake.cpp
   Transactions.cpp
   Génération de code en cours...
+y:\b52\snake\democonsole\singleplayerautomaton.cpp(104): warning C4715: 'SinglePlayerAutomaton::update' : les chemins de contrôle ne retournent pas tous une valeur
+y:\b52\snake\democonsole\game.cpp(177): warning C4715: 'Game::update' : les chemins de contrôle ne retournent pas tous une valeur
+GamePlateformer.obj : warning LNK4099: PDB 'vc141.pdb' n'a pu Ûtre trouvÚ avec 'GamePlateformer.obj' ou sur 'Y:\B52\Snake\Debug\vc141.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+  DemoConsole.vcxproj -> Y:\B52\Snake\Debug\SnakeGame.exe
