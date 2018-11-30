@@ -20,8 +20,10 @@ public:
 	bool conditionOptions();
 	bool conditionWelcome();
 	bool conditionSinglePlayer();
+	bool conditionSnakeCollision(Snake snake);
 	bool conditionMultiPlayer();
 	bool conditionPlatformer();
 	bool conditionGameOver(Snake snake);
+	bool conditionSnakeMove(Snake snake);
 };
 #endif //TRANSACTIONS_H

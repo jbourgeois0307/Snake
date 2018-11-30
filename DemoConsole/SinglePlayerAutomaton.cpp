@@ -4,71 +4,83 @@ SinglePlayerAutomaton::SinglePlayerAutomaton()
 {
 }
 
+SinglePlayerAutomaton::SinglePlayerAutomaton(Snake snake)
+	: mSnake{snake}
+{
+	//Entame la machine de Single Player
+	startSinglePlayerAutomaton();
+}
+
 SinglePlayerAutomaton::~SinglePlayerAutomaton()
 {
 }
 
-SinglePlayerAutomaton::State SinglePlayerAutomaton::nextState(State state)
+void SinglePlayerAutomaton::start()
+{
+}
+
+SinglePlayerAutomaton::SinglePlayerState SinglePlayerAutomaton::nextSinglePlayerState(SinglePlayerState mCurState)
 {
 	//Change l'état prochain 
-	return (State)((int)state+1);
+	return (SinglePlayerState)((int)mCurState +1);
 }
 
-void SinglePlayerAutomaton::startSinglePlayerAutomaton(State state)
+void SinglePlayerAutomaton::startSinglePlayerAutomaton(SinglePlayerState mCurState)
 {
 	//Part le timer de l'automate
-//	mTimer.start();
+	//	mTimer.start();
+	update(mCurState);
 }
 
-SinglePlayerAutomaton::State SinglePlayerAutomaton::update(State state)
+SinglePlayerAutomaton::SinglePlayerState SinglePlayerAutomaton::update(SinglePlayerState mCurState)
 {
-	switch (state) {
-	case State::Idle:
+	switch (mCurState) {
+	case SinglePlayerState::Idle:
 		if (true) {
-			return nextState(state);
+			return nextSinglePlayerState(mCurState);
 		}
 		else {
-			return state;
+			return mCurState;
 		}
 		break;
-	case State::Move:
-		if (true) {
-			return nextState(state);
+	case SinglePlayerState::Move:
+		if (Transaction::getInstance().conditionSnakeCollision(GameSinglePlayer::getInstance().snake())) {
+			return SinglePlayerState::Collision;
 		}
 		else {
-			return state;
+			return nextSinglePlayerState(mCurState);
 		}
 		break;
-	case State::Eat:
+	case SinglePlayerState::Eat:
 		if (true) {
-			return nextState(state);
+			return nextSinglePlayerState(mCurState);
 		}
 		else {
-			return state;
+			return mCurState;
 		}
 		break;
-	case State::Nothing:
+	case SinglePlayerState::Nothing:
 		if (true) {
-			return nextState(state);
+			return nextSinglePlayerState(mCurState);
 		}
 		else {
-			return state;
+			return mCurState;
 		}
 		break;
-	case State::Collision:
+	case SinglePlayerState::Collision:
 		if (true) {
-			return nextState(state);
+			return nextSinglePlayerState(mCurState);
 		}
 		else {
-			return state;
+			return mCurState;
 		}
 		break;
-	case State::EndGame:
+	case SinglePlayerState::EndGame:
 		if (true) {
-			return nextState(state);
+			return nextSinglePlayerState(mCurState);
 		}
 		else {
-			return State::Idle;
+			return SinglePlayerState::Idle;
 		}
 		break;
 }

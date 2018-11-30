@@ -2,15 +2,18 @@
 #define SINGLEPLAYER_AUTOMATON_H
 
 //#include "ElapsedTimer.h"
+#include "Transactions.h"
+#include "Snake.h"
 
 class SinglePlayerAutomaton
 {
 private:
 	SinglePlayerAutomaton();
+	SinglePlayerAutomaton(Snake snake);
 	~SinglePlayerAutomaton();
 public:
 	void static start();
-	enum class State { Idle, Move, Eat, Nothing, Collision, EndGame };
+	enum class SinglePlayerState { Idle, Move, Eat, Nothing, Collision, EndGame };
 	static SinglePlayerAutomaton& getInstance()
 	{
 		static SinglePlayerAutomaton instance;
@@ -18,9 +21,11 @@ public:
 	}
 	
 private:
-	State nextState(State state);
-	void startSinglePlayerAutomaton(State state = State::Idle);
-	State update(State state);
+	SinglePlayerState mCurState;
+	Snake mSnake;
+	SinglePlayerState nextSinglePlayerState(SinglePlayerState state);
+	void startSinglePlayerAutomaton(SinglePlayerState state = SinglePlayerState::Idle);
+	SinglePlayerState update(SinglePlayerState state);
 	//ElapsedTimer<> mTimer;
 	size_t slow_m;
 };
