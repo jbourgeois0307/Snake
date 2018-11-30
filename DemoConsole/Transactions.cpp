@@ -1,4 +1,5 @@
 #include "Transactions.h"
+
 Transaction::Transaction()
 {
 }
@@ -24,6 +25,7 @@ bool Transaction::conditionWelcome()
 }
 bool Transaction::conditionSinglePlayer()
 {
+	SinglePlayerAutomaton::getInstance();
 	return false;
 }
 bool Transaction::conditionMultiPlayer()

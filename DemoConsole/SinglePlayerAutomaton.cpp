@@ -1,26 +1,26 @@
 #include "SinglePlayerAutomaton.h"
 
-SinglePlayerAutomation::SinglePlayerAutomation()
+SinglePlayerAutomaton::SinglePlayerAutomaton()
 {
 }
 
-SinglePlayerAutomation::~SinglePlayerAutomation()
+SinglePlayerAutomaton::~SinglePlayerAutomaton()
 {
 }
 
-SinglePlayerAutomation::State SinglePlayerAutomation::nextState(State state)
+SinglePlayerAutomaton::State SinglePlayerAutomaton::nextState(State state)
 {
 	//Change l'état prochain 
 	return (State)((int)state+1);
 }
 
-void SinglePlayerAutomation::startSinglePlayerAutomation(State state)
+void SinglePlayerAutomaton::startSinglePlayerAutomaton(State state)
 {
 	//Part le timer de l'automate
 //	mTimer.start();
 }
 
-/*SinglePlayerAutomation::State SinglePlayerAutomation::update(State state)
+SinglePlayerAutomaton::State SinglePlayerAutomaton::update(State state)
 {
 	switch (state) {
 	case State::Idle:
@@ -72,4 +72,4 @@ void SinglePlayerAutomation::startSinglePlayerAutomation(State state)
 		}
 		break;
 }
-}*/
+}

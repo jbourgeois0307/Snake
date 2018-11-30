@@ -109,7 +109,7 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::GameModeChooser:
-		if (false) {
+		if (Transaction::getInstance().conditionSinglePlayer()) {
 			return nextState(state);
 		}
 		else {
