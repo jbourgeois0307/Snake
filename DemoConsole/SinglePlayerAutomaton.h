@@ -14,10 +14,10 @@ public:
 		static SinglePlayerAutomation instance;
 		return instance;
 	}
-	enum class State {Idle, Move, Eat, Collision, EndGame};
+	enum class State {Idle, Move, Eat, Nothing, Collision, EndGame};
 private:
 	State nextState(State state);
-	void startSinglePlayerAutomation();
+	void startSinglePlayerAutomation(State state = State::Idle);
 	State update(State state);
 	ElapsedTimer<> mTimer;
 	size_t slow_m;
