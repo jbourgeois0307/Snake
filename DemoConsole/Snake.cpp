@@ -18,7 +18,7 @@ Snake::Snake(float speed, Point &p)
 	mBodLength { 4 }
 {
 	mBodPart.insert(mBodPart.begin(), p);
-	for (int b{ 1 }; b <= static_cast<int>(mBodPart.size()); ++b)
+	for (int b{ 1 }; b <= mBodLength; ++b)
 	{
 		mBodPart.insert((mBodPart.begin() + b),Point(p.x(),p.y()+b));
 	}

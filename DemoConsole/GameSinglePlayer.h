@@ -16,6 +16,7 @@ private:
 	bool snakeExist_m;
 	Fruit fruit_m;
 	Snake snake;
+	
 
 public:
 	static GameSinglePlayer& getInstance()
