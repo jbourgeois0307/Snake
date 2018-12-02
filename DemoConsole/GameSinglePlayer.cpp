@@ -33,8 +33,6 @@ void GameSinglePlayer::generateSnake()
 		snake_m = Snake(0.5f, p);
 		GameSinglePlayer::snakeExist_m = true;
 	}
-
-
 }
 
 void GameSinglePlayer::showSnake(ConsoleImage & image)
@@ -54,6 +52,16 @@ void GameSinglePlayer::showFruit(ConsoleImage & image)
 	if(haveFruit_m){
 		image.drawPoint(fruit_m.point().x(), fruit_m.point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tr);
 	}
+}
+
+void GameSinglePlayer::slitherSnake()
+{
+	snake_m.slither();
+}
+
+void GameSinglePlayer::directionSnake(Snake::Direction direction)
+{
+	snake_m.setCurDirection(direction);
 }
 
 Snake GameSinglePlayer::snake()

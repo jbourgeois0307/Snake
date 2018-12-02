@@ -7,7 +7,7 @@ Snake::Snake()
 //Constructeur qui demande la vitesse et positionne la tête à (50,50)
 Snake::Snake(float speed)
 	: mSpeed{ speed },
-	mBodLength{ 4 },
+	mBodLength{ 10 },
 	mCurDirection{ Direction::Up }
 {
 	Point p = Point(50, 50);
@@ -21,7 +21,7 @@ Snake::Snake(float speed)
 //Constructeur qui requiert vitesse et positions de la tête initiales
 Snake::Snake(float speed, Point &p)
 	: mSpeed{speed},
-	mBodLength { 4 },
+	mBodLength { 10 },
 	mCurDirection{ Direction::Up }
 {
 	mBodPart.insert(mBodPart.begin(), p);
@@ -38,13 +38,15 @@ Snake::~Snake()
 //Fait avancer le serpent ainsi que sa queue
 void Snake::slither()
 {
-	//avance la queue du serpent en premier
-	for (int b{ 1 };b<=static_cast<int>(mBodPart.size());++b)
-	{	
-		(mBodPart.begin() + b) = (mBodPart.begin()-b);
-	}
+	Point temp = mBodPart.front();
+	//avance la queue du serpent en premier par rotation
+	std::rotate(mBodPart.begin(), mBodPart.begin()+(mBodLength), mBodPart.end());
+	mBodPart.front() = temp;
 	//La tête se place au point demandé
 	slitherHead();
+	
+	
+	
 }
 
 void Snake::eatFruit(Fruit &fruit)
