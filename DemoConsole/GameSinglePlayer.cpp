@@ -75,6 +75,7 @@ void GameSinglePlayer::directionSnake(Snake::Direction direction)
 
 Snake::Direction & GameSinglePlayer::curDirection()
 {
+	//Change la direction courante du snake
 	return snake_m.curDirection();
 }
 

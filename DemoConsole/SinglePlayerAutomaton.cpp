@@ -58,6 +58,7 @@ SinglePlayerAutomaton::SinglePlayerState SinglePlayerAutomaton::update(SinglePla
 			//Change sa direction
 			for (auto &k : Game::getInstance().getKeyEvents())
 			{
+				//Change sa direction
 				changeDirection(k);
 			}
 			//Le déplace

@@ -48,19 +48,16 @@ void Snake::slither()
 
 void Snake::eatFruit(Fruit &fruit)
 {
-	//ptr temporaire pour connaitre la sous-classe du fruit
-	Fruit *tempPtr = &fruit;
-
-	////La queue du serpent s'allonge selon la valeur du fruit
-	//mBodLength += fruit.getMPointVal();
-	//if (dynamic_cast <GreenFruit*>(tempPtr) != nullptr || dynamic_cast <YellowFruit*>(tempPtr) != nullptr)
+	//La queue du serpent s'allonge selon la valeur du fruit
+	mBodLength += fruit.pointVal();
+	//if (static_cast <GreenFruit>(fruit) != nullptr)
 	//{
-	//	speed(fruit.getSpeedAmplificator());
+		//speed(fruit.getSpeedAmplificator());
 	//}
-	////ICI CONTINUER AVEC D'AUTRES SOUS-CLASSE DE SOUS-FRUIT (25 nov)
+	//ICI CONTINUER AVEC D'AUTRES SOUS-CLASSE DE SOUS-FRUIT (25 nov)
 	//else if ()
 	//{
-	//
+	
 	//}
 
 }
@@ -99,6 +96,14 @@ Snake::Direction& Snake::curDirection()
 int Snake::bodLength()
 {
 	return mBodLength;
+}
+
+void Snake::addBodPart(int addedLength)
+{
+	mBodLength += addedLength;
+	for (int i{}; i < addedLength; ++i) {
+		mBodPart.push_back(mBodPart.back());
+	}
 }
 
 std::vector<Point> Snake::bodPart()
