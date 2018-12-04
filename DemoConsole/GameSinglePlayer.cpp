@@ -25,6 +25,15 @@ void GameSinglePlayer::generateFruit() {
 	}
 	
 }
+void GameSinglePlayer::generateFruit(bool newFruit) {
+	if (newFruit) {
+		Point p(Random::getInstance().uniformRandomize(1, 90) + 5, Random::getInstance().uniformRandomize(1, 90) + 5);
+		fruit_m.setPoint(p);
+		haveFruit_m = true;
+	}
+
+}
+
 
 void GameSinglePlayer::generateSnake()
 {

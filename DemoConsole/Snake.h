@@ -20,6 +20,8 @@ public:
 	void eatFruit(Fruit &fruit);
 	void addBodPart(int addedLength);
 	void cutTail(int cuttedLength);
+	bool checkCollisionHead();
+	bool checkCollisionWall();
 	void speed(float speedModifier);
 	void setCurDirection(Direction direction);
 	Direction& curDirection();

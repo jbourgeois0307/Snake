@@ -49,8 +49,9 @@ bool Transaction::conditionSnakeEat(Snake snake, Fruit fruit)
 {
 	//Si la tête est à la même position que le fruit
 	if(snake.bodPart().at(0).x()==fruit.point().x())
-		if (snake.bodPart().at(0).y() == fruit.point().y())
+		if (snake.bodPart().at(0).y() == fruit.point().y()) {
 			return true;
+		}
 	return false;
 }
 
@@ -71,16 +72,11 @@ bool Transaction::conditionMoveInput(std::list<ConsoleKeyEvent> ke)
 	return false;
 }
 
-bool Transaction::conditionSnakeCollision(Snake snake) 
+bool Transaction::conditionSnakeCollision(Snake& snake) 
 {
-	//Si la tête touche à la queue
-	for (int i{ 1 }; i < snake.bodLength() - 1; ++i) {
-		if (snake.bodPart().at(0).x() == snake.bodPart().at(i).x())
-			if (snake.bodPart().at(0).y() == snake.bodPart().at(i).y())
-				//le Game over aura lieu
-				return true;
-	}
-	//Sinon, continue la partie
+	
+	if (snake.checkCollisionHead() || snake.checkCollisionWall())
+		return true;
 	return false;
 }
 

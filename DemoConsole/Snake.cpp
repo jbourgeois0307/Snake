@@ -62,6 +62,22 @@ void Snake::eatFruit(Fruit &fruit)
 
 }
 
+bool Snake::checkCollisionHead() {
+	for (int i{ 1 }; i < mBodLength - 1; ++i) {
+		if (mBodPart.at(0).x() == mBodPart.at(i).x())
+			if (mBodPart.at(0).y() == mBodPart.at(i).y())
+				//le Game over aura lieu
+				return true;
+	}
+	return false;
+}
+
+bool Snake::checkCollisionWall() {
+	if (mBodPart.front().x() == 5 || mBodPart.front().y() == 5 || mBodPart.front().y() == 95|| mBodPart.front().x() == 95) {
+		return true;
+	}
+	return false;
+}
 void Snake::speed(float speedModifier) 
 {
 	mSpeed *= speedModifier;

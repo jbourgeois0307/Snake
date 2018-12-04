@@ -34,3 +34,12 @@ void Point::setY(int y)
 {
 	mY = y;
 }
+
+bool Point::operator==(Point & a)
+{
+	//Teste si a.m_heure == b.m_heure etc.  
+	if (mX == a.x() && mY == a.y())
+		return true;
+	else
+		return false;
+}

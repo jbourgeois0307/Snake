@@ -14,6 +14,8 @@ public:
 	double x();
 	double y();
 	void setY();
+	bool operator==(Point & a);
+	
 };
 
 

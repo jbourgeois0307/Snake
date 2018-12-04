@@ -23,7 +23,7 @@ public:
 	bool conditionOptions();
 	bool conditionWelcome();
 	bool conditionSinglePlayer();
-	bool conditionSnakeCollision(Snake snake);
+	bool conditionSnakeCollision(Snake &snake);
 	bool conditionMultiPlayer();
 	bool conditionPlatformer();
 	bool conditionGameOver(Snake snake);

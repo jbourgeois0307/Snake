@@ -36,4 +36,3 @@ void Fruit::destroyFruit()
 {
 	Fruit::~Fruit();
 }
-

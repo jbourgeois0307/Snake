@@ -28,6 +28,7 @@ public:
 
 	bool play();
 	void generateFruit();
+	void generateFruit(bool newFruit);
 	void generateSnake();
 	void showSnake(ConsoleImage & image);
 	void showFruit(ConsoleImage & image);

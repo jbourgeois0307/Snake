@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Game.cpp
 y:\b52\snake\democonsole\game.cpp(26): warning C4244: 'initialisation' : conversion de 'int64_t' en 'int', perte possible de données
 y:\b52\snake\democonsole\game.cpp(28): warning C4244: '=' : conversion de 'int64_t' en 'int', perte possible de données
@@ -26,3 +27,5 @@ y:\b52\snake\democonsole\gamearea.cpp(138): warning C4129: '_' : caractère de 
 y:\b52\snake\democonsole\singleplayerautomaton.cpp(125): warning C4715: 'SinglePlayerAutomaton::changeDirection' : les chemins de contrôle ne retournent pas tous une valeur
 y:\b52\snake\democonsole\game.cpp(181): warning C4715: 'Game::update' : les chemins de contrôle ne retournent pas tous une valeur
   DemoConsole.vcxproj -> Y:\B52\Snake\Debug\SnakeGame.exe
+=======
+>>>>>>> 73e971f4b9ebdb35bb4891132538586670e0567c
