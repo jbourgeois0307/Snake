@@ -46,7 +46,15 @@ SinglePlayerAutomaton::SinglePlayerState SinglePlayerAutomaton::update(SinglePla
 		break;
 	case SinglePlayerState::Move:
 		//avance automatiquement
-		if (Transaction::getInstance().conditionMoveInput(Game::getInstance().getKeyEvents())) {
+		if (Transaction::getInstance().conditionSnakeCollision(GameSinglePlayer::getInstance().snake())) {
+			return SinglePlayerState::Collision;
+		}
+		//s'il mange un fruit
+		else if (Transaction::getInstance().conditionSnakeEat(GameSinglePlayer::getInstance().snake(), GameSinglePlayer::getInstance().fruit())) {
+			GameSinglePlayer::getInstance().generateFruit(true);
+			return nextSinglePlayerState(state);
+		}
+		else if (Transaction::getInstance().conditionMoveInput(Game::getInstance().getKeyEvents())) {
 			//Change sa direction
 			for (auto &k : Game::getInstance().getKeyEvents())
 			{
@@ -69,33 +77,13 @@ SinglePlayerAutomaton::SinglePlayerState SinglePlayerAutomaton::update(SinglePla
 			GameSinglePlayer::getInstance().slitherSnake();
 			return SinglePlayerState::Move;
 		}
-		//S'il y a une collision
-		if (Transaction::getInstance().conditionSnakeCollision(GameSinglePlayer::getInstance().snake())) {
-			return SinglePlayerState::Collision;
-		}
-		//s'il mange un fruit
-		else if (Transaction::getInstance().conditionSnakeEat(GameSinglePlayer::getInstance().snake(),GameSinglePlayer::getInstance().fruit())) {
-			return nextSinglePlayerState(state);
-		}
-		else {
-			return SinglePlayerState::Move;
-		}
 		break;
 	case SinglePlayerState::Eat:
-		if (true) {
-			return nextSinglePlayerState(state);
-		}
-		else {
-			return state;
-		}
+			//GameSinglePlayer::getInstance().generateFruit(true);
+			return SinglePlayerState::Move;
 		break;
 	case SinglePlayerState::Collision:
-		if (true) {
 			return nextSinglePlayerState(state);
-		}
-		else {
-			return state;
-		}
 		break;
 	case SinglePlayerState::EndGame:
 		return SinglePlayerState::Idle;
