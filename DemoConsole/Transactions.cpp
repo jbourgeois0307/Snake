@@ -45,11 +45,11 @@ bool Transaction::conditionSnakeMove(Snake snake)
 	return false;
 }
 
-bool Transaction::conditionSnakeEat(Snake snake, Fruit fruit)
+bool Transaction::conditionSnakeEat(Snake snake, Fruit *fruit)
 {
 	//Si la tête est à la même position que le fruit
-	if(snake.bodPart().at(0).x()==fruit.point().x())
-		if (snake.bodPart().at(0).y() == fruit.point().y()) {
+	if(snake.bodPart().at(0).x()==fruit->point().x())
+		if (snake.bodPart().at(0).y() == fruit->point().y()) {
 			return true;
 		}
 	return false;

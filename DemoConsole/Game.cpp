@@ -76,6 +76,8 @@ void Game::changeKnownState(State state)
 {
 	update(state);
 }
+
+
 void Game::gamemodechooser(State& state){
 	if (keyEvents.size() > 0) {
 		for (auto &event : keyEvents) {
@@ -180,6 +182,8 @@ Game::State Game::update(State state) {
 			return State::GameOver;
 		}
 		break;
+	default:
+		return State::GameOver;
 	}
 }
 

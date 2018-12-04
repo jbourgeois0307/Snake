@@ -30,9 +30,3 @@ Point Fruit::point()
 {
 	return mPoint;
 }
-
-
-void Fruit::destroyFruit()
-{
-	Fruit::~Fruit();
-}

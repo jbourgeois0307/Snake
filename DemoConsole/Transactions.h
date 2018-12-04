@@ -28,7 +28,7 @@ public:
 	bool conditionPlatformer();
 	bool conditionGameOver(Snake snake);
 	bool conditionSnakeMove(Snake snake);
-	bool conditionSnakeEat(Snake snake, Fruit fruit);
+	bool conditionSnakeEat(Snake snake, Fruit* fruit);
 	bool conditionMoveInput(std::list<ConsoleKeyEvent> ke);
 };
 #endif //TRANSACTIONS_H

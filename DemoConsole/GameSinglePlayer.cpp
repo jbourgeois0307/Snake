@@ -1,37 +1,38 @@
 #include "GameSinglePlayer.h"
+#include "GreenFruit.h"
 #include <vector>
 
-GameSinglePlayer::GameSinglePlayer() :haveFruit_m{ false }, snakeExist_m{ false }, fruit_m{ Fruit(Point(5, 5), 5) }, snake_m{ Snake(0.5f) }
+GameSinglePlayer::GameSinglePlayer() :haveFruit_m{ false }, snakeExist_m{ false }, snake_m{ Snake(0.5f) }, fruit_m{nullptr}
 {
 	
 }
 GameSinglePlayer::~GameSinglePlayer()
 {
+	delete fruit_m;
 }
 
 bool GameSinglePlayer::play()
 {
-	if (!haveFruit_m) {
+	if (!fruit_m) {
 		getInstance().generateFruit();
 	}
 	
 	return false;
 }
-void GameSinglePlayer::generateFruit() {
-	if (!haveFruit_m) {
-		Point p(Random::getInstance().uniformRandomize(1, 90)+5, Random::getInstance().uniformRandomize(1, 90)+5);
-		fruit_m.setPoint(p);
-		haveFruit_m = true;
-	}
-	
-}
-void GameSinglePlayer::generateFruit(bool newFruit) {
-	if (newFruit) {
+//void GameSinglePlayer::generateFruit() {
+//	if (!haveFruit_m) {
+//		Point p(Random::getInstance().uniformRandomize(1, 90)+5, Random::getInstance().uniformRandomize(1, 90)+5);
+//		fruit_m.setPoint(p);
+//		haveFruit_m = true;
+//	}
+//	
+//}
+void GameSinglePlayer::generateFruit() 
+{
+		delete fruit_m;
 		Point p(Random::getInstance().uniformRandomize(1, 90) + 5, Random::getInstance().uniformRandomize(1, 90) + 5);
-		fruit_m.setPoint(p);
+		fruit_m = new GreenFruit(p, 5, 2.0);// (Point(5, 5), 5);
 		haveFruit_m = true;
-	}
-
 }
 
 
@@ -58,8 +59,8 @@ void GameSinglePlayer::showSnake(ConsoleImage & image)
 
 void GameSinglePlayer::showFruit(ConsoleImage & image)
 {
-	if(haveFruit_m){
-		image.drawPoint(fruit_m.point().x(), fruit_m.point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tr);
+	if(fruit_m){
+		image.drawPoint(fruit_m->point().x(), fruit_m->point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tr);
 	}
 }
 
@@ -85,7 +86,7 @@ Snake& GameSinglePlayer::snake()
 	return snake_m;
 }
 
-Fruit GameSinglePlayer::fruit()
+Fruit* GameSinglePlayer::fruit()
 {
 	//getter du fruit dans le jeu pour le test des conditions(transactions)
 	return fruit_m;

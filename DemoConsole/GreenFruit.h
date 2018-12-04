@@ -9,9 +9,10 @@ class GreenFruit : public Fruit
 public:
 	GreenFruit();
 	GreenFruit(float speedAmplifier);
-	GreenFruit(Point &p, int pointVal, float speedAmplifier);
+	GreenFruit(Point const &p, int pointVal, float speedAmplifier);
 	~GreenFruit();
 	float getSpeedAmplificator();
+	void beEaten(Snake &snake) override;
 };
 
 

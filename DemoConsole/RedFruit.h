@@ -7,8 +7,9 @@ class RedFruit : public Fruit
 {
 public:
 	RedFruit();
-	RedFruit(Point &p, int pointVal);
+	RedFruit(Point const &p, int pointVal);
 	~RedFruit();
+	void beEaten(Snake &snake) override;
 };
 
 #endif // !REDFRUIT_H

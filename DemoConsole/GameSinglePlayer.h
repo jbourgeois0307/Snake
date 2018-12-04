@@ -15,7 +15,7 @@ protected:
 
 	bool haveFruit_m;
 	bool snakeExist_m;
-	Fruit fruit_m;
+	Fruit *fruit_m;
 	Snake snake_m;
 	
 
@@ -27,8 +27,8 @@ public:
 	}
 
 	bool play();
+	//void generateFruit();
 	void generateFruit();
-	void generateFruit(bool newFruit);
 	void generateSnake();
 	void showSnake(ConsoleImage & image);
 	void showFruit(ConsoleImage & image);
@@ -36,7 +36,7 @@ public:
 	void directionSnake(Snake::Direction direction);
 	Snake::Direction& curDirection();
 	Snake& snake();
-	Fruit fruit();
+	Fruit* fruit();
 
 };
 
