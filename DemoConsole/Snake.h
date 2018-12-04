@@ -18,7 +18,7 @@ public:
 	void slither();
 	void slitherHead();
 	void eatFruit(Fruit &fruit);
-	void addTail(int addedLength);
+	void addBodPart(int addedLength);
 	void cutTail(int cuttedLength);
 	void speed(float speedModifier);
 	void setCurDirection(Direction direction);

@@ -1,2 +1,28 @@
-﻿  GameSinglePlayer.cpp
+﻿  Game.cpp
+y:\b52\snake\democonsole\game.cpp(26): warning C4244: 'initialisation' : conversion de 'int64_t' en 'int', perte possible de données
+y:\b52\snake\democonsole\game.cpp(28): warning C4244: '=' : conversion de 'int64_t' en 'int', perte possible de données
+y:\b52\snake\democonsole\game.cpp(67): warning C4018: '<' : incompatibilité signed/unsigned
+  GameArea.cpp
+y:\b52\snake\democonsole\gamearea.cpp(35): warning C4309: 'argument' : troncation de valeur de constante
+y:\b52\snake\democonsole\gamearea.cpp(51): warning C4309: 'argument' : troncation de valeur de constante
+y:\b52\snake\democonsole\gamearea.cpp(64): warning C4309: 'argument' : troncation de valeur de constante
+y:\b52\snake\democonsole\gamearea.cpp(76): warning C4309: 'argument' : troncation de valeur de constante
+y:\b52\snake\democonsole\gamearea.cpp(130): warning C4309: 'argument' : troncation de valeur de constante
+y:\b52\snake\democonsole\gamearea.cpp(134): warning C4129: ' ' : caractère de séquence d'échappement non reconnu
+y:\b52\snake\democonsole\gamearea.cpp(135): warning C4129: '_' : caractère de séquence d'échappement non reconnu
+y:\b52\snake\democonsole\gamearea.cpp(135): warning C4129: ' ' : caractère de séquence d'échappement non reconnu
+y:\b52\snake\democonsole\gamearea.cpp(136): warning C4129: ' ' : caractère de séquence d'échappement non reconnu
+y:\b52\snake\democonsole\gamearea.cpp(136): warning C4129: '|' : caractère de séquence d'échappement non reconnu
+y:\b52\snake\democonsole\gamearea.cpp(137): warning C4129: '_' : caractère de séquence d'échappement non reconnu
+y:\b52\snake\democonsole\gamearea.cpp(137): warning C4129: ' ' : caractère de séquence d'échappement non reconnu
+y:\b52\snake\democonsole\gamearea.cpp(138): warning C4129: '_' : caractère de séquence d'échappement non reconnu
+  GameMultiPlayer.cpp
+  GameSinglePlayer.cpp
+  main.cpp
+  SinglePlayerAutomaton.cpp
+  Snake.cpp
+  Transactions.cpp
+  Génération de code en cours...
+y:\b52\snake\democonsole\singleplayerautomaton.cpp(125): warning C4715: 'SinglePlayerAutomaton::changeDirection' : les chemins de contrôle ne retournent pas tous une valeur
+y:\b52\snake\democonsole\game.cpp(181): warning C4715: 'Game::update' : les chemins de contrôle ne retournent pas tous une valeur
   DemoConsole.vcxproj -> Y:\B52\Snake\Debug\SnakeGame.exe
