@@ -51,6 +51,7 @@ SinglePlayerAutomaton::SinglePlayerState SinglePlayerAutomaton::update(SinglePla
 		}
 		//s'il mange un fruit
 		else if (Transaction::getInstance().conditionSnakeEat(GameSinglePlayer::getInstance().snake(), GameSinglePlayer::getInstance().fruit())) {
+			GameSinglePlayer::getInstance().snake().eatFruit(GameSinglePlayer::getInstance().fruit());
 			GameSinglePlayer::getInstance().generateFruit(true);
 			return nextSinglePlayerState(state);
 		}
