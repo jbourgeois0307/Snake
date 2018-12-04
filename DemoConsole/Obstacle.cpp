@@ -23,3 +23,13 @@ size_t Obstacle::Size()
 {
 	return mSize;
 }
+
+void Obstacle::setX(double x)
+{
+	mX = x;
+}
+
+void Obstacle::setY(double y)
+{
+	mY = y;
+}

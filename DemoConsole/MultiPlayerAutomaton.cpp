@@ -53,6 +53,8 @@ MultiPlayerAutomaton::MultiPlayerState MultiPlayerAutomaton::update(MultiPlayerS
 		else if (Transaction::getInstance().conditionSnakeEat(GameMultiPlayer::getInstance().snake(), GameMultiPlayer::getInstance().fruit()) ||
 					Transaction::getInstance().conditionSnakeEat(GameMultiPlayer::getInstance().caterpillar(), GameMultiPlayer::getInstance().fruit())) {
 			GameMultiPlayer::getInstance().generateFruit();
+			GameMultiPlayer::getInstance().fruit()->beEaten(GameMultiPlayer::getInstance().fruit());
+
 			return nextMultiPlayerState(state);
 		}
 		else if (Transaction::getInstance().conditionMoveInput(Game::getInstance().getKeyEvents()) ) {
