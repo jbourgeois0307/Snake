@@ -38,6 +38,9 @@
     <ClCompile Include="GameSinglePlayer.cpp" />
     <ClCompile Include="GreenFruit.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MultiPlayerAutomaton.cpp" />
+    <ClCompile Include="Obstacle.cpp" />
+    <ClCompile Include="PlateformerAutomaton.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="PurpleFruit.cpp" />
@@ -73,6 +76,9 @@
     <ClInclude Include="GamePlateformer.h" />
     <ClInclude Include="GameSinglePlayer.h" />
     <ClInclude Include="GreenFruit.h" />
+    <ClInclude Include="MultiPlayerAutomaton.h" />
+    <ClInclude Include="Obstacle.h" />
+    <ClInclude Include="PlateformerAutomaton.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="PurpleFruit.h" />

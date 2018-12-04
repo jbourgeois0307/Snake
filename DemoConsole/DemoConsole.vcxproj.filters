@@ -111,6 +111,15 @@
     <ClCompile Include="Random.cpp">
       <Filter>CPP\Auter</Filter>
     </ClCompile>
+    <ClCompile Include="MultiPlayerAutomaton.cpp">
+      <Filter>CPP\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="PlateformerAutomaton.cpp">
+      <Filter>CPP\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Obstacle.cpp">
+      <Filter>CPP\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h">
@@ -202,6 +211,15 @@
     </ClInclude>
     <ClInclude Include="ElapsedTimer.h">
       <Filter>Headder\Autre</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiPlayerAutomaton.h">
+      <Filter>Headder\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="PlateformerAutomaton.h">
+      <Filter>Headder\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Obstacle.h">
+      <Filter>Headder\Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

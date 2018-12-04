@@ -1,13 +1,25 @@
 #ifndef MULTI_H
 #define MULTI_H
-#include "GameSinglePlayer.h"
+
+#include "Console.h"
+#include "Fruit.h"
+#include "GameArea.h"
+#include "Random.h"
+#include "Point.h"
 #include "Snake.h"
-class GameMultiPlayer : public GameSinglePlayer
+class GameMultiPlayer
 {
-private:
+protected:
 	GameMultiPlayer();
-	GameMultiPlayer(Point p);
 	~GameMultiPlayer();
+
+	bool haveFruit_m;
+	bool snakeExist_m;
+	Fruit fruit_m;
+	Snake snake_m;
+	Snake caterpillar_m;
+
+
 public:
 	static GameMultiPlayer& getInstance()
 	{
@@ -15,13 +27,22 @@ public:
 		return instance;
 	}
 
+	bool play();
+	void generateFruit();
+	void generateFruit(bool newFruit);
 	void generateSnake();
-
 	void showSnake(ConsoleImage & image);
+	void showFruit(ConsoleImage & image);
+	void slitherSnake();
+	void slitherCaterpillar();
+	void directionSnake(Snake::Direction direction);
+	void directionCaterpillar(Snake::Direction direction);
+	Snake::Direction& curDirection();
+	Snake::Direction & curDirectionCaterpillar();
+	Snake& snake();
+	Snake & caterpillar();
+	Fruit fruit();
 
-private:
-
-	Snake adversary_m;
 };
 
 #endif

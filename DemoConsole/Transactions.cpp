@@ -68,6 +68,16 @@ bool Transaction::conditionMoveInput(std::list<ConsoleKeyEvent> ke)
 			return true;
 		else if (k.keyV() == VK_RIGHT)
 			return true;
+
+		char keyEntered = toupper(k.keyA());
+		if (keyEntered == 'W')
+			return true;
+		else if (keyEntered == 'A')
+			return true;
+		else if (keyEntered == 'S')
+			return true;
+		else if (keyEntered == 'D')
+			return true;
 	}
 	return false;
 }
@@ -76,6 +86,16 @@ bool Transaction::conditionSnakeCollision(Snake& snake)
 {
 	
 	if (snake.checkCollisionHead() || snake.checkCollisionWall())
+		return true;
+	return false;
+}
+
+bool Transaction::conditionSnakeCollision(Snake& snake, Snake& caterpillar)
+{
+
+	if (snake.checkCollisionHead() || snake.checkCollisionWall() || snake.checkCollisionAdversary(caterpillar))
+		return true;
+	if (caterpillar.checkCollisionHead() || caterpillar.checkCollisionWall() || caterpillar.checkCollisionAdversary(snake))
 		return true;
 	return false;
 }

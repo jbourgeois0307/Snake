@@ -1,3 +1,6 @@
+#ifndef RANDOM_H
+#define RANDOM_H
+
 #include <random>
 class Random
 {
@@ -20,3 +23,4 @@ public:
 	int bernoulliRandomize(double proportion);
 };
 
+#endif

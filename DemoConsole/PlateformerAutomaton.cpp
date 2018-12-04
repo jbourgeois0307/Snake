@@ -1,16 +1,12 @@
 #include "PlateformerAutomaton.h"
 
-
-
 PlateformerAutomaton::PlateformerAutomaton()
 {
 }
 
-
 PlateformerAutomaton::~PlateformerAutomaton()
 {
 }
-
 
 void PlateformerAutomaton::startPlateformerAutomaton(PlateformerState state)
 {
@@ -88,18 +84,7 @@ PlateformerAutomaton::PlateformerState PlateformerAutomaton::update(PlateformerS
 
 bool PlateformerAutomaton::changeDirection(ConsoleKeyEvent &k)
 {
-	//Autorise le changement de direction seulement si ce n'est pas dans le sens directement opposé
-	if (k.keyV() == VK_UP)
-		if ((GamePlateformer::getInstance().snake()).curDirection() == Snake::Direction::Down)
-			return false;
-		else
-			GamePlateformer::getInstance().directionSnake(Snake::Direction::Up);
-	else if (k.keyV() == VK_DOWN)
-		if ((GamePlateformer::getInstance().snake()).curDirection() == Snake::Direction::Up)
-			return false;
-		else
-			GamePlateformer::getInstance().directionSnake(Snake::Direction::Down);
-	else if (k.keyV() == VK_LEFT)
+	if (k.keyV() == VK_LEFT)
 		if ((GamePlateformer::getInstance().snake()).curDirection() == Snake::Direction::Right)
 			return false;
 		else
