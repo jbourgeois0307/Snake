@@ -2,10 +2,12 @@
 #define FRUIT_H
 
 #include "Point.h"
+#include "Snake.h"
 
 class Fruit
 {
 	static int sCountFruit;
+protected:
 	Point mPoint;
 	int  mPointVal;
 public:
@@ -15,7 +17,7 @@ public:
 	void setPoint(Point p);
 	int pointVal();
 	Point point();
-	void destroyFruit();
+	virtual void beEaten(Snake &snake)=0;
 };
 
 

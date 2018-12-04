@@ -33,7 +33,6 @@ private:
 	void gamemodechooser(State & state);
 	State update(State state);
 	void render(State state);
-
 	bool anyTouch();
 
 	ConsoleWriter *writer;
@@ -43,7 +42,8 @@ private:
 	ConsoleKeyReader * reader_m;
 	ConsoleKeyReader::KeyEvents keyEvents;
 	int positonChooser = 1;
-
+public:
+	void changeKnownState(State state);
 };
 
 

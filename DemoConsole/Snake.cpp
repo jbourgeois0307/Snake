@@ -46,22 +46,6 @@ void Snake::slither()
 	slitherHead();
 }
 
-void Snake::eatFruit(Fruit fruit)
-{
-	//La queue du serpent s'allonge selon la valeur du fruit
-	addBodPart(fruit.pointVal());
-	//if (static_cast <GreenFruit>(fruit) != nullptr)
-	//{
-		//speed(fruit.getSpeedAmplificator());
-	//}
-	//ICI CONTINUER AVEC D'AUTRES SOUS-CLASSE DE SOUS-FRUIT (25 nov)
-	//else if ()
-	//{
-	
-	//}
-
-}
-
 bool Snake::checkCollisionHead() {
 	for (int i{ 1 }; i < mBodLength - 1; ++i) {
 		if (mBodPart.at(0).x() == mBodPart.at(i).x())

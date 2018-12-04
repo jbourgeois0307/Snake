@@ -54,7 +54,6 @@ void Game::render(State state) {
 	}
 }
 
-
 ConsoleKeyReader::KeyEvents Game::getKeyEvents() const
 {
 	return keyEvents;
@@ -74,6 +73,12 @@ bool Game::anyTouch() {
 	return false;
 	}
 }
+void Game::changeKnownState(State state)
+{
+	update(state);
+}
+
+
 void Game::gamemodechooser(State& state){
 	if (keyEvents.size() > 0) {
 		for (auto &event : keyEvents) {
@@ -143,8 +148,7 @@ Game::State Game::update(State state) {
 			return State::GameOver;
 		}
 		else {
-			GameSinglePlayer::getInstance().generateFruit();
-			GameSinglePlayer::getInstance().generateSnake();
+			GameSinglePlayer::getInstance().play();
 			//if (!SinglePlayerAutomaton::getInstance().startedAutomaton())
 				SinglePlayerAutomaton::getInstance().startSinglePlayerAutomaton();
 			//else
@@ -183,6 +187,8 @@ Game::State Game::update(State state) {
 			return State::GameOver;
 		}
 		break;
+	default:
+		return State::GameOver;
 	}
 }
 

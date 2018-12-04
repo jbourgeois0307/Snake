@@ -23,6 +23,7 @@ void SinglePlayerAutomaton::resumeSinglePlayerAutomaton(SinglePlayerState state)
 
 bool SinglePlayerAutomaton::startedAutomaton() const
 {
+	//Crée un fruit au démarrage de l'automate
 	return mStartedAutomaton;
 }
 
@@ -49,12 +50,16 @@ SinglePlayerAutomaton::SinglePlayerState SinglePlayerAutomaton::update(SinglePla
 		if (Transaction::getInstance().conditionSnakeCollision(GameSinglePlayer::getInstance().snake())) {
 			return SinglePlayerState::Collision;
 		}
+
 		//s'il mange un fruit
 		else if (Transaction::getInstance().conditionSnakeEat(GameSinglePlayer::getInstance().snake(), GameSinglePlayer::getInstance().fruit())) {
-			GameSinglePlayer::getInstance().snake().eatFruit(GameSinglePlayer::getInstance().fruit());
-			GameSinglePlayer::getInstance().generateFruit(true);
+			if (GameSinglePlayer::getInstance().fruit()) {
+				GameSinglePlayer::getInstance().fruit()->beEaten(GameSinglePlayer::getInstance().snake());
+				GameSinglePlayer::getInstance().generateFruit();
+			}
 			return nextSinglePlayerState(state);
 		}
+
 		else if (Transaction::getInstance().conditionMoveInput(Game::getInstance().getKeyEvents())) {
 			//Change sa direction
 			for (auto &k : Game::getInstance().getKeyEvents())
@@ -77,9 +82,11 @@ SinglePlayerAutomaton::SinglePlayerState SinglePlayerAutomaton::update(SinglePla
 			return SinglePlayerState::Move;
 		break;
 	case SinglePlayerState::Collision:
+		Game::getInstance().changeKnownState(Game::State::GameOver);
 			return nextSinglePlayerState(state);
 		break;
 	case SinglePlayerState::EndGame:
+		Game::getInstance().changeKnownState(Game::State::GameOver);
 		return SinglePlayerState::Idle;
 		break;
 	default:
