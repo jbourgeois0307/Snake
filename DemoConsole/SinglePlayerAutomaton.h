@@ -23,6 +23,7 @@ public:
 private:
 	SinglePlayerState nextSinglePlayerState(SinglePlayerState state);
 	SinglePlayerState update(SinglePlayerState state);
+	bool changeDirection(ConsoleKeyEvent &k);
 	size_t slow_m;
 	bool mStartedAutomaton;
 };

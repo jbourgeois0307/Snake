@@ -22,7 +22,7 @@ public:
 	void cutTail(int cuttedLength);
 	void speed(float speedModifier);
 	void setCurDirection(Direction direction);
-	Direction curDirection();
+	Direction& curDirection();
 	int bodLength();
 	std::vector<Point> bodPart();
 	void nextPoint(Point &point);

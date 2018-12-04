@@ -33,7 +33,8 @@ public:
 	void showFruit(ConsoleImage & image);
 	void slitherSnake();
 	void directionSnake(Snake::Direction direction);
-	Snake snake();
+	Snake::Direction& curDirection();
+	Snake& snake();
 	Fruit fruit();
 
 };

@@ -64,7 +64,12 @@ void GameSinglePlayer::directionSnake(Snake::Direction direction)
 	snake_m.setCurDirection(direction);
 }
 
-Snake GameSinglePlayer::snake()
+Snake::Direction & GameSinglePlayer::curDirection()
+{
+	return snake_m.curDirection();
+}
+
+Snake& GameSinglePlayer::snake()
 {
 	//getter du snake dans le jeu pour le test des conditions(transactions)
 	return snake_m;
