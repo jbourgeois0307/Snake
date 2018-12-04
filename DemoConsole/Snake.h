@@ -17,7 +17,7 @@ public:
 	enum class Direction { Up, Down, Left, Right };
 	void slither();
 	void slitherHead();
-	void eatFruit(Fruit &fruit);
+	void eatFruit(Fruit fruit);
 	void addBodPart(int addedLength);
 	void cutTail(int cuttedLength);
 	bool checkCollisionHead();

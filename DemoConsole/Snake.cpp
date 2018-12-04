@@ -46,10 +46,10 @@ void Snake::slither()
 	slitherHead();
 }
 
-void Snake::eatFruit(Fruit &fruit)
+void Snake::eatFruit(Fruit fruit)
 {
 	//La queue du serpent s'allonge selon la valeur du fruit
-	mBodLength += fruit.pointVal();
+	addBodPart(fruit.pointVal());
 	//if (static_cast <GreenFruit>(fruit) != nullptr)
 	//{
 		//speed(fruit.getSpeedAmplificator());
