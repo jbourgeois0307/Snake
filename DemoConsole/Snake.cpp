@@ -44,9 +44,6 @@ void Snake::slither()
 	mBodPart.front() = temp;
 	//La tête se place au point demandé
 	slitherHead();
-	
-	
-	
 }
 
 void Snake::eatFruit(Fruit &fruit)
@@ -94,7 +91,7 @@ void Snake::setCurDirection(Direction direction)
 	mCurDirection = direction;
 }
 
-Snake::Direction Snake::curDirection()
+Snake::Direction& Snake::curDirection()
 {
 	return mCurDirection;
 }
