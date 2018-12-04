@@ -31,7 +31,7 @@ void Game::gameLoop(State state) {
 	}
 }
 void Game::processInput() {
-	(*reader_m).read(keyEvents);
+	reader_m->read(keyEvents);
 }
 void Game::render(State state) {
 	switch (state) {
@@ -63,10 +63,11 @@ ConsoleKeyReader::KeyEvents Game::getKeyEvents() const
 bool Game::anyTouch() {
 	if (keyEvents.size() > 0)
 	{
-		size_t size = keyEvents.size();
-		for (int i = 0; i < size; ++i) {
-			keyEvents.pop_back();
-		}
+		//size_t size = keyEvents.size();
+		keyEvents.clear();
+		//for (int i = 0; i < size; ++i) {
+		//	keyEvents.pop_back();
+		//}
 		return true;
 	}
 	else {
@@ -76,15 +77,15 @@ bool Game::anyTouch() {
 void Game::gamemodechooser(State& state){
 	if (keyEvents.size() > 0) {
 		for (auto &event : keyEvents) {
-			if (event.keyA() == (int) '1')
+			if (event.keyA() == '1')
 			{
 				positonChooser = 1;
 			}
-			if (event.keyA() == (int) '2')
+			if (event.keyA() == '2')
 			{
 				positonChooser = 2;
 			}
-			if (event.keyA() == (int) '3')
+			if (event.keyA() == '3')
 			{
 				positonChooser = 3;
 			}
@@ -152,20 +153,25 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::Multiplayer:
-		if (Transaction::getInstance().conditionGameOver(GameSinglePlayer::getInstance().snake())) {
+		if (Transaction::getInstance().conditionGameOver(GameMultiPlayer::getInstance().snake())) {
 			return State::GameOver;
 		}
 		else {
 			GameMultiPlayer::getInstance().generateFruit();
 			GameMultiPlayer::getInstance().generateSnake();
+			MultiPlayerAutomaton::getInstance().startMultiPlayerAutomaton();
+
 			return State::Multiplayer;
 		}
 		break;
 	case State::Plateformer:
-		if (Transaction::getInstance().conditionGameOver(GameSinglePlayer::getInstance().snake())) {
+		if (Transaction::getInstance().conditionGameOver(GamePlateformer::getInstance().snake())) {
 			return State::GameOver;
 		}
 		else {
+			GamePlateformer::getInstance().generateFruit();
+			GamePlateformer::getInstance().generateSnake();
+			GamePlateformer::getInstance().generateObstacles();
 			return State::Plateformer;
 		}
 		break;
@@ -185,7 +191,7 @@ void Game::start(size_t width, size_t height) {
 	ConsoleContext context(800, 800, "The Snake Game", 8, 8, L"Consolas");
 	Console::defineContext(context);
 	Game::getInstance().reader_m = &( Console::getInstance().keyReader());
-	Game::getInstance().gameLoop(State::GameModeChooser);
+	Game::getInstance().gameLoop(State::Welcome);
 }
 
 void Game::test() {

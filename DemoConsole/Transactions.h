@@ -3,7 +3,12 @@
 
 #include "Snake.h"
 #include "Game.h"
+
 #include "SinglePlayerAutomaton.h"
+#include "MultiPlayerAutomaton.h"
+#include "PlateformerAutomaton.h"
+
+
 #include "Fruit.h"
 #include "ConsoleKeyEvent.h"
 
@@ -24,6 +29,7 @@ public:
 	bool conditionWelcome();
 	bool conditionSinglePlayer();
 	bool conditionSnakeCollision(Snake &snake);
+	bool conditionSnakeCollision(Snake & snake, Snake & caterpillar);
 	bool conditionMultiPlayer();
 	bool conditionPlatformer();
 	bool conditionGameOver(Snake snake);

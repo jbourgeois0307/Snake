@@ -2,8 +2,10 @@
 #define GAME_H
 
 #include "Console.h"
+
 #include "GameSinglePlayer.h"
 #include "GameMultiPlayer.h"
+#include "GamePlateformer.h"
 
 #include "GameArea.h"
 #include "Transactions.h"

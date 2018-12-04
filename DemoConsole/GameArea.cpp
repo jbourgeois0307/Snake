@@ -1,6 +1,8 @@
 #include "GameArea.h"
 #include "GameSinglePlayer.h"
 #include "GameMultiPlayer.h"
+#include "GamePlateformer.h"
+
 GameArea::GameArea()
 {
 }
@@ -40,6 +42,7 @@ bool GameArea::singleplayer() {
 	showInfo(singlePlayerArea, 100, "singleplayer","Ludovic", 0, sizeSnake, 0, 0, 0);
 	GameSinglePlayer::getInstance().showFruit(singlePlayerArea);
 	GameSinglePlayer::getInstance().showSnake(singlePlayerArea);
+
 	return false;
 }
 
@@ -62,11 +65,13 @@ bool GameArea::plateformer() {
 	writer.push("plateformer");
 
 	plateformerArea.fill(178, ConsoleColor::bK + ConsoleColor::tC);
-	plateformerArea.fill(5.0, 0.0, 90.0, 100.0, (char)176, ConsoleColor::bg + ConsoleColor::tw);
+	plateformerArea.fill(5.0, 0.0, 90.0, 100.0, (char)176, ConsoleColor::br + ConsoleColor::tw);
 
 	showInfo(plateformerArea, 100, "plateformer", "Ludovic", 0, 4, 0, 0, 0);
-	GameSinglePlayer::getInstance().showFruit(plateformerArea);
-	GameSinglePlayer::getInstance().showSnake(plateformerArea);
+	GamePlateformer::getInstance().showFruit(plateformerArea);
+	GamePlateformer::getInstance().showSnake(plateformerArea);
+	GamePlateformer::getInstance().showObstacles(plateformerArea);
+
 	return false;
 }
 bool GameArea::gameModeChooser(int pos) {

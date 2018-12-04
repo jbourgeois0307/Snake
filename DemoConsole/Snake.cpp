@@ -72,6 +72,17 @@ bool Snake::checkCollisionHead() {
 	return false;
 }
 
+
+bool Snake::checkCollisionAdversary(Snake& adversary) {
+	for (int i{ 1 }; i < adversary.bodLength() - 1; ++i) {
+		if (mBodPart.at(0).x() == adversary.bodPart().at(i).x())
+			if (mBodPart.at(0).y() == adversary.bodPart().at(i).y())
+				//le Game over aura lieu
+				return true;
+	}
+	return false;
+}
+
 bool Snake::checkCollisionWall() {
 	if (mBodPart.front().x() == 5 || mBodPart.front().y() == 5 || mBodPart.front().y() == 95|| mBodPart.front().x() == 95) {
 		return true;

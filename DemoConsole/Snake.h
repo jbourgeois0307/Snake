@@ -21,6 +21,7 @@ public:
 	void addBodPart(int addedLength);
 	void cutTail(int cuttedLength);
 	bool checkCollisionHead();
+	bool checkCollisionAdversary(Snake & adversary);
 	bool checkCollisionWall();
 	void speed(float speedModifier);
 	void setCurDirection(Direction direction);
