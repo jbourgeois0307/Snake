@@ -54,7 +54,6 @@ void Game::render(State state) {
 	}
 }
 
-
 ConsoleKeyReader::KeyEvents Game::getKeyEvents() const
 {
 	return keyEvents;
@@ -72,6 +71,10 @@ bool Game::anyTouch() {
 	else {
 	return false;
 	}
+}
+void Game::changeKnownState(State state)
+{
+	update(state);
 }
 void Game::gamemodechooser(State& state){
 	if (keyEvents.size() > 0) {

@@ -80,7 +80,7 @@ SinglePlayerAutomaton::SinglePlayerState SinglePlayerAutomaton::update(SinglePla
 			return nextSinglePlayerState(state);
 		break;
 	case SinglePlayerState::EndGame:
-		return SinglePlayerState::Idle;
+		Game::getInstance().changeKnownState(Game::State::GameOver);
 		break;
 	default:
 		return SinglePlayerState::Idle;
