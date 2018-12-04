@@ -19,14 +19,7 @@ bool GameSinglePlayer::play()
 	
 	return false;
 }
-//void GameSinglePlayer::generateFruit() {
-//	if (!haveFruit_m) {
-//		Point p(Random::getInstance().uniformRandomize(1, 90)+5, Random::getInstance().uniformRandomize(1, 90)+5);
-//		fruit_m.setPoint(p);
-//		haveFruit_m = true;
-//	}
-//	
-//}
+
 void GameSinglePlayer::generateFruit() 
 {
 		delete fruit_m;

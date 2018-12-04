@@ -18,7 +18,7 @@ protected:
 
 	bool haveFruit_m;
 	bool snakeExist_m;
-	Fruit fruit_m;
+	Fruit *fruit_m;
 	Snake snake_m;
 	size_t mNbFruit;
 	std::vector<Obstacle> obstacles;
@@ -33,7 +33,6 @@ public:
 
 	bool play();
 	void generateFruit();
-	void generateFruit(bool newFruit);
 	void generateSnake();
 	void generateObstacles();
 	void showSnake(ConsoleImage & image);
@@ -43,7 +42,7 @@ public:
 	void directionSnake(Snake::Direction direction);
 	Snake::Direction& curDirection();
 	Snake& snake();
-	Fruit fruit();
+	Fruit* fruit();
 	
 };
 

@@ -1,36 +1,31 @@
 #include "GameMultiPlayer.h"
+#include "GreenFruit.h"
 #include <vector>
 
-GameMultiPlayer::GameMultiPlayer() :haveFruit_m{ false }, snakeExist_m{ false }, fruit_m{ Fruit(Point(5, 5), 5) }, snake_m{ Snake(0.5f) }
+GameMultiPlayer::GameMultiPlayer() :haveFruit_m{ false }, snakeExist_m{ false } , fruit_m{ nullptr }, snake_m{ Snake(0.5f) }
 {
-
 }
+
 GameMultiPlayer::~GameMultiPlayer()
 {
+	delete fruit_m;
 }
 
 bool GameMultiPlayer::play()
 {
-	if (!haveFruit_m) {
-		getInstance().generateFruit();
+	if (!fruit_m) {
+		generateFruit();
+		generateSnake();
 	}
 
 	return false;
 }
-void GameMultiPlayer::generateFruit() {
-	if (!haveFruit_m) {
-		Point p(Random::getInstance().uniformRandomize(1, 89) + 5, Random::getInstance().uniformRandomize(1, 89) + 5);
-		fruit_m.setPoint(p);
-		haveFruit_m = true;
-	}
-
-}
-void GameMultiPlayer::generateFruit(bool newFruit) {
-	if (newFruit) {
-		Point p(Random::getInstance().uniformRandomize(1, 89) + 5, Random::getInstance().uniformRandomize(1, 89) + 5);
-		fruit_m.setPoint(p);
-		haveFruit_m = true;
-	}
+void GameMultiPlayer::generateFruit() 
+{
+	delete fruit_m;
+	Point p(Random::getInstance().uniformRandomize(1, 90) + 5, Random::getInstance().uniformRandomize(1, 90) + 5);
+	fruit_m = new GreenFruit(p, 5, 2.0);// (Point(5, 5), 5);
+	haveFruit_m = true;
 
 }
 
@@ -69,7 +64,7 @@ void GameMultiPlayer::showSnake(ConsoleImage & image)
 void GameMultiPlayer::showFruit(ConsoleImage & image)
 {
 	if (haveFruit_m) {
-		image.drawPoint(fruit_m.point().x(), fruit_m.point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tr);
+		image.drawPoint(fruit_m->point().x(), fruit_m->point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tr);
 	}
 }
 
@@ -115,7 +110,7 @@ Snake& GameMultiPlayer::caterpillar()
 	return caterpillar_m;
 }
 
-Fruit GameMultiPlayer::fruit()
+Fruit* GameMultiPlayer::fruit()
 {
 	//getter du fruit dans le jeu pour le test des conditions(transactions)
 	return fruit_m;

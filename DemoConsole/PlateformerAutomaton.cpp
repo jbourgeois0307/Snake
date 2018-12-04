@@ -48,7 +48,7 @@ PlateformerAutomaton::PlateformerState PlateformerAutomaton::update(PlateformerS
 		}
 		//s'il mange un fruit
 		else if (Transaction::getInstance().conditionSnakeEat(GamePlateformer::getInstance().snake(), GamePlateformer::getInstance().fruit())) {
-			GamePlateformer::getInstance().generateFruit(true);
+			GamePlateformer::getInstance().generateFruit();
 			return nextPlateformerState(state);
 		}
 		else if (Transaction::getInstance().conditionMoveInput(Game::getInstance().getKeyEvents())) {

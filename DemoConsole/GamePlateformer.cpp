@@ -1,37 +1,32 @@
 #include "GamePlateformer.h"
+#include "GreenFruit.h"
 #include <vector>
 
-GamePlateformer::GamePlateformer() :haveFruit_m{ false }, snakeExist_m{ false }, fruit_m{ Fruit(Point(5, 5), 5) }, snake_m{ Snake(0.5f) }
+GamePlateformer::GamePlateformer() :haveFruit_m{ false }, snakeExist_m{ false }, fruit_m{ nullptr }, snake_m{ Snake(0.5f) }
 {
 
 }
 GamePlateformer::~GamePlateformer()
 {
+	delete fruit_m;
 }
 
 bool GamePlateformer::play()
 {
-	if (!haveFruit_m) {
-		getInstance().generateFruit();
+	if (!fruit_m) {
+		generateFruit();
+		generateSnake();
 	}
 
 	return false;
 }
-void GamePlateformer::generateFruit() {
-	if (!haveFruit_m) {
-		Point p(Random::getInstance().uniformRandomize(1, 89) + 5, 80);
-		fruit_m.setPoint(p);
-		haveFruit_m = true;
-	}
 
-}
-void GamePlateformer::generateFruit(bool newFruit) {
-	if (newFruit) {
-		Point p(Random::getInstance().uniformRandomize(1, 89) + 5, 80);
-		fruit_m.setPoint(p);
-		haveFruit_m = true;
-	}
-
+void GamePlateformer::generateFruit() 
+{
+	delete fruit_m;
+	Point p(Random::getInstance().uniformRandomize(1, 89) + 5, 80);
+	fruit_m = new GreenFruit(p, 5, 2.0);// (Point(5, 5), 5);
+	haveFruit_m = true;
 }
 
 void GamePlateformer::generateSnake()
@@ -79,7 +74,7 @@ void GamePlateformer::showObstacles(ConsoleImage & image) {
 void GamePlateformer::showFruit(ConsoleImage & image)
 {
 	if (haveFruit_m) {
-		image.drawPoint(fruit_m.point().x(), fruit_m.point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tr);
+		image.drawPoint(fruit_m->point().x(), fruit_m->point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tr);
 	}
 }
 
@@ -105,7 +100,7 @@ Snake& GamePlateformer::snake()
 	return snake_m;
 }
 
-Fruit GamePlateformer::fruit()
+Fruit* GamePlateformer::fruit()
 {
 	//getter du fruit dans le jeu pour le test des conditions(transactions)
 	return fruit_m;
