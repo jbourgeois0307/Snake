@@ -49,12 +49,16 @@ void GamePlateformer::generateObstacles()
 		for (int i = 0; i < 20; i++) {
 			Point p(Random::getInstance().uniformRandomize(1, 90) + 5, Random::getInstance().uniformRandomize(1, 80) + 5);
 			size_t size = Random::getInstance().uniformRandomize(5, 10);
-			obstacles.push_back(Obstacle(size, p));
+			mObstacles.push_back(Obstacle(size, p));
 			GamePlateformer::snakeExist_m = true;
 			++mNbFruit;
 		}
 	}
 	
+}
+
+std::vector<Obstacle> & GamePlateformer::obstacles() {
+	return mObstacles;
 }
 
 void GamePlateformer::showSnake(ConsoleImage & image)
@@ -71,7 +75,7 @@ void GamePlateformer::showSnake(ConsoleImage & image)
 
 void GamePlateformer::showObstacles(ConsoleImage & image) {
 		for (int i = 0; i < mNbFruit; ++i) {
-				image.drawLine(obstacles.at(i).X(), obstacles.at(i).Y(), obstacles.at(i).X()+obstacles.at(i).Size(), obstacles.at(i).Y(), (char)178, ConsoleColor::bg + ConsoleColor::ty);
+				image.drawLine(mObstacles.at(i).X(), mObstacles.at(i).Y(), mObstacles.at(i).X()+mObstacles.at(i).Size(), mObstacles.at(i).Y(), (char)178, ConsoleColor::bg + ConsoleColor::ty);
 		}
 		
 }

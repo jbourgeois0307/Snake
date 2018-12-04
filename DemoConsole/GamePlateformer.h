@@ -21,7 +21,7 @@ protected:
 	Fruit fruit_m;
 	Snake snake_m;
 	size_t mNbFruit;
-	std::vector<Obstacle> obstacles;
+	std::vector<Obstacle> mObstacles;
 
 
 public:
@@ -36,6 +36,7 @@ public:
 	void generateFruit(bool newFruit);
 	void generateSnake();
 	void generateObstacles();
+	std::vector<Obstacle>& obstacles();
 	void showSnake(ConsoleImage & image);
 	void showObstacles(ConsoleImage & image);
 	void showFruit(ConsoleImage & image);
