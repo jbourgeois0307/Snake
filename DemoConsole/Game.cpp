@@ -147,8 +147,7 @@ Game::State Game::update(State state) {
 			return State::GameOver;
 		}
 		else {
-			GameSinglePlayer::getInstance().generateFruit();
-			GameSinglePlayer::getInstance().generateSnake();
+			GameSinglePlayer::getInstance().play();
 			//if (!SinglePlayerAutomaton::getInstance().startedAutomaton())
 				SinglePlayerAutomaton::getInstance().startSinglePlayerAutomaton();
 			//else

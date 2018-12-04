@@ -2,7 +2,6 @@
 #define SNAKE_H
 
 #include <vector>
-#include "Fruit.h"
 #include "Point.h"
 class Snake
 {

@@ -4,7 +4,6 @@
 
 GameSinglePlayer::GameSinglePlayer() :haveFruit_m{ false }, snakeExist_m{ false }, snake_m{ Snake(0.5f) }, fruit_m{nullptr}
 {
-	
 }
 GameSinglePlayer::~GameSinglePlayer()
 {
@@ -14,7 +13,8 @@ GameSinglePlayer::~GameSinglePlayer()
 bool GameSinglePlayer::play()
 {
 	if (!fruit_m) {
-		getInstance().generateFruit();
+		generateFruit();
+		generateSnake();
 	}
 	
 	return false;

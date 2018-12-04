@@ -24,7 +24,6 @@ void SinglePlayerAutomaton::resumeSinglePlayerAutomaton(SinglePlayerState state)
 bool SinglePlayerAutomaton::startedAutomaton() const
 {
 	//Crée un fruit au démarrage de l'automate
-	GameSinglePlayer::getInstance().generateFruit();
 	return mStartedAutomaton;
 }
 
