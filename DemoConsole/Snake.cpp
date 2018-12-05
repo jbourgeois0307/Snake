@@ -68,7 +68,7 @@ bool Snake::checkCollisionAdversary(Snake* adversary) {
 }
 
 bool Snake::checkCollisionWall() {
-	if (mBodPart.front().x() <= 5 || mBodPart.front().y() <= 5 || mBodPart.front().y() >= 95|| mBodPart.front().x() >= 95) {
+	if (mBodPart.front().x() <= 3 || mBodPart.front().y() <= 3 || mBodPart.front().y() >= 96|| mBodPart.front().x() >= 96) {
 		return true;
 	}
 	return false;

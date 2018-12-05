@@ -22,5 +22,5 @@ int PurpleFruit::getPointPenaltyVal()
 
 void PurpleFruit::beEaten(Snake * snake)
 {
-	snake->addBodPart(mPointVal);
+	snake->addBodPart(Fruit::mPointVal);
 }

@@ -29,6 +29,7 @@ float GreenFruit::getSpeedAmplificator()
 
 void GreenFruit::beEaten(Snake * snake)
 {
-	snake->addBodPart(mPointVal);
+	snake->addBodPart(Fruit::mPointVal);
+	snake->speed(mSpeedAmplifier);
 }
 

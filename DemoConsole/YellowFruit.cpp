@@ -30,5 +30,5 @@ float YellowFruit::getSpeedReducer()
 
 void YellowFruit::beEaten(Snake * snake)
 {
-	snake->addBodPart(mPointVal);
+	snake->addBodPart(Fruit::mPointVal);
 }

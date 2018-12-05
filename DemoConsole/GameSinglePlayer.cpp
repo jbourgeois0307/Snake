@@ -1,6 +1,6 @@
 #include "GameSinglePlayer.h"
-#include "GreenFruit.h"
 #include <vector>
+#include "FruitFactory.h"
 
 GameSinglePlayer::GameSinglePlayer() :haveFruit_m{ false }, snakeExist_m{ false }, snake_m{ nullptr }, fruit_m{nullptr}
 {
@@ -24,8 +24,8 @@ bool GameSinglePlayer::play()
 void GameSinglePlayer::generateFruit() 
 {
 	delete fruit_m;
-	Point p(Random::getInstance().uniformRandomize(1, 88) + 5, Random::getInstance().uniformRandomize(1, 88) + 5);
-	fruit_m = new GreenFruit(p, 5, 2.0);// (Point(5, 5), 5);
+	FruitFactory f;
+	fruit_m = f.createFruit();
 	haveFruit_m = true;
 }
 
