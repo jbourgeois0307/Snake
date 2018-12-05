@@ -63,7 +63,7 @@ void GameMultiPlayer::showSnake(ConsoleImage & image)
 
 void GameMultiPlayer::showFruit(ConsoleImage & image)
 {
-	if (haveFruit_m) {
+	if (fruit_m) {
 		image.drawPoint(fruit_m->point().x(), fruit_m->point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tr);
 	}
 }

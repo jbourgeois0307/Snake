@@ -36,14 +36,7 @@ bool Transaction::conditionPlatformer()
 {
 	return false;
 }
-bool Transaction::conditionGameOver(Snake snake)
-{
-	return false;
-}
-bool Transaction::conditionSnakeMove(Snake snake)
-{
-	return false;
-}
+
 
 bool Transaction::conditionSnakeEat(Snake snake, Fruit *fruit)
 {
@@ -78,6 +71,16 @@ bool Transaction::conditionMoveInput(std::list<ConsoleKeyEvent> ke)
 			return true;
 		else if (keyEntered == 'D')
 			return true;
+	}
+	return false;
+}
+
+bool Transaction::conditionAnyInput()
+{
+	if (Game::getInstance().getKeyEvents().size()>0)
+	{
+		Game::getInstance().getKeyEvents().clear();
+		return true;
 	}
 	return false;
 }

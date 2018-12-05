@@ -73,10 +73,12 @@ bool Game::anyTouch() {
 	return false;
 	}
 }
+
 void Game::changeKnownState(State state)
 {
 	update(state);
 }
+
 
 
 void Game::gamemodechooser(State& state){
@@ -144,32 +146,31 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::SinglePlayer:
-		if (Transaction::getInstance().conditionGameOver(GameSinglePlayer::getInstance().snake())) {
+		if (Transaction::getInstance().conditionSnakeCollision(GameMultiPlayer::getInstance().snake())) {
 			return State::GameOver;
 		}
 		else {
 			GameSinglePlayer::getInstance().play();
-			//if (!SinglePlayerAutomaton::getInstance().startedAutomaton())
+			if (!SinglePlayerAutomaton::getInstance().startedAutomaton())
 				SinglePlayerAutomaton::getInstance().startSinglePlayerAutomaton();
-			//else
-				//SinglePlayerAutomaton::getInstance().resumeSinglePlayerAutomaton(SinglePlayerAutomaton::SinglePlayerState::Move);
+			else
+				SinglePlayerAutomaton::getInstance().resumeSinglePlayerAutomaton(SinglePlayerAutomaton::SinglePlayerState::Move);
 			return State::SinglePlayer;
 		}
 		break;
 	case State::Multiplayer:
-		if (Transaction::getInstance().conditionGameOver(GameMultiPlayer::getInstance().snake())) {
+		if (Transaction::getInstance().conditionSnakeCollision(GameMultiPlayer::getInstance().snake(), GameMultiPlayer::getInstance().caterpillar())) {
 			return State::GameOver;
 		}
 		else {
 			GameMultiPlayer::getInstance().generateFruit();
 			GameMultiPlayer::getInstance().generateSnake();
 			MultiPlayerAutomaton::getInstance().startMultiPlayerAutomaton();
-
 			return State::Multiplayer;
 		}
 		break;
 	case State::Plateformer:
-		if (Transaction::getInstance().conditionGameOver(GamePlateformer::getInstance().snake())) {
+		if (Transaction::getInstance().conditionSnakeCollision(GameMultiPlayer::getInstance().snake())) {
 			return State::GameOver;
 		}
 		else {
@@ -184,7 +185,7 @@ Game::State Game::update(State state) {
 			return State::GameModeChooser;
 		}
 		else {
-			return State::GameOver;
+			return state;
 		}
 		break;
 	default:

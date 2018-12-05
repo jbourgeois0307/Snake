@@ -32,7 +32,7 @@ void GameSinglePlayer::generateFruit()
 void GameSinglePlayer::generateSnake()
 {
 	if (!snakeExist_m) {
-		Point p(Random::getInstance().uniformRandomize(1, 90) + 5, Random::getInstance().uniformRandomize(1, 90) + 5);
+		Point p(Random::getInstance().uniformRandomize(1, 90) + 5, Random::getInstance().uniformRandomize(40, 90) + 5);
 		snake_m = Snake(0.5f, p);
 		GameSinglePlayer::snakeExist_m = true;
 	}

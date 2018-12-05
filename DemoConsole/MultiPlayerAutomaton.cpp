@@ -51,12 +51,14 @@ MultiPlayerAutomaton::MultiPlayerState MultiPlayerAutomaton::update(MultiPlayerS
 		}
 		//s'il mange un fruit
 		else if (Transaction::getInstance().conditionSnakeEat(GameMultiPlayer::getInstance().snake(), GameMultiPlayer::getInstance().fruit()) ||
-					Transaction::getInstance().conditionSnakeEat(GameMultiPlayer::getInstance().caterpillar(), GameMultiPlayer::getInstance().fruit())) {
+			Transaction::getInstance().conditionSnakeEat(GameMultiPlayer::getInstance().caterpillar(), GameMultiPlayer::getInstance().fruit())) {
+			if(GameMultiPlayer::getInstance().fruit()){
+			GameMultiPlayer::getInstance().fruit()->beEaten(GameMultiPlayer::getInstance().snake());
 			GameMultiPlayer::getInstance().generateFruit();
-			GameMultiPlayer::getInstance().fruit()->beEaten(GameMultiPlayer::getInstance().fruit());
-
-			return nextMultiPlayerState(state);
+			}
+		return nextMultiPlayerState(state);
 		}
+
 		else if (Transaction::getInstance().conditionMoveInput(Game::getInstance().getKeyEvents()) ) {
 			//Change sa direction
 			for (auto &k : Game::getInstance().getKeyEvents())

@@ -52,15 +52,16 @@ PlateformerAutomaton::PlateformerState PlateformerAutomaton::update(PlateformerS
 		}
 		else if (Transaction::getInstance().conditionMoveInput(Game::getInstance().getKeyEvents())) {
 			//Change sa direction
-			for (auto &k : Game::getInstance().getKeyEvents())
-=======
-		for (Obstacle o : GamePlateformer::getInstance().obstacles()) {
-			if (o.Y() + 1.0 < 100)
-
+			for (auto &k : Game::getInstance().getKeyEvents()) 
 			{
-				o.setY(o.Y() + 1.0);
+				changeDirection(k);
 			}
-		}
+			for (Obstacle o : GamePlateformer::getInstance().obstacles()) {
+				if (o.Y() + 1.0 < 100)
+				{
+					o.setY(o.Y() + 1.0);
+				}
+			}
 		////avance automatiquement
 		//if (Transaction::getInstance().conditionSnakeCollision(GamePlateformer::getInstance().snake())) {
 		//	return PlateformerState::Collision;
@@ -84,8 +85,8 @@ PlateformerAutomaton::PlateformerState PlateformerAutomaton::update(PlateformerS
 		//	//avance automatiquement
 		//	GamePlateformer::getInstance().slitherSnake();
 		//	return PlateformerState::Move;
-		//}
-		//break;
+		}
+	break;
 	case PlateformerState::Eat:
 		//GamePlateformer::getInstance().generateFruit(true);
 		return PlateformerState::Move;

@@ -93,7 +93,7 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{3C1AE9D6-56A4-4636-BD6F-8173ADE4DC9B}</ProjectGuid>
     <RootNamespace>DemoConsole</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
     <ProjectName>SnakeGame</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

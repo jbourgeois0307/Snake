@@ -37,7 +37,8 @@ SinglePlayerAutomaton::SinglePlayerState SinglePlayerAutomaton::update(SinglePla
 {
 	switch (state) {
 	case SinglePlayerState::Idle:
-		if (true) {
+		if (Transaction::getInstance().conditionAnyInput()) {
+			Game::getInstance().getKeyEvents().clear();
 			return nextSinglePlayerState(state);
 		}
 		//S'il n'y a pas d'input de key
@@ -48,7 +49,7 @@ SinglePlayerAutomaton::SinglePlayerState SinglePlayerAutomaton::update(SinglePla
 	case SinglePlayerState::Move:
 		//avance automatiquement
 		if (Transaction::getInstance().conditionSnakeCollision(GameSinglePlayer::getInstance().snake())) {
-			return SinglePlayerState::Collision;
+			return update(SinglePlayerState::Collision);
 		}
 
 		//s'il mange un fruit
@@ -83,10 +84,9 @@ SinglePlayerAutomaton::SinglePlayerState SinglePlayerAutomaton::update(SinglePla
 		break;
 	case SinglePlayerState::Collision:
 		Game::getInstance().changeKnownState(Game::State::GameOver);
-			return nextSinglePlayerState(state);
+		return nextSinglePlayerState(state);
 		break;
 	case SinglePlayerState::EndGame:
-		Game::getInstance().changeKnownState(Game::State::GameOver);
 		return SinglePlayerState::Idle;
 		break;
 	default:

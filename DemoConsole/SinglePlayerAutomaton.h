@@ -17,7 +17,7 @@ public:
 		static SinglePlayerAutomaton instance;
 		return instance;
 	}
-	void startSinglePlayerAutomaton(SinglePlayerState state = SinglePlayerState::Move);
+	void startSinglePlayerAutomaton(SinglePlayerState state = SinglePlayerState::Idle);
 	void resumeSinglePlayerAutomaton(SinglePlayerState state);
 	bool startedAutomaton() const;
 private:
