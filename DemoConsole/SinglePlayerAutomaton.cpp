@@ -48,6 +48,7 @@ SinglePlayerAutomaton::SinglePlayerState SinglePlayerAutomaton::update(SinglePla
 		break;
 	case SinglePlayerState::Move:
 		//avance automatiquement
+		//Si collision a lieu
 		if (Transaction::getInstance().conditionSnakeCollision(GameSinglePlayer::getInstance().snake())) {
 			return update(SinglePlayerState::Collision);
 		}
