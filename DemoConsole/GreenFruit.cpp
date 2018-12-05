@@ -12,8 +12,8 @@ GreenFruit::GreenFruit(float speedAmplifier)
 {
 }
 
-GreenFruit::GreenFruit(Point const &p, int pointVal, float speedAmplifier)
-	: Fruit(p, pointVal),
+GreenFruit::GreenFruit(Point const &p, int pointVal, float speedAmplifier, FruitType c)
+	: Fruit(p, pointVal,c),
 	mSpeedAmplifier{speedAmplifier}
 {
 }

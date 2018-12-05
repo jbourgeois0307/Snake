@@ -24,8 +24,8 @@ bool GamePlateformer::play()
 void GamePlateformer::generateFruit() 
 {
 	delete fruit_m;
-	Point p(Random::getInstance().uniformRandomize(1, 89) + 5, 80);
-	fruit_m = new GreenFruit(p, 5, 2.0);// (Point(5, 5), 5);
+	FruitFactory f;
+	fruit_m = f.createFruit();
 	haveFruit_m = true;
 }
 

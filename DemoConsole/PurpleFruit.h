@@ -9,7 +9,7 @@ class PurpleFruit : public Fruit
 	int mPointPenalty;
 public:
 	PurpleFruit();
-	PurpleFruit(Point &p, int pointVal);
+	PurpleFruit(Point &p, int pointVal, FruitType c);
 	~PurpleFruit();
 	int getPointPenaltyVal();
 	void beEaten(Snake *snake) override;

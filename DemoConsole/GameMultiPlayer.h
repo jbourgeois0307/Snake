@@ -7,6 +7,7 @@
 #include "Random.h"
 #include "Point.h"
 #include "Snake.h"
+#include "FruitFactory.h"
 class GameMultiPlayer
 {
 protected:

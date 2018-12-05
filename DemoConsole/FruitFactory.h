@@ -2,12 +2,11 @@
 #define FRUIT_FACTORY_H
 
 #include "Fruit.h"
+
 class FruitFactory
 {
 public:
-	enum class FruitType { Red, Purple, Yellow, Green};
-	Fruit *createFruit();
+	Fruit* createFruit();
 };
-
 #endif // !FRUIT_FACTORY_H
 

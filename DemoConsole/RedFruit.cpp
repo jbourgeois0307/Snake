@@ -5,8 +5,8 @@ RedFruit::RedFruit()
 {
 }
 
-RedFruit::RedFruit(Point const &p, int pointVal)
-	: Fruit(p,pointVal)
+RedFruit::RedFruit(Point const &p, int pointVal, FruitType c)
+	: Fruit(p,pointVal,c)
 {
 }
 

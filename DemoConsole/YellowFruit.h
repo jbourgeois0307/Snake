@@ -9,7 +9,7 @@ class YellowFruit : public Fruit
 public:
 	YellowFruit();
 	YellowFruit(float speedReducor);
-	YellowFruit(Point &p, int pointVal, float speedReducor);
+	YellowFruit(Point &p, int pointVal, float speedReducor, FruitType c);
 	~YellowFruit();
 	float getSpeedReducer();
 	void beEaten(Snake *snake) override;

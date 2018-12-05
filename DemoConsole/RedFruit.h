@@ -7,7 +7,7 @@ class RedFruit : public Fruit
 {
 public:
 	RedFruit();
-	RedFruit(Point const &p, int pointVal);
+	RedFruit(Point const &p, int pointVal, FruitType c);
 	~RedFruit();
 	void beEaten(Snake *snake) override;
 };

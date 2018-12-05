@@ -9,6 +9,7 @@
 #include "Point.h"
 #include "Snake.h"
 #include "Obstacle.h"
+#include "FruitFactory.h"
 
 class GamePlateformer
 {

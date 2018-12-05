@@ -2,13 +2,15 @@
 
 Fruit::Fruit()
 	: mPoint(0,0),
-	mPointVal{ 0 }
+	mPointVal{ 0 },
+	mColor{ 0 }
 {
 }
 
-Fruit::Fruit(Point p, int pointVal)
+Fruit::Fruit(Point p, int pointVal, FruitType c)
 	: mPoint{p},
-	mPointVal{pointVal}
+	mPointVal{pointVal},
+	mColor{c}
 {
 }
 
@@ -29,4 +31,9 @@ int Fruit::pointVal()
 Point Fruit::point()
 {
 	return mPoint;
+}
+
+Fruit::FruitType Fruit::color()
+{
+	return mColor;
 }

@@ -1,6 +1,5 @@
 #include "GameSinglePlayer.h"
 #include <vector>
-#include "FruitFactory.h"
 
 GameSinglePlayer::GameSinglePlayer() :haveFruit_m{ false }, snakeExist_m{ false }, snake_m{ nullptr }, fruit_m{nullptr}
 {
@@ -52,8 +51,18 @@ void GameSinglePlayer::showSnake(ConsoleImage & image)
 
 void GameSinglePlayer::showFruit(ConsoleImage & image)
 {
+
+	//Affiche selon la couleur du fruit
 	if(fruit_m){
-		image.drawPoint(fruit_m->point().x(), fruit_m->point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tr);
+		if (fruit_m->color() == Fruit::FruitType::Red) 
+			image.drawPoint(fruit_m->point().x(), fruit_m->point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tr);
+		if (fruit_m->color() == Fruit::FruitType::Green)
+			image.drawPoint(fruit_m->point().x(), fruit_m->point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tg);
+		if (fruit_m->color() == Fruit::FruitType::Yellow)
+			image.drawPoint(fruit_m->point().x(), fruit_m->point().y(), (char)178, ConsoleColor::bw + ConsoleColor::ty);
+		if (fruit_m->color() == Fruit::FruitType::Purple)
+			image.drawPoint(fruit_m->point().x(), fruit_m->point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tm);
+		
 	}
 }
 
