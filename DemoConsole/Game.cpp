@@ -154,6 +154,7 @@ Game::State Game::update(State state) {
 		}
 
 		if (Transaction::getInstance().conditionSnakeCollision(GameSinglePlayer::getInstance().snake())) {
+			SinglePlayerAutomaton::getInstance().resetSinglePlayerAutomaton();
 			return State::GameOver;
 		}
 

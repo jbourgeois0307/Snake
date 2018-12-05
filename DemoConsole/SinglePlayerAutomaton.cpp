@@ -11,6 +11,13 @@ SinglePlayerAutomaton::~SinglePlayerAutomaton()
 }
 
 
+void SinglePlayerAutomaton::resetSinglePlayerAutomaton()
+{
+	mStartedAutomaton = false;
+	GameSinglePlayer::getInstance().generateSnake();
+	GameSinglePlayer::getInstance().generateFruit();
+}
+
 void SinglePlayerAutomaton::startSinglePlayerAutomaton(SinglePlayerState state)
 {
 	mStartedAutomaton = true;
@@ -24,7 +31,7 @@ void SinglePlayerAutomaton::resumeSinglePlayerAutomaton(SinglePlayerState state)
 
 bool SinglePlayerAutomaton::startedAutomaton() const
 {
-	//Crée un fruit au démarrage de l'automate
+	//Retourne si oui ou non l'automate a été créé
 	return mStartedAutomaton;
 }
 
