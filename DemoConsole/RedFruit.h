@@ -9,7 +9,7 @@ public:
 	RedFruit();
 	RedFruit(Point const &p, int pointVal);
 	~RedFruit();
-	void beEaten(Snake &snake) override;
+	void beEaten(Snake *snake) override;
 };
 
 #endif // !REDFRUIT_H

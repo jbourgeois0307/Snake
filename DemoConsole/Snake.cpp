@@ -7,7 +7,7 @@ Snake::Snake()
 //Constructeur qui demande la vitesse et positionne la tête à (50,50)
 Snake::Snake(float speed)
 	: mSpeed{ speed },
-	mBodLength{ 10 },
+	mBodLength{ 4 },
 	mCurDirection{ Direction::Up }
 {
 	Point p = Point(50, 50);
@@ -21,7 +21,7 @@ Snake::Snake(float speed)
 //Constructeur qui requiert vitesse et positions de la tête initiales
 Snake::Snake(float speed, Point &p)
 	: mSpeed{speed},
-	mBodLength { 10 },
+	mBodLength { 4 },
 	mCurDirection{ Direction::Up }
 {
 	mBodPart.insert(mBodPart.begin(), p);
@@ -57,10 +57,10 @@ bool Snake::checkCollisionHead() {
 }
 
 
-bool Snake::checkCollisionAdversary(Snake& adversary) {
-	for (int i{ 1 }; i < adversary.bodLength() - 1; ++i) {
-		if (mBodPart.at(0).x() == adversary.bodPart().at(i).x())
-			if (mBodPart.at(0).y() == adversary.bodPart().at(i).y())
+bool Snake::checkCollisionAdversary(Snake* adversary) {
+	for (int i{ 1 }; i < adversary->bodLength() - 1; ++i) {
+		if (mBodPart.at(0).x() == adversary->bodPart().at(i).x())
+			if (mBodPart.at(0).y() == adversary->bodPart().at(i).y())
 				//le Game over aura lieu
 				return true;
 	}

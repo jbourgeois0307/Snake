@@ -27,8 +27,8 @@ float GreenFruit::getSpeedAmplificator()
 	return mSpeedAmplifier;
 }
 
-void GreenFruit::beEaten(Snake & snake)
+void GreenFruit::beEaten(Snake * snake)
 {
-	snake.addBodPart(mPointVal);
+	snake->addBodPart(mPointVal);
 }
 

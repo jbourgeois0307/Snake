@@ -28,11 +28,11 @@ public:
 	bool conditionOptions();
 	bool conditionWelcome();
 	bool conditionSinglePlayer();
-	bool conditionSnakeCollision(Snake &snake);
-	bool conditionSnakeCollision(Snake & snake, Snake & caterpillar);
+	bool conditionSnakeCollision(Snake *snake);
+	bool conditionSnakeCollision(Snake * snake, Snake * caterpillar);
 	bool conditionMultiPlayer();
 	bool conditionPlatformer();
-	bool conditionSnakeEat(Snake snake, Fruit* fruit);
+	bool conditionSnakeEat(Snake *snake, Fruit* fruit);
 	bool conditionMoveInput(std::list<ConsoleKeyEvent> ke);
 	bool conditionAnyInput();
 };

@@ -12,7 +12,7 @@ public:
 	PurpleFruit(Point &p, int pointVal);
 	~PurpleFruit();
 	int getPointPenaltyVal();
-	void beEaten(Snake &snake) override;
+	void beEaten(Snake *snake) override;
 };
 
 #endif // PURPLEFRUIT_H

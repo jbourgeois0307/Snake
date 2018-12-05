@@ -19,7 +19,7 @@ protected:
 	bool haveFruit_m;
 	bool snakeExist_m;
 	Fruit *fruit_m;
-	Snake snake_m;
+	Snake* snake_m;
 	size_t mNbFruit;
 	std::vector<Obstacle> mObstacles;
 
@@ -42,7 +42,7 @@ public:
 	void slitherSnake();
 	void directionSnake(Snake::Direction direction);
 	Snake::Direction& curDirection();
-	Snake& snake();
+	Snake* snake();
 	Fruit* fruit();
 };
 

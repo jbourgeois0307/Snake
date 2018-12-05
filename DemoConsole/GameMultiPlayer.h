@@ -16,8 +16,8 @@ protected:
 	bool haveFruit_m;
 	bool snakeExist_m;
 	Fruit *fruit_m;
-	Snake snake_m;
-	Snake caterpillar_m;
+	Snake *snake_m;
+	Snake *caterpillar_m;
 
 
 public:
@@ -38,10 +38,9 @@ public:
 	void directionCaterpillar(Snake::Direction direction);
 	Snake::Direction& curDirection();
 	Snake::Direction & curDirectionCaterpillar();
-	Snake& snake();
-	Snake & caterpillar();
+	Snake* snake();
+	Snake* caterpillar();
 	Fruit* fruit();
-
 };
 
 #endif

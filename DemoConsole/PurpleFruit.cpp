@@ -20,7 +20,7 @@ int PurpleFruit::getPointPenaltyVal()
 	return mPointPenalty;
 }
 
-void PurpleFruit::beEaten(Snake & snake)
+void PurpleFruit::beEaten(Snake * snake)
 {
-	snake.addBodPart(mPointVal);
+	snake->addBodPart(mPointVal);
 }

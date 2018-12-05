@@ -37,7 +37,11 @@ bool GameArea::singleplayer() {
 	singlePlayerArea.fill(178, ConsoleColor::bK + ConsoleColor::tC);
 	singlePlayerArea.fill(5.0, 5.0, 90.0, 90.0, (char)176, ConsoleColor::bg + ConsoleColor::tw);
 
-	int sizeSnake = GameSinglePlayer::getInstance().snake().bodLength();
+	int sizeSnake = 0;
+	if (GameSinglePlayer::getInstance().snake() != nullptr) {
+		sizeSnake = GameSinglePlayer::getInstance().snake()->bodLength();
+	}
+	
 
 	showInfo(singlePlayerArea, 100, "singleplayer","Ludovic", 0, sizeSnake, 0, 0, 0);
 	GameSinglePlayer::getInstance().showFruit(singlePlayerArea);

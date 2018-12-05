@@ -105,12 +105,12 @@ PlateformerAutomaton::PlateformerState PlateformerAutomaton::update(PlateformerS
 bool PlateformerAutomaton::changeDirection(ConsoleKeyEvent &k)
 {
 	if (k.keyV() == VK_LEFT)
-		if ((GamePlateformer::getInstance().snake()).curDirection() == Snake::Direction::Right)
+		if ((GamePlateformer::getInstance().snake())->curDirection() == Snake::Direction::Right)
 			return false;
 		else
 			GamePlateformer::getInstance().directionSnake(Snake::Direction::Left);
 	else {
-		if ((GamePlateformer::getInstance().snake()).curDirection() == Snake::Direction::Left)
+		if ((GamePlateformer::getInstance().snake())->curDirection() == Snake::Direction::Left)
 			return false;
 		else
 			GamePlateformer::getInstance().directionSnake(Snake::Direction::Right);

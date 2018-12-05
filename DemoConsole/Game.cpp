@@ -146,17 +146,19 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::SinglePlayer:
-		if (Transaction::getInstance().conditionSnakeCollision(GameSinglePlayer::getInstance().snake())) {
+
+		if (!SinglePlayerAutomaton::getInstance().startedAutomaton()) {
 			GameSinglePlayer::getInstance().play();
+			SinglePlayerAutomaton::getInstance().startSinglePlayerAutomaton();
+			return State::SinglePlayer;
+		}
+
+		if (Transaction::getInstance().conditionSnakeCollision(GameSinglePlayer::getInstance().snake())) {
 			return State::GameOver;
 		}
+
 		else {
-			GameSinglePlayer::getInstance().play();
-			if (!SinglePlayerAutomaton::getInstance().startedAutomaton())
-				SinglePlayerAutomaton::getInstance().startSinglePlayerAutomaton();
-			else 
-				SinglePlayerAutomaton::getInstance().resumeSinglePlayerAutomaton(SinglePlayerAutomaton::SinglePlayerState::Move);
-				
+			SinglePlayerAutomaton::getInstance().resumeSinglePlayerAutomaton(SinglePlayerAutomaton::SinglePlayerState::Move);
 			return State::SinglePlayer;
 		}
 		break;

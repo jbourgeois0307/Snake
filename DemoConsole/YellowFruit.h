@@ -12,7 +12,7 @@ public:
 	YellowFruit(Point &p, int pointVal, float speedReducor);
 	~YellowFruit();
 	float getSpeedReducer();
-	void beEaten(Snake &snake) override;
+	void beEaten(Snake *snake) override;
 };
 
 

@@ -38,13 +38,15 @@ bool Transaction::conditionPlatformer()
 }
 
 
-bool Transaction::conditionSnakeEat(Snake snake, Fruit *fruit)
+bool Transaction::conditionSnakeEat(Snake *snake, Fruit *fruit)
 {
 	//Si la tête est à la même position que le fruit
-	if(snake.bodPart().at(0).x()==fruit->point().x())
-		if (snake.bodPart().at(0).y() == fruit->point().y()) {
-			return true;
-		}
+	if (snake != nullptr) {
+		if (snake->bodPart().at(0).x() == fruit->point().x())
+			if (snake->bodPart().at(0).y() == fruit->point().y()) {
+				return true;
+			}
+	}
 	return false;
 }
 
@@ -85,21 +87,23 @@ bool Transaction::conditionAnyInput()
 	return false;
 }
 
-bool Transaction::conditionSnakeCollision(Snake& snake) 
+bool Transaction::conditionSnakeCollision(Snake* snake) 
 {
-	
-	if (snake.checkCollisionHead() || snake.checkCollisionWall())
-		return true;
+	if (snake != nullptr) {
+		if (snake->checkCollisionHead() || snake->checkCollisionWall())
+			return true;
+	}
 	return false;
 }
 
-bool Transaction::conditionSnakeCollision(Snake& snake, Snake& caterpillar)
+bool Transaction::conditionSnakeCollision(Snake* snake, Snake* caterpillar)
 {
-
-	if (snake.checkCollisionHead() || snake.checkCollisionWall() || snake.checkCollisionAdversary(caterpillar))
-		return true;
-	if (caterpillar.checkCollisionHead() || caterpillar.checkCollisionWall() || caterpillar.checkCollisionAdversary(snake))
-		return true;
+	if (snake != nullptr) {
+		if (snake->checkCollisionHead() || snake->checkCollisionWall() || snake->checkCollisionAdversary(caterpillar))
+			return true;
+		if (caterpillar->checkCollisionHead() || caterpillar->checkCollisionWall() || caterpillar->checkCollisionAdversary(snake))
+			return true;
+	}
 	return false;
 }
 

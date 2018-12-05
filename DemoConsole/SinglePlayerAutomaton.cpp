@@ -2,7 +2,7 @@
 
 SinglePlayerAutomaton::SinglePlayerAutomaton()
 	:slow_m{500},
-	mStartedAutomaton{true}
+	mStartedAutomaton{false}
 {
 }
 
@@ -13,6 +13,7 @@ SinglePlayerAutomaton::~SinglePlayerAutomaton()
 
 void SinglePlayerAutomaton::startSinglePlayerAutomaton(SinglePlayerState state)
 {
+	mStartedAutomaton = true;
 	state = update(state);
 }
 
@@ -99,22 +100,22 @@ bool SinglePlayerAutomaton::changeDirection(ConsoleKeyEvent &k)
 {
 	//Autorise le changement de direction seulement si ce n'est pas dans le sens directement opposé
 	if (k.keyV() == VK_UP)
-		if ((GameSinglePlayer::getInstance().snake()).curDirection() == Snake::Direction::Down)
+		if ((GameSinglePlayer::getInstance().snake())->curDirection() == Snake::Direction::Down)
 			return false;
 		else
 			GameSinglePlayer::getInstance().directionSnake(Snake::Direction::Up);
 	else if (k.keyV() == VK_DOWN)
-		if ((GameSinglePlayer::getInstance().snake()).curDirection() == Snake::Direction::Up)
+		if ((GameSinglePlayer::getInstance().snake())->curDirection() == Snake::Direction::Up)
 			return false;
 		else
 			GameSinglePlayer::getInstance().directionSnake(Snake::Direction::Down);
 	else if (k.keyV() == VK_LEFT)
-		if ((GameSinglePlayer::getInstance().snake()).curDirection() == Snake::Direction::Right)
+		if ((GameSinglePlayer::getInstance().snake())->curDirection() == Snake::Direction::Right)
 			return false;
 		else
 			GameSinglePlayer::getInstance().directionSnake(Snake::Direction::Left);
 	else {
-		if ((GameSinglePlayer::getInstance().snake()).curDirection() == Snake::Direction::Left)
+		if ((GameSinglePlayer::getInstance().snake())->curDirection() == Snake::Direction::Left)
 			return false;
 		else
 			GameSinglePlayer::getInstance().directionSnake(Snake::Direction::Right);

@@ -12,7 +12,7 @@ public:
 	GreenFruit(Point const &p, int pointVal, float speedAmplifier);
 	~GreenFruit();
 	float getSpeedAmplificator();
-	void beEaten(Snake &snake) override;
+	void beEaten(Snake * snake) override;
 };
 
 

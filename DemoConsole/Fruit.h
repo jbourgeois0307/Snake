@@ -17,7 +17,7 @@ public:
 	void setPoint(Point p);
 	int pointVal();
 	Point point();
-	virtual void beEaten(Snake &snake)=0;
+	virtual void beEaten(Snake *snake)=0;
 };
 
 

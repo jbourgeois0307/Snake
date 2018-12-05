@@ -16,7 +16,7 @@ protected:
 	bool haveFruit_m;
 	bool snakeExist_m;
 	Fruit *fruit_m;
-	Snake snake_m;
+	Snake *snake_m;
 	
 
 public:
@@ -35,9 +35,9 @@ public:
 	void slitherSnake();
 	void directionSnake(Snake::Direction direction);
 	Snake::Direction& curDirection();
-	Snake& snake();
+	Snake* snake();
 	Fruit* fruit();
 
 };
 
-#endif
+#endif //SINGLEPLAYER_H

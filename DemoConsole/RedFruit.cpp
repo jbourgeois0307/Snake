@@ -14,7 +14,7 @@ RedFruit::~RedFruit()
 {
 }
 
-void RedFruit::beEaten(Snake & snake)
+void RedFruit::beEaten(Snake * snake)
 {
-	snake.addBodPart(mPointVal);
+	snake->addBodPart(mPointVal);
 }
