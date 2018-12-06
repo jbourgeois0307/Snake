@@ -19,7 +19,7 @@ private:
 public:
 	void static start(size_t width=800, size_t height= 800);
 	void test();
-	enum class State {Welcome, StartMenu, GameModeChooser, Options, SinglePlayer, Multiplayer, Plateformer, GameOver};
+	enum class State {Welcome, StartMenu, GameModeChooser, Options, SinglePlayer, Multiplayer, Plateformer, GameOver, PauseSinglePlayer, PauseMultiPlayer};
 	static Game& getInstance()
 	{
 		static Game instance;
@@ -31,6 +31,7 @@ private:
 	void gameLoop(State state = State::Welcome);
 	void processInput();
 	void gamemodechooser(State & state);
+	State testPause(State state);
 	State update(State state);
 	void render(State state);
 	bool anyTouch();
@@ -42,6 +43,7 @@ private:
 	ConsoleKeyReader * reader_m;
 	ConsoleKeyReader::KeyEvents keyEvents;
 	int positonChooser = 1;
+	
 public:
 	void changeKnownState(State state);
 };

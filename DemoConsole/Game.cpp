@@ -24,7 +24,7 @@ void Game::gameLoop(State state) {
 		render(state);
 		timer.restart();
 		int timertime = timer.elapsed();
-		while (timertime <= 100000000) {
+		while (timertime <= 65000000) {
 			timertime = timer.elapsed();
 
 		}
@@ -146,6 +146,8 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::SinglePlayer:
+		if (Transaction::getInstance().conditionPause(getKeyEvents()))
+			return testPause(State::SinglePlayer);
 
 		if (!SinglePlayerAutomaton::getInstance().startedAutomaton()) {
 			GameSinglePlayer::getInstance().play();
@@ -164,6 +166,8 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::Multiplayer:
+		if (Transaction::getInstance().conditionPause(getKeyEvents()))
+			return testPause(State::Multiplayer);
 		if (!MultiPlayerAutomaton::getInstance().startedAutomaton()) {
 			GameMultiPlayer::getInstance().play();
 			return State::Multiplayer;
@@ -179,6 +183,8 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::Plateformer:
+		if (Transaction::getInstance().conditionPause(getKeyEvents()))
+			testPause(State::Plateformer);
 		if (Transaction::getInstance().conditionSnakeCollision(GameMultiPlayer::getInstance().snake())) {
 			return State::GameOver;
 		}
@@ -197,6 +203,12 @@ Game::State Game::update(State state) {
 			return state;
 		}
 		break;
+	case State::PauseSinglePlayer:
+		testPause(State::SinglePlayer);
+		break;
+	case State::PauseMultiPlayer:
+		testPause(State::Multiplayer);
+		break;
 	default:
 		return State::GameOver;
 	}
@@ -204,7 +216,7 @@ Game::State Game::update(State state) {
 
 void Game::start(size_t width, size_t height) {
 
-	ConsoleContext context(800, 800, "The Snake Game", 8, 8, L"Consolas");
+	ConsoleContext context(800, 800, "The Snake Game", 9, 9, L"Consolas");
 	Console::defineContext(context);
 	Game::getInstance().reader_m = &( Console::getInstance().keyReader());
 	Game::getInstance().gameLoop(State::Welcome);
@@ -213,5 +225,19 @@ void Game::start(size_t width, size_t height) {
 void Game::test() {
 	while (true) {
 		writer->randomize();
+	}
+}
+
+Game::State Game::testPause(State state)
+{
+
+	if (!Transaction::getInstance().conditionPause(getKeyEvents())) {
+		if (state == State::SinglePlayer)
+			return State::PauseSinglePlayer;
+		else
+			return State::PauseMultiPlayer;
+	}
+	else {
+		return state;
 	}
 }
