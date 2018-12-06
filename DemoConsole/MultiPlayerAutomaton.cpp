@@ -21,12 +21,13 @@ void MultiPlayerAutomaton::resetMultiPlayerAutomaton()
 void MultiPlayerAutomaton::startMultiPlayerAutomaton(MultiPlayerState state)
 {
 	mStartedAutomaton = true;
+	mState = state;
 	state = update(state);
 }
 
-void MultiPlayerAutomaton::resumeMultiPlayerAutomaton(MultiPlayerState state)
+void MultiPlayerAutomaton::resumeMultiPlayerAutomaton()
 {
-	state = update(state);
+	mState = update(mState);
 }
 
 bool MultiPlayerAutomaton::startedAutomaton() const
@@ -61,9 +62,8 @@ MultiPlayerAutomaton::MultiPlayerState MultiPlayerAutomaton::update(MultiPlayerS
 		//s'il mange un fruit
 		else if (Transaction::getInstance().conditionSnakeEat(GameMultiPlayer::getInstance().snake(), GameMultiPlayer::getInstance().fruit()) ||
 			Transaction::getInstance().conditionSnakeEat(GameMultiPlayer::getInstance().caterpillar(), GameMultiPlayer::getInstance().fruit())) {
-			
-			return nextMultiPlayerState(state);
-		}
+				return nextMultiPlayerState(state);
+			}
 
 		else if (Transaction::getInstance().conditionMoveInput(Game::getInstance().getKeyEvents()) ) {
 			//Change sa direction
@@ -84,7 +84,10 @@ MultiPlayerAutomaton::MultiPlayerState MultiPlayerAutomaton::update(MultiPlayerS
 		}
 		break;
 	case MultiPlayerState::Eat:
-		GameMultiPlayer::getInstance().fruit()->beEaten(GameMultiPlayer::getInstance().snake());
+		if (Transaction::getInstance().conditionSnakeEat(GameMultiPlayer::getInstance().snake(), GameMultiPlayer::getInstance().fruit()))
+			GameMultiPlayer::getInstance().fruit()->beEaten(GameMultiPlayer::getInstance().snake());
+		else
+			GameMultiPlayer::getInstance().fruit()->beEaten(GameMultiPlayer::getInstance().caterpillar());
 		GameMultiPlayer::getInstance().generateFruit();
 		return MultiPlayerState::Move;
 		break;

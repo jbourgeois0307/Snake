@@ -36,10 +36,10 @@ void GameMultiPlayer::generateFruit()
 void GameMultiPlayer::generateSnake()
 {
 	delete snake_m;
-	Point p(Random::getInstance().uniformRandomize(1, 49) + 5, Random::getInstance().uniformRandomize(40, 90) + 5);
+	Point p(Random::getInstance().uniformRandomize(1, 45) + 5, Random::getInstance().uniformRandomize(40, 88) + 5);
 	snake_m = new Snake(0.5f, p);
 
-	Point p2(Random::getInstance().uniformRandomize(50, 90) + 5, Random::getInstance().uniformRandomize(40, 90) + 5);
+	Point p2(Random::getInstance().uniformRandomize(50, 88) + 5, Random::getInstance().uniformRandomize(40, 88) + 5);
 	caterpillar_m = new Snake(0.5f, p2);
 	snakeExist_m = true;
 

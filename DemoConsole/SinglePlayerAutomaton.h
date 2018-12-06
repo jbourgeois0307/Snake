@@ -19,9 +19,10 @@ public:
 	}
 	void startSinglePlayerAutomaton(SinglePlayerState state = SinglePlayerState::Idle);
 	void resetSinglePlayerAutomaton();
-	void resumeSinglePlayerAutomaton(SinglePlayerState state);
+	void resumeSinglePlayerAutomaton();
 	bool startedAutomaton() const;
 private:
+	SinglePlayerState mState;
 	SinglePlayerState nextSinglePlayerState(SinglePlayerState state);
 	SinglePlayerState update(SinglePlayerState state);
 	bool changeDirection(ConsoleKeyEvent &k);

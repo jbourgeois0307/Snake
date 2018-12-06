@@ -159,7 +159,7 @@ Game::State Game::update(State state) {
 		}
 
 		else {
-			SinglePlayerAutomaton::getInstance().resumeSinglePlayerAutomaton(SinglePlayerAutomaton::SinglePlayerState::Move);
+			SinglePlayerAutomaton::getInstance().resumeSinglePlayerAutomaton();
 			return State::SinglePlayer;
 		}
 		break;
@@ -174,7 +174,7 @@ Game::State Game::update(State state) {
 			return State::GameOver;
 		}
 		else {
-			MultiPlayerAutomaton::getInstance().resumeMultiPlayerAutomaton(MultiPlayerAutomaton::MultiPlayerState::Move);
+			MultiPlayerAutomaton::getInstance().resumeMultiPlayerAutomaton();
 			return State::Multiplayer;
 		}
 		break;

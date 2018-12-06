@@ -19,10 +19,11 @@ public:
 		return instance;
 	}
 	void startMultiPlayerAutomaton(MultiPlayerState state = MultiPlayerState::Idle);
-	void resumeMultiPlayerAutomaton(MultiPlayerState state);
+	void resumeMultiPlayerAutomaton();
 	void resetMultiPlayerAutomaton();
 	bool startedAutomaton() const;
 private:
+	MultiPlayerState mState;
 	MultiPlayerState nextMultiPlayerState(MultiPlayerState state);
 	MultiPlayerState update(MultiPlayerState state);
 	bool changeDirection(ConsoleKeyEvent &k);

@@ -21,12 +21,13 @@ void SinglePlayerAutomaton::resetSinglePlayerAutomaton()
 void SinglePlayerAutomaton::startSinglePlayerAutomaton(SinglePlayerState state)
 {
 	mStartedAutomaton = true;
+	mState = state;
 	state = update(state);
 }
 
-void SinglePlayerAutomaton::resumeSinglePlayerAutomaton(SinglePlayerState state)
+void SinglePlayerAutomaton::resumeSinglePlayerAutomaton()
 {
-	state = update(state);
+	mState = update(mState);
 }
 
 bool SinglePlayerAutomaton::startedAutomaton() const
