@@ -90,12 +90,13 @@ bool Transaction::conditionAnyInput()
 bool Transaction::conditionPause(std::list<ConsoleKeyEvent> ke)
 {
 	//Pause si le joueur clique sur "espace"
-		for (auto &k : ke)
-		{
-			if (k.keyV() == VK_SPACE)
-				return true;
-				
+	for (auto &k : ke)
+	{
+		if (k.keyV() == VK_SPACE) {
+			ke.clear();
+			return true;
 		}
+	}
 	return false;
 }
 

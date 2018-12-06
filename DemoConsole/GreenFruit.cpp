@@ -16,6 +16,8 @@ GreenFruit::GreenFruit(Point const &p, int pointVal, float speedAmplifier, Fruit
 	: Fruit(p, pointVal,c),
 	mSpeedAmplifier{speedAmplifier}
 {
+	//Incrémente un compteur de fruit propre à la classe
+	sCountFruit++;
 }
 
 GreenFruit::~GreenFruit()

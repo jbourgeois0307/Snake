@@ -8,6 +8,7 @@ class GameArea
 private:
 	GameArea();
 	~GameArea();
+	int mGameScore;
 
 public:
 

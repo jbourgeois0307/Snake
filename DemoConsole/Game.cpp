@@ -1,4 +1,10 @@
 #include "Game.h"
+#include "GreenFruit.h"
+#include "RedFruit.h"
+#include "PurpleFruit.h"
+#include "YellowFruit.h"
+
+
 Game::Game() :slow_m{ 500 }, reader_m{ nullptr }, writer{ nullptr }, gamezone{ nullptr }
 {
 }
@@ -197,6 +203,7 @@ Game::State Game::update(State state) {
 		break;
 	case State::GameOver:
 		if (anyTouch()) {
+			resetAllFruitsCounter();
 			return State::GameModeChooser;
 		}
 		else {
@@ -204,10 +211,20 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::PauseSinglePlayer:
-		testPause(State::SinglePlayer);
+		if (anyTouch()) {
+			return State::SinglePlayer;
+		}
+		else {
+			return state;
+		}
 		break;
 	case State::PauseMultiPlayer:
-		testPause(State::Multiplayer);
+		if (anyTouch()) {
+			return State::Multiplayer;
+		}
+		else {
+			return state;
+		}
 		break;
 	default:
 		return State::GameOver;
@@ -230,14 +247,24 @@ void Game::test() {
 
 Game::State Game::testPause(State state)
 {
+			if (Transaction::getInstance().conditionPause(getKeyEvents()))
+			{
+				keyEvents.clear();
+				if (state == State::SinglePlayer)
+					return State::PauseSinglePlayer;
+				else
+					return State::PauseMultiPlayer;
+			}
+			else {
+				return state;
+			}
+	
+}
 
-	if (!Transaction::getInstance().conditionPause(getKeyEvents())) {
-		if (state == State::SinglePlayer)
-			return State::PauseSinglePlayer;
-		else
-			return State::PauseMultiPlayer;
-	}
-	else {
-		return state;
-	}
+void Game::resetAllFruitsCounter()
+{
+	GreenFruit::sCountFruit = 0;
+	YellowFruit::sCountFruit = 0;
+	RedFruit::sCountFruit = 0;
+	PurpleFruit::sCountFruit = 0;
 }

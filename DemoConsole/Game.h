@@ -46,6 +46,7 @@ private:
 	
 public:
 	void changeKnownState(State state);
+	void resetAllFruitsCounter();
 };
 
 

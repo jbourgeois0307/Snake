@@ -2,9 +2,14 @@
 #include "GameSinglePlayer.h"
 #include "GameMultiPlayer.h"
 #include "GamePlateformer.h"
+#include "RedFruit.h"
+#include "GreenFruit.h"
+#include "YellowFruit.h"
+#include "PurpleFruit.h"
 
 GameArea::GameArea()
 {
+	mGameScore = 0;
 }
 
 
@@ -12,7 +17,7 @@ GameArea::~GameArea()
 {
 }
 
-void showInfo(ConsoleImage& image, int place, std::string type,std::string game_tag, int points,int lenght, int redFruit, int yellowFruit, int greenFruit) {
+void showInfo(ConsoleImage& image, int place, std::string type,std::string game_tag, int points,int lenght, int redFruit, int yellowFruit, int greenFruit, int purpleFruit) {
 	image.drawText(place, 5, type, ConsoleColor::bw + ConsoleColor::tk);
 	image.drawText(place, 8, "Game tag : ", ConsoleColor::bw + ConsoleColor::tk);
 	image.drawText(place, 11, "Points : ", ConsoleColor::bw + ConsoleColor::tk);
@@ -20,6 +25,7 @@ void showInfo(ConsoleImage& image, int place, std::string type,std::string game_
 	image.drawText(place, 17, "Red Fruit : ", ConsoleColor::bw + ConsoleColor::tk);
 	image.drawText(place, 20, "Yellow Fruit : ", ConsoleColor::bw + ConsoleColor::tk);
 	image.drawText(place, 23, "Green Fruit : ", ConsoleColor::bw + ConsoleColor::tk);
+	image.drawText(place, 26, "Purple Fruit : ", ConsoleColor::bw + ConsoleColor::tk);
 
 	image.drawText(place+20, 8, game_tag, ConsoleColor::bw + ConsoleColor::tk);
 	image.drawText(place + 20, 11,std::to_string(points), ConsoleColor::bw + ConsoleColor::tk);
@@ -27,6 +33,7 @@ void showInfo(ConsoleImage& image, int place, std::string type,std::string game_
 	image.drawText(place + 20, 17, std::to_string(redFruit), ConsoleColor::bw + ConsoleColor::tk);
 	image.drawText(place + 20, 20, std::to_string(yellowFruit), ConsoleColor::bw + ConsoleColor::tk);
 	image.drawText(place + 20, 23, std::to_string(greenFruit), ConsoleColor::bw + ConsoleColor::tk);
+	image.drawText(place + 20, 26, std::to_string(purpleFruit), ConsoleColor::bw + ConsoleColor::tk);
 }
 
 bool GameArea::singleplayer() {
@@ -41,9 +48,9 @@ bool GameArea::singleplayer() {
 	if (GameSinglePlayer::getInstance().snake() != nullptr) {
 		sizeSnake = GameSinglePlayer::getInstance().snake()->bodLength();
 	}
-	
+	mGameScore = (sizeSnake - 1) * 10;
 
-	showInfo(singlePlayerArea, 100, "singleplayer","Ludovic", 0, sizeSnake, 0, 0, 0);
+	showInfo(singlePlayerArea, 100, "Singleplayer","Ludovic", mGameScore, sizeSnake-1, RedFruit::sCountFruit, YellowFruit::sCountFruit,GreenFruit::sCountFruit,PurpleFruit::sCountFruit);
 	GameSinglePlayer::getInstance().showFruit(singlePlayerArea);
 	GameSinglePlayer::getInstance().showSnake(singlePlayerArea);
 
@@ -58,11 +65,18 @@ bool GameArea::multiplayer() {
 	multiPlayerArea.fill(178, ConsoleColor::bK + ConsoleColor::tC);
 	multiPlayerArea.fill(5.0, 5.0, 90.0, 90.0, (char)176, ConsoleColor::bg + ConsoleColor::tw);
 
-	showInfo(multiPlayerArea, 100, "multiplayer", "Ludovic", 0, 4, 0, 0, 0);
+	int sizeSnake = 0;
+	if (GameSinglePlayer::getInstance().snake() != nullptr) {
+		sizeSnake = GameSinglePlayer::getInstance().snake()->bodLength();
+	}
+	mGameScore = (sizeSnake - 1) * 10;
+
+	showInfo(multiPlayerArea, 100, "multiplayer", "Ludovic", mGameScore, sizeSnake-1, RedFruit::sCountFruit, YellowFruit::sCountFruit, GreenFruit::sCountFruit, PurpleFruit::sCountFruit);
 	GameMultiPlayer::getInstance().showFruit(multiPlayerArea);
 	GameMultiPlayer::getInstance().showSnake(multiPlayerArea);
 	return false;
 }
+
 bool GameArea::plateformer() {
 	ConsoleWriter & writer{ Console::getInstance().writer() };
 	ConsoleImage & plateformerArea{ writer.createImage("plateformer") };
@@ -71,7 +85,13 @@ bool GameArea::plateformer() {
 	plateformerArea.fill(178, ConsoleColor::bK + ConsoleColor::tC);
 	plateformerArea.fill(5.0, 0.0, 90.0, 100.0, (char)176, ConsoleColor::br + ConsoleColor::tw);
 
-	showInfo(plateformerArea, 100, "plateformer", "Ludovic", 0, 4, 0, 0, 0);
+	int sizeSnake = 0;
+	if (GameSinglePlayer::getInstance().snake() != nullptr) {
+		sizeSnake = GameSinglePlayer::getInstance().snake()->bodLength();
+	}
+	mGameScore = RedFruit::sCountFruit+ YellowFruit::sCountFruit+ GreenFruit::sCountFruit+ PurpleFruit::sCountFruit;
+
+	showInfo(plateformerArea, 100, "plateformer", "Ludovic", mGameScore, sizeSnake - 1, RedFruit::sCountFruit, YellowFruit::sCountFruit, GreenFruit::sCountFruit, PurpleFruit::sCountFruit);
 	GamePlateformer::getInstance().showFruit(plateformerArea);
 	GamePlateformer::getInstance().showSnake(plateformerArea);
 	GamePlateformer::getInstance().showObstacles(plateformerArea);
@@ -86,7 +106,7 @@ bool GameArea::gameModeChooser(int pos) {
 	gameModeChooserArea.drawText(30, 10, "Choose your Game Mode :", ConsoleColor::bw + ConsoleColor::tk);
 	gameModeChooserArea.drawText(30, 15, "SinglePlayer", ConsoleColor::bw + ConsoleColor::tk);
 	gameModeChooserArea.drawText(30, 20 , "Multiplayer ", ConsoleColor::bw + ConsoleColor::tk);
-	gameModeChooserArea.drawText(30, 25, "Plateformer", ConsoleColor::bw + ConsoleColor::tk);
+	gameModeChooserArea.drawText(30, 25, "Platformer", ConsoleColor::bw + ConsoleColor::tk);
 
 	//draw arrow
 	gameModeChooserArea.drawText(26, 10+(pos*5),"-->", ConsoleColor::bw + ConsoleColor::tk);
@@ -114,7 +134,10 @@ bool GameArea::gameOverMenu() {
 	gameoverArea.drawText(50, 35, "#     #   # #   #       #    #  ", ConsoleColor::bk + ConsoleColor::tr);
 	gameoverArea.drawText(50, 36, "#######    #    ####### #     # ", ConsoleColor::bk + ConsoleColor::tr);
 
-	gameoverArea.drawText(50, 45, "Press Any Key to Restart", ConsoleColor::bk + ConsoleColor::tw);
+
+	gameoverArea.drawText(57, 45, "Score : "+std::to_string(mGameScore), ConsoleColor::bk + ConsoleColor::tw);
+
+	gameoverArea.drawText(43, 55, "Press Any Key to Restart (Press Enter to restart)", ConsoleColor::bk + ConsoleColor::tw);
 
 	return false;
 }

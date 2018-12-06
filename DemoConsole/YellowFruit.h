@@ -7,6 +7,7 @@ class YellowFruit : public Fruit
 {
 	float mSpeedReducor;
 public:
+	inline static int sCountFruit = 0;
 	YellowFruit();
 	YellowFruit(float speedReducor);
 	YellowFruit(Point &p, int pointVal, float speedReducor, FruitType c);
