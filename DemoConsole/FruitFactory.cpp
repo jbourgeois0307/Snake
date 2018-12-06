@@ -11,7 +11,7 @@ Fruit * FruitFactory::createFruit()
 	Fruit* foo{nullptr};
 
 	//Génère un point aléatoire
-	Point p(Random::getInstance().uniformRandomize(4, 85), Random::getInstance().uniformRandomize(4, 85));
+	Point p(Random::getInstance().uniformRandomize(5, 85), Random::getInstance().uniformRandomize(5, 85));
 	
 	//Un des types de fruit aléatoire
 	Fruit::FruitType f = static_cast<Fruit::FruitType>(rand() % 4);

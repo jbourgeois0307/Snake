@@ -3,10 +3,10 @@ Game::Game() :slow_m{ 500 }, reader_m{ nullptr }, writer{ nullptr }, gamezone{ n
 {
 }
 
-
 Game::~Game()
 {
 }
+
 Game::State Game::nextState(State state)
 {
 	return (State)((int)state + 1);
@@ -149,7 +149,7 @@ Game::State Game::update(State state) {
 
 		if (!SinglePlayerAutomaton::getInstance().startedAutomaton()) {
 			GameSinglePlayer::getInstance().play();
-			SinglePlayerAutomaton::getInstance().startSinglePlayerAutomaton();
+			
 			return State::SinglePlayer;
 		}
 
@@ -164,13 +164,17 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::Multiplayer:
+		if (!MultiPlayerAutomaton::getInstance().startedAutomaton()) {
+			GameMultiPlayer::getInstance().play();
+			return State::Multiplayer;
+		}
+
 		if (Transaction::getInstance().conditionSnakeCollision(GameMultiPlayer::getInstance().snake(), GameMultiPlayer::getInstance().caterpillar())) {
+			MultiPlayerAutomaton::getInstance().resetMultiPlayerAutomaton();
 			return State::GameOver;
 		}
 		else {
-			GameMultiPlayer::getInstance().generateFruit();
-			GameMultiPlayer::getInstance().generateSnake();
-			MultiPlayerAutomaton::getInstance().startMultiPlayerAutomaton();
+			MultiPlayerAutomaton::getInstance().resumeMultiPlayerAutomaton(MultiPlayerAutomaton::MultiPlayerState::Move);
 			return State::Multiplayer;
 		}
 		break;
@@ -182,7 +186,7 @@ Game::State Game::update(State state) {
 			GamePlateformer::getInstance().generateFruit();
 			GamePlateformer::getInstance().generateSnake();
 			GamePlateformer::getInstance().generateObstacles();
-			return State::Plateformer;
+			return nextState(state);
 		}
 		break;
 	case State::GameOver:

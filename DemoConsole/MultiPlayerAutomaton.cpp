@@ -1,8 +1,8 @@
 #include "MultiPlayerAutomaton.h"
 
-
-
 MultiPlayerAutomaton::MultiPlayerAutomaton()
+	:slow_m{ 500 },
+	mStartedAutomaton{ false }
 {
 }
 
@@ -11,8 +11,16 @@ MultiPlayerAutomaton::~MultiPlayerAutomaton()
 {
 }
 
+void MultiPlayerAutomaton::resetMultiPlayerAutomaton()
+{
+	mStartedAutomaton = false;
+	GameMultiPlayer::getInstance().generateSnake();
+	GameMultiPlayer::getInstance().generateFruit();
+}
+
 void MultiPlayerAutomaton::startMultiPlayerAutomaton(MultiPlayerState state)
 {
+	mStartedAutomaton = true;
 	state = update(state);
 }
 
@@ -36,7 +44,8 @@ MultiPlayerAutomaton::MultiPlayerState MultiPlayerAutomaton::update(MultiPlayerS
 {
 	switch (state) {
 	case MultiPlayerState::Idle:
-		if (true) {
+		if (Transaction::getInstance().conditionAnyInput()) {
+			Game::getInstance().getKeyEvents().clear();
 			return nextMultiPlayerState(state);
 		}
 		//S'il n'y a pas d'input de key
@@ -52,11 +61,8 @@ MultiPlayerAutomaton::MultiPlayerState MultiPlayerAutomaton::update(MultiPlayerS
 		//s'il mange un fruit
 		else if (Transaction::getInstance().conditionSnakeEat(GameMultiPlayer::getInstance().snake(), GameMultiPlayer::getInstance().fruit()) ||
 			Transaction::getInstance().conditionSnakeEat(GameMultiPlayer::getInstance().caterpillar(), GameMultiPlayer::getInstance().fruit())) {
-			if(GameMultiPlayer::getInstance().fruit()){
-			GameMultiPlayer::getInstance().fruit()->beEaten(GameMultiPlayer::getInstance().snake());
-			GameMultiPlayer::getInstance().generateFruit();
-			}
-		return nextMultiPlayerState(state);
+			
+			return nextMultiPlayerState(state);
 		}
 
 		else if (Transaction::getInstance().conditionMoveInput(Game::getInstance().getKeyEvents()) ) {
@@ -68,23 +74,25 @@ MultiPlayerAutomaton::MultiPlayerState MultiPlayerAutomaton::update(MultiPlayerS
 			//Le déplace
 			GameMultiPlayer::getInstance().slitherSnake();
 			GameMultiPlayer::getInstance().slitherCaterpillar();
-			return MultiPlayerState::Move;
+			return state;
 		}
 		else {
 			//avance automatiquement
 			GameMultiPlayer::getInstance().slitherSnake();
 			GameMultiPlayer::getInstance().slitherCaterpillar();
-			return MultiPlayerState::Move;
+			return state;
 		}
 		break;
 	case MultiPlayerState::Eat:
-		//GameMultiPlayer::getInstance().generateFruit(true);
+		GameMultiPlayer::getInstance().fruit()->beEaten(GameMultiPlayer::getInstance().snake());
+		GameMultiPlayer::getInstance().generateFruit();
 		return MultiPlayerState::Move;
 		break;
 	case MultiPlayerState::Collision:
 		return nextMultiPlayerState(state);
 		break;
 	case MultiPlayerState::EndGame:
+		resetMultiPlayerAutomaton();
 		return MultiPlayerState::Idle;
 		break;
 	default:

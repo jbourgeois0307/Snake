@@ -1,6 +1,7 @@
 #include "GameMultiPlayer.h"
 #include "GreenFruit.h"
 #include <vector>
+#include "MultiPlayerAutomaton.h"
 
 GameMultiPlayer::GameMultiPlayer() :haveFruit_m{ false }, snakeExist_m{ false } , fruit_m{ nullptr }, snake_m{ nullptr }
 {
@@ -9,14 +10,17 @@ GameMultiPlayer::GameMultiPlayer() :haveFruit_m{ false }, snakeExist_m{ false } 
 GameMultiPlayer::~GameMultiPlayer()
 {
 	delete fruit_m;
+	delete snake_m;
+	delete caterpillar_m;
 }
 
 bool GameMultiPlayer::play()
 {
-	if (!fruit_m) {
+	MultiPlayerAutomaton::getInstance().startMultiPlayerAutomaton();
+	if (!fruit_m)
 		generateFruit();
+	if (!snake_m)
 		generateSnake();
-	}
 
 	return false;
 }
@@ -59,8 +63,16 @@ void GameMultiPlayer::showSnake(ConsoleImage & image)
 
 void GameMultiPlayer::showFruit(ConsoleImage & image)
 {
+	//Affiche selon la couleur du fruit
 	if (fruit_m) {
-		image.drawPoint(fruit_m->point().x(), fruit_m->point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tr);
+		if (fruit_m->color() == Fruit::FruitType::Red)
+			image.drawPoint(fruit_m->point().x(), fruit_m->point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tr);
+		if (fruit_m->color() == Fruit::FruitType::Green)
+			image.drawPoint(fruit_m->point().x(), fruit_m->point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tg);
+		if (fruit_m->color() == Fruit::FruitType::Yellow)
+			image.drawPoint(fruit_m->point().x(), fruit_m->point().y(), (char)178, ConsoleColor::bw + ConsoleColor::ty);
+		if (fruit_m->color() == Fruit::FruitType::Purple)
+			image.drawPoint(fruit_m->point().x(), fruit_m->point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tm);
 	}
 }
 

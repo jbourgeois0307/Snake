@@ -5,6 +5,7 @@
 #include "Snake.h"
 #include "Game.h"
 
+
 class MultiPlayerAutomaton
 {
 private:
@@ -17,8 +18,9 @@ public:
 		static MultiPlayerAutomaton instance;
 		return instance;
 	}
-	void startMultiPlayerAutomaton(MultiPlayerState state = MultiPlayerState::Move);
+	void startMultiPlayerAutomaton(MultiPlayerState state = MultiPlayerState::Idle);
 	void resumeMultiPlayerAutomaton(MultiPlayerState state);
+	void resetMultiPlayerAutomaton();
 	bool startedAutomaton() const;
 private:
 	MultiPlayerState nextMultiPlayerState(MultiPlayerState state);

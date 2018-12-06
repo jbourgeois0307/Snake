@@ -1,5 +1,6 @@
 #include "GameSinglePlayer.h"
 #include <vector>
+#include "SinglePlayerAutomaton.h"
 
 GameSinglePlayer::GameSinglePlayer() :haveFruit_m{ false }, snakeExist_m{ false }, snake_m{ nullptr }, fruit_m{nullptr}
 {
@@ -12,6 +13,7 @@ GameSinglePlayer::~GameSinglePlayer()
 
 bool GameSinglePlayer::play()
 {
+	SinglePlayerAutomaton::getInstance().startSinglePlayerAutomaton();
 	if (!fruit_m)
 		generateFruit();
 	if(!snake_m)
