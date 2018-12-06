@@ -43,8 +43,8 @@ public:
 	void slitherSnake();
 	void directionSnake(Snake::Direction direction);
 	Snake::Direction& curDirection();
-	Snake* snake();
-	Fruit* fruit();
+	Fruit *fruit_m;
+	Snake *snake_m;
 };
 
 #endif

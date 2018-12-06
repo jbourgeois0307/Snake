@@ -1,6 +1,7 @@
 #include "GamePlateformer.h"
 #include "GreenFruit.h"
 #include <vector>
+#include "PlateformerAutomaton.h"
 
 GamePlateformer::GamePlateformer() :haveFruit_m{ false }, snakeExist_m{ false }, fruit_m{ nullptr }, snake_m{ nullptr }
 {
@@ -9,14 +10,16 @@ GamePlateformer::GamePlateformer() :haveFruit_m{ false }, snakeExist_m{ false },
 GamePlateformer::~GamePlateformer()
 {
 	delete fruit_m;
+	delete snake_m;
 }
 
 bool GamePlateformer::play()
 {
-	if (!fruit_m) {
+	PlateformerAutomaton::getInstance().startPlateformerAutomaton();
+	if (!fruit_m)
 		generateFruit();
+	if (!snake_m)
 		generateSnake();
-	}
 
 	return false;
 }
@@ -32,7 +35,7 @@ void GamePlateformer::generateFruit()
 void GamePlateformer::generateSnake()
 {
 	delete snake_m;
-	Point p(Random::getInstance().uniformRandomize(1, 90) + 5, 80);
+	Point p(Random::getInstance().uniformRandomize(1, 45) + 5, 80);
 	snake_m = new Snake(0.5f, p);
 	GamePlateformer::snakeExist_m = true;
 }
@@ -76,8 +79,18 @@ void GamePlateformer::showObstacles(ConsoleImage & image) {
 
 void GamePlateformer::showFruit(ConsoleImage & image)
 {
-	if (haveFruit_m) {
-		image.drawPoint(fruit_m->point().x(), fruit_m->point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tr);
+
+	//Affiche selon la couleur du fruit
+	if (fruit_m) {
+		if (fruit_m->color() == Fruit::FruitType::Red)
+			image.drawPoint(fruit_m->point().x(), fruit_m->point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tr);
+		if (fruit_m->color() == Fruit::FruitType::Green)
+			image.drawPoint(fruit_m->point().x(), fruit_m->point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tg);
+		if (fruit_m->color() == Fruit::FruitType::Yellow)
+			image.drawPoint(fruit_m->point().x(), fruit_m->point().y(), (char)178, ConsoleColor::bw + ConsoleColor::ty);
+		if (fruit_m->color() == Fruit::FruitType::Purple)
+			image.drawPoint(fruit_m->point().x(), fruit_m->point().y(), (char)178, ConsoleColor::bk + ConsoleColor::tm);
+
 	}
 }
 
@@ -108,3 +121,13 @@ Fruit* GamePlateformer::fruit()
 	//getter du fruit dans le jeu pour le test des conditions(transactions)
 	return fruit_m;
 }
+
+
+
+
+
+
+
+
+
+

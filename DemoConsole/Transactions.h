@@ -29,6 +29,7 @@ public:
 	bool conditionWelcome();
 	bool conditionSinglePlayer();
 	bool conditionSnakeCollision(Snake *snake);
+	bool conditionSnakeCollision(Snake * snake, std::vector<Obstacle>& obstacles);
 	bool conditionSnakeCollision(Snake * snake, Snake * caterpillar);
 	bool conditionMultiPlayer();
 	bool conditionPlatformer();

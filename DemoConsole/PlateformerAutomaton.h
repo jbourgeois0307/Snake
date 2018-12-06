@@ -19,10 +19,13 @@ public:
 	}
 	void startPlateformerAutomaton(PlateformerState state = PlateformerState::Move);
 	void resumePlateformerAutomaton(PlateformerState state);
+	void resetPlateformerAutomaton();
 	bool startedAutomaton() const;
 private:
+	PlateformerState mState;
 	PlateformerState nextPlateformerState(PlateformerState state);
 	PlateformerState update(PlateformerState state);
+	void moveObstacles();
 	bool changeDirection(ConsoleKeyEvent &k);
 	size_t slow_m;
 	bool mStartedAutomaton;

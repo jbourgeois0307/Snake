@@ -96,6 +96,24 @@ bool Transaction::conditionSnakeCollision(Snake* snake)
 	return false;
 }
 
+bool Transaction::conditionSnakeCollision(Snake* snake, std::vector<Obstacle> &obstacles)
+{
+	if (snake != nullptr) {
+		if (snake->checkCollisionHead() || snake->checkCollisionWall())
+			return true;
+		for (Obstacle o : obstacles) {
+			for (int i = 0; i < o.Size(); i++) {
+				Point p(o.X() + i, o.Y());
+				if (snake->checkCollisionPoint(p)) {
+					return true;
+				}
+			}
+		}
+	}
+
+	return false;
+}
+
 bool Transaction::conditionSnakeCollision(Snake* snake, Snake* caterpillar)
 {
 	if (snake != nullptr) {

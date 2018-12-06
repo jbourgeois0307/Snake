@@ -179,14 +179,18 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::Plateformer:
-		if (Transaction::getInstance().conditionSnakeCollision(GameMultiPlayer::getInstance().snake())) {
+		if (!PlateformerAutomaton::getInstance().startedAutomaton()) {
+			GamePlateformer::getInstance().play();
+			return State::Plateformer;
+		}
+
+		if (Transaction::getInstance().conditionSnakeCollision(GamePlateformer::getInstance().snake(), GamePlateformer::getInstance().obstacles())) {
+			PlateformerAutomaton::getInstance().resetPlateformerAutomaton();
 			return State::GameOver;
 		}
 		else {
-			GamePlateformer::getInstance().generateFruit();
-			GamePlateformer::getInstance().generateSnake();
-			GamePlateformer::getInstance().generateObstacles();
-			return nextState(state);
+			PlateformerAutomaton::getInstance().resumePlateformerAutomaton(PlateformerAutomaton::PlateformerState::Idle);
+			return State::Plateformer;
 		}
 		break;
 	case State::GameOver:

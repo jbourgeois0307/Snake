@@ -12,6 +12,7 @@ public:
 	Snake();
 	Snake(float speed);
 	Snake(float speed, Point &initP);
+	Snake(float speed, Point & p, int size);
 	~Snake();
 	enum class Direction { Up, Down, Left, Right };
 	void slither();
@@ -20,6 +21,7 @@ public:
 	void cutTail(int cuttedLength);
 	bool checkCollisionHead();
 	bool checkCollisionAdversary(Snake * adversary);
+	bool checkCollisionPoint(Point & p);
 	bool checkCollisionWall();
 	void speed(float speedModifier);
 	void setCurDirection(Direction direction);
