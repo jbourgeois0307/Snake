@@ -87,6 +87,19 @@ bool Transaction::conditionAnyInput()
 	return false;
 }
 
+bool Transaction::conditionPause(std::list<ConsoleKeyEvent> ke)
+{
+	//Pause si le joueur clique sur "espace"
+	for (auto &k : ke)
+	{
+		if (k.keyV() == VK_SPACE) {
+			ke.clear();
+			return true;
+		}
+	}
+	return false;
+}
+
 bool Transaction::conditionSnakeCollision(Snake* snake) 
 {
 	if (snake != nullptr) {

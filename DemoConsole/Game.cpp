@@ -1,4 +1,10 @@
 #include "Game.h"
+#include "GreenFruit.h"
+#include "RedFruit.h"
+#include "PurpleFruit.h"
+#include "YellowFruit.h"
+
+
 Game::Game() :slow_m{ 500 }, reader_m{ nullptr }, writer{ nullptr }, gamezone{ nullptr }
 {
 }
@@ -24,7 +30,7 @@ void Game::gameLoop(State state) {
 		render(state);
 		timer.restart();
 		int timertime = timer.elapsed();
-		while (timertime <= 100000000) {
+		while (timertime <= 65000000) {
 			timertime = timer.elapsed();
 
 		}
@@ -146,6 +152,8 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::SinglePlayer:
+		if (Transaction::getInstance().conditionPause(getKeyEvents()))
+			return testPause(State::SinglePlayer);
 
 		if (!SinglePlayerAutomaton::getInstance().startedAutomaton()) {
 			GameSinglePlayer::getInstance().play();
@@ -164,6 +172,8 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::Multiplayer:
+		if (Transaction::getInstance().conditionPause(getKeyEvents()))
+			return testPause(State::Multiplayer);
 		if (!MultiPlayerAutomaton::getInstance().startedAutomaton()) {
 			GameMultiPlayer::getInstance().play();
 			return State::Multiplayer;
@@ -179,6 +189,7 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::Plateformer:
+<<<<<<< HEAD
 		if (!PlateformerAutomaton::getInstance().startedAutomaton()) {
 			GamePlateformer::getInstance().play();
 			return State::Plateformer;
@@ -186,6 +197,11 @@ Game::State Game::update(State state) {
 
 		if (Transaction::getInstance().conditionSnakeCollision(GamePlateformer::getInstance().snake(), GamePlateformer::getInstance().obstacles())) {
 			PlateformerAutomaton::getInstance().resetPlateformerAutomaton();
+=======
+		if (Transaction::getInstance().conditionPause(getKeyEvents()))
+			testPause(State::Plateformer);
+		if (Transaction::getInstance().conditionSnakeCollision(GameMultiPlayer::getInstance().snake())) {
+>>>>>>> 96e8dc6b111f1e898be7fd84dec3f6558c5fc81f
 			return State::GameOver;
 		}
 		else {
@@ -195,7 +211,24 @@ Game::State Game::update(State state) {
 		break;
 	case State::GameOver:
 		if (anyTouch()) {
+			resetAllFruitsCounter();
 			return State::GameModeChooser;
+		}
+		else {
+			return state;
+		}
+		break;
+	case State::PauseSinglePlayer:
+		if (anyTouch()) {
+			return State::SinglePlayer;
+		}
+		else {
+			return state;
+		}
+		break;
+	case State::PauseMultiPlayer:
+		if (anyTouch()) {
+			return State::Multiplayer;
 		}
 		else {
 			return state;
@@ -208,7 +241,7 @@ Game::State Game::update(State state) {
 
 void Game::start(size_t width, size_t height) {
 
-	ConsoleContext context(800, 800, "The Snake Game", 8, 8, L"Consolas");
+	ConsoleContext context(800, 800, "The Snake Game", 9, 9, L"Consolas");
 	Console::defineContext(context);
 	Game::getInstance().reader_m = &( Console::getInstance().keyReader());
 	Game::getInstance().gameLoop(State::Welcome);
@@ -218,4 +251,28 @@ void Game::test() {
 	while (true) {
 		writer->randomize();
 	}
+}
+
+Game::State Game::testPause(State state)
+{
+			if (Transaction::getInstance().conditionPause(getKeyEvents()))
+			{
+				keyEvents.clear();
+				if (state == State::SinglePlayer)
+					return State::PauseSinglePlayer;
+				else
+					return State::PauseMultiPlayer;
+			}
+			else {
+				return state;
+			}
+	
+}
+
+void Game::resetAllFruitsCounter()
+{
+	GreenFruit::sCountFruit = 0;
+	YellowFruit::sCountFruit = 0;
+	RedFruit::sCountFruit = 0;
+	PurpleFruit::sCountFruit = 0;
 }

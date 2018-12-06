@@ -6,13 +6,13 @@
 
 class Fruit
 {
-	static int sCountFruit;
 protected:
 	Point mPoint;
 	int  mPointVal;
 
 public:
 	enum class FruitType { Red, Purple, Yellow, Green };
+	inline static int sCountFruit = 0;
 protected:
 	FruitType mColor;
 public:

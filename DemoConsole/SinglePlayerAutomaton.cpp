@@ -88,6 +88,7 @@ SinglePlayerAutomaton::SinglePlayerState SinglePlayerAutomaton::update(SinglePla
 			GameSinglePlayer::getInstance().generateFruit();
 			return SinglePlayerState::Move;
 		break;
+
 	case SinglePlayerState::Collision:
 		Game::getInstance().changeKnownState(Game::State::GameOver);
 		return nextSinglePlayerState(state);

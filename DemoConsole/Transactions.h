@@ -36,5 +36,6 @@ public:
 	bool conditionSnakeEat(Snake *snake, Fruit* fruit);
 	bool conditionMoveInput(std::list<ConsoleKeyEvent> ke);
 	bool conditionAnyInput();
+	bool conditionPause(std::list<ConsoleKeyEvent> ke);
 };
 #endif //TRANSACTIONS_H

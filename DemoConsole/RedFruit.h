@@ -6,6 +6,7 @@
 class RedFruit : public Fruit 
 {
 public:
+	inline static int sCountFruit = 0;
 	RedFruit();
 	RedFruit(Point const &p, int pointVal, FruitType c);
 	~RedFruit();
