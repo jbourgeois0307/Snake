@@ -11,8 +11,8 @@ PlateformerAutomaton::~PlateformerAutomaton()
 void PlateformerAutomaton::resetPlateformerAutomaton()
 {
 	mStartedAutomaton = false;
-	GameMultiPlayer::getInstance().generateSnake();
-	GameMultiPlayer::getInstance().generateFruit();
+	GamePlateformer::getInstance().generateSnake();
+	GamePlateformer::getInstance().generateFruit();
 	GamePlateformer::getInstance().generateObstacles();
 
 }
@@ -28,8 +28,6 @@ void PlateformerAutomaton::resumePlateformerAutomaton()
 {
 	mState = update(mState);
 }
-
-
 
 bool PlateformerAutomaton::startedAutomaton() const
 {
