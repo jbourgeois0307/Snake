@@ -196,16 +196,18 @@ Game::State Game::update(State state) {
 		}
 		if (Transaction::getInstance().conditionSnakeCollision(GamePlateformer::getInstance().snake(), GamePlateformer::getInstance().obstacles())) {
 			PlateformerAutomaton::getInstance().resetPlateformerAutomaton();
-			if (Transaction::getInstance().conditionPause(getKeyEvents()))
-				testPause(State::Plateformer);
-			if (Transaction::getInstance().conditionSnakeCollision(GameMultiPlayer::getInstance().snake())) {
-				return State::GameOver;
-			}
-			else {
-				PlateformerAutomaton::getInstance().resumePlateformerAutomaton(PlateformerAutomaton::PlateformerState::Idle);
-				return State::Plateformer;
-			}
-			break;
+			return State::GameOver;
+		}
+		if (Transaction::getInstance().conditionPause(getKeyEvents()))
+			testPause(State::Plateformer);
+		if (Transaction::getInstance().conditionSnakeCollision(GameMultiPlayer::getInstance().snake())) {
+			return State::GameOver;
+		}
+		else {
+			PlateformerAutomaton::getInstance().resumePlateformerAutomaton(PlateformerAutomaton::PlateformerState::Idle);				
+			return State::Plateformer;
+		}
+		break;
 	case State::GameOver:
 		if (anyTouch()) {
 			resetAllFruitsCounter();
@@ -235,7 +237,6 @@ Game::State Game::update(State state) {
 		return State::GameOver;
 		}
 	}
-}
 
 void Game::start(size_t width, size_t height) 
 {
