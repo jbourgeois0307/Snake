@@ -8,6 +8,8 @@
 //	420-B42-IN LANGAGE D'EXPLOITATION DES BASES DE DONNÉES
 //			par Jean-Christophe Demers
 //
+//			VOIR README.MD POUR INSTRUCTIONS 
+//				DANS LE REPERTOIRE RACINE
 //
 //==========================================================
 
