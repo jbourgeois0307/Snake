@@ -112,7 +112,7 @@ bool Transaction::conditionSnakeCollision(Snake* snake)
 bool Transaction::conditionSnakeCollision(Snake* snake, std::vector<Obstacle> &obstacles)
 {
 	if (snake != nullptr) {
-		if (snake->checkCollisionHead() || snake->checkCollisionWall())
+		if (snake->checkCollisionHead() || snake->checkCollisionWallPlateformer())
 			return true;
 		for (Obstacle o : obstacles) {
 			for (int i = 0; i < o.Size(); i++) {

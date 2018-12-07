@@ -23,6 +23,7 @@ public:
 	bool checkCollisionAdversary(Snake * adversary);
 	bool checkCollisionPoint(Point & p);
 	bool checkCollisionWall();
+	bool checkCollisionWallPlateformer();
 	void speed(float speedModifier);
 	void setCurDirection(Direction direction);
 	Direction& curDirection();

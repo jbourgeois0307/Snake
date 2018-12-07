@@ -96,6 +96,14 @@ bool Snake::checkCollisionWall() {
 	}
 	return false;
 }
+
+bool Snake::checkCollisionWallPlateformer() {
+	if (mBodPart.front().x() <= 3 || mBodPart.front().y() <= 0 || mBodPart.front().y() >= 100 || mBodPart.front().x() >= 96) {
+		return true;
+	}
+	return false;
+}
+
 void Snake::speed(float speedModifier) 
 {
 	mSpeed *= speedModifier;

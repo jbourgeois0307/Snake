@@ -69,11 +69,9 @@ ConsoleKeyReader::KeyEvents Game::getKeyEvents() const
 bool Game::anyTouch() {
 	if (keyEvents.size() > 0)
 	{
-		//size_t size = keyEvents.size();
+
 		keyEvents.clear();
-		//for (int i = 0; i < size; ++i) {
-		//	keyEvents.pop_back();
-		//}
+
 		return true;
 	}
 	else {
@@ -204,7 +202,7 @@ Game::State Game::update(State state) {
 			return State::GameOver;
 		}
 		else {
-			PlateformerAutomaton::getInstance().resumePlateformerAutomaton(PlateformerAutomaton::PlateformerState::Idle);				
+			PlateformerAutomaton::getInstance().resumePlateformerAutomaton();				
 			return State::Plateformer;
 		}
 		break;

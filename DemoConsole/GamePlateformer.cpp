@@ -3,7 +3,7 @@
 #include <vector>
 #include "PlateformerAutomaton.h"
 
-GamePlateformer::GamePlateformer() :haveFruit_m{ false }, snakeExist_m{ false }, fruit_m{ nullptr }, snake_m{ nullptr }
+GamePlateformer::GamePlateformer() :mNbObstacles{ 0 },haveFruit_m { false }, snakeExist_m{ false }, fruit_m{ nullptr }, snake_m{ nullptr }
 {
 }
 GamePlateformer::~GamePlateformer()
@@ -19,7 +19,8 @@ bool GamePlateformer::play()
 		generateFruit();
 	if (!snake_m)
 		generateSnake();
-
+	if (mNbObstacles < 20)
+		generateObstacles();
 	return false;
 }
 
@@ -41,15 +42,13 @@ void GamePlateformer::generateSnake()
 
 void GamePlateformer::generateObstacles()
 {
-	if (mNbFruit < 20) {
-		for (int i = 0; i < 20; i++) {
-			Point p(Random::getInstance().uniformRandomize(1, 90) + 5, Random::getInstance().uniformRandomize(1, 80) + 5);
+		while (mNbObstacles < 20){
+			Point p(Random::getInstance().uniformRandomize(1, 90) + 5, Random::getInstance().uniformRandomize(1, 70));
 			size_t size = Random::getInstance().uniformRandomize(5, 10);
 			mObstacles.push_back(Obstacle(size, p));
 			GamePlateformer::snakeExist_m = true;
-			++mNbFruit;
+			++mNbObstacles;
 		}
-	}
 	
 }
 
@@ -70,7 +69,7 @@ void GamePlateformer::showSnake(ConsoleImage & image)
 }
 
 void GamePlateformer::showObstacles(ConsoleImage & image) {
-		for (int i = 0; i < mNbFruit; ++i) {
+		for (int i = 0; i < mNbObstacles; ++i) {
 				image.drawLine(mObstacles.at(i).X(), mObstacles.at(i).Y(), mObstacles.at(i).X()+mObstacles.at(i).Size(), mObstacles.at(i).Y(), (char)178, ConsoleColor::bg + ConsoleColor::ty);
 		}
 		

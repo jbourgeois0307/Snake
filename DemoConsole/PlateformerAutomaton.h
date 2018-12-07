@@ -18,7 +18,7 @@ public:
 		return instance;
 	}
 	void startPlateformerAutomaton(PlateformerState state = PlateformerState::Idle);
-	void resumePlateformerAutomaton(PlateformerState state);
+	void resumePlateformerAutomaton();
 	void resetPlateformerAutomaton();
 	bool startedAutomaton() const;
 private:

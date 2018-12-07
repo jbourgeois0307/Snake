@@ -8,6 +8,15 @@ PlateformerAutomaton::~PlateformerAutomaton()
 {
 }
 
+void PlateformerAutomaton::resetPlateformerAutomaton()
+{
+	mStartedAutomaton = false;
+	GameMultiPlayer::getInstance().generateSnake();
+	GameMultiPlayer::getInstance().generateFruit();
+	GamePlateformer::getInstance().generateObstacles();
+
+}
+
 void PlateformerAutomaton::startPlateformerAutomaton(PlateformerState state)
 {
 	mStartedAutomaton = true;
@@ -15,18 +24,12 @@ void PlateformerAutomaton::startPlateformerAutomaton(PlateformerState state)
 	state = update(state);
 }
 
-void PlateformerAutomaton::resumePlateformerAutomaton(PlateformerState state)
+void PlateformerAutomaton::resumePlateformerAutomaton()
 {
-	state = update(state);
+	mState = update(mState);
 }
 
-void PlateformerAutomaton::resetPlateformerAutomaton()
-{
-	mStartedAutomaton = false;
-	GamePlateformer::getInstance().generateSnake();
-	GamePlateformer::getInstance().generateFruit();
-	GamePlateformer::getInstance().generateObstacles();
-}
+
 
 bool PlateformerAutomaton::startedAutomaton() const
 {
@@ -73,13 +76,13 @@ PlateformerAutomaton::PlateformerState PlateformerAutomaton::update(PlateformerS
 			}
 			//Le déplace
 			GamePlateformer::getInstance().slitherSnake();
-			//moveObstacles();
+			moveObstacles();
 			return PlateformerState::Move;
 		}
 		else {
 			//avance automatiquement
 			GamePlateformer::getInstance().slitherSnake();
-		//	moveObstacles();
+			moveObstacles();
 			return PlateformerState::Move;
 		}
 		break;
@@ -89,7 +92,7 @@ PlateformerAutomaton::PlateformerState PlateformerAutomaton::update(PlateformerS
 		return PlateformerState::Move;
 		break;
 	case PlateformerState::Collision:
-		//Game::getInstance().changeKnownState(Game::State::GameOver);
+		Game::getInstance().changeKnownState(Game::State::GameOver);
 		return nextPlateformerState(state);
 		break;
 	case PlateformerState::EndGame:
@@ -103,32 +106,38 @@ PlateformerAutomaton::PlateformerState PlateformerAutomaton::update(PlateformerS
 void PlateformerAutomaton::moveObstacles() {
 	std::vector<Obstacle>* obstacles = &(GamePlateformer::getInstance().obstacles());
 	for (int i{ 0 }; i < obstacles->size(); ++i) {
-		obstacles->at(i).setX(obstacles->at(i).X()+1);
+		if (obstacles->at(i).Y() + 1 >= 100) {
+			obstacles->at(i).setY(0);
+			obstacles->at(i).setX(Random::getInstance().uniformRandomize(0, 90) + 5);
+		}
+		else {
+			obstacles->at(i).setY(obstacles->at(i).Y() + 1);
+		}
 	}
 }
 bool PlateformerAutomaton::changeDirection(ConsoleKeyEvent &k)
 {
 	//Autorise le changement de direction seulement si ce n'est pas dans le sens directement opposé
 	if (k.keyV() == VK_UP)
-		if ((GameSinglePlayer::getInstance().snake())->curDirection() == Snake::Direction::Down)
+		if ((GamePlateformer::getInstance().snake())->curDirection() == Snake::Direction::Down)
 			return false;
 		else
-			GameSinglePlayer::getInstance().directionSnake(Snake::Direction::Up);
+			GamePlateformer::getInstance().directionSnake(Snake::Direction::Up);
 	else if (k.keyV() == VK_DOWN)
-		if ((GameSinglePlayer::getInstance().snake())->curDirection() == Snake::Direction::Up)
+		if ((GamePlateformer::getInstance().snake())->curDirection() == Snake::Direction::Up)
 			return false;
 		else
-			GameSinglePlayer::getInstance().directionSnake(Snake::Direction::Down);
+			GamePlateformer::getInstance().directionSnake(Snake::Direction::Down);
 	else if (k.keyV() == VK_LEFT)
-		if ((GameSinglePlayer::getInstance().snake())->curDirection() == Snake::Direction::Right)
+		if ((GamePlateformer::getInstance().snake())->curDirection() == Snake::Direction::Right)
 			return false;
 		else
-			GameSinglePlayer::getInstance().directionSnake(Snake::Direction::Left);
+			GamePlateformer::getInstance().directionSnake(Snake::Direction::Left);
 	else {
-		if ((GameSinglePlayer::getInstance().snake())->curDirection() == Snake::Direction::Left)
+		if ((GamePlateformer::getInstance().snake())->curDirection() == Snake::Direction::Left)
 			return false;
 		else
-			GameSinglePlayer::getInstance().directionSnake(Snake::Direction::Right);
+			GamePlateformer::getInstance().directionSnake(Snake::Direction::Right);
 	}
 }
 

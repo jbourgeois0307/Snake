@@ -22,6 +22,7 @@ protected:
 	Fruit *fruit_m;
 	Snake* snake_m;
 	size_t mNbFruit;
+	size_t mNbObstacles;
 	std::vector<Obstacle> mObstacles;
 
 
@@ -45,6 +46,7 @@ public:
 	Snake::Direction& curDirection();
 	Fruit* fruit();
 	Snake* snake();
+
 };
 
 #endif
