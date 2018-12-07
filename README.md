@@ -19,21 +19,24 @@ NOTE D'USAGE
     possible sans frapper les obstacles, les murs ou 
     sa propre queue!
     
+CONCEPTEURS
 ===========================================
 
 AUTEURS:
   - Joé Bourgeois-Paquin
   - Ludovic Doutre-Guay
 
+CONTEXTE
 ===========================================
 
 Dans le cadre du cours B52 :
 420-B42-IN LANGAGE D'EXPLOITATION DES BASES DE DONNÉES
 par Jean-Christophe Demers
 
+LIENS
 ==========================================
 
 https://github.com/jbourgeois0307/Snake.git
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   Pour accéder au projet sur Github
   
