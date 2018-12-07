@@ -32,3 +32,8 @@ Dans le cadre du cours B52 :
 par Jean-Christophe Demers
 
 ==========================================
+
+https://github.com/jbourgeois0307/Snake.git
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Pour accéder au projet sur Github
+  
