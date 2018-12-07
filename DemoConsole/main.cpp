@@ -1,3 +1,17 @@
+//===========================================================
+//
+//            SNAKE v1.0 6/12/2018
+//  
+//			   Bourgeois-Paquin Joé
+//				Doutre-Guay Ludovic
+//
+//	420-B42-IN LANGAGE D'EXPLOITATION DES BASES DE DONNÉES
+//			par Jean-Christophe Demers
+//
+//
+//==========================================================
+
+
 #include "Game.h"
 #include <iostream>
 using namespace std;
