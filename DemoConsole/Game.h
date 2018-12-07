@@ -17,7 +17,7 @@ private:
 	Game();
 	~Game();
 public:
-	void static start(size_t width=800, size_t height= 800);
+	void static start(size_t width = 800, size_t height = 800);
 	void test();
 	enum class State {Welcome, StartMenu, GameModeChooser, Options, SinglePlayer, Multiplayer, Plateformer, GameOver, PauseSinglePlayer, PauseMultiPlayer};
 	static Game& getInstance()

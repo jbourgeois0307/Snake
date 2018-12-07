@@ -93,7 +93,7 @@ PlateformerAutomaton::PlateformerState PlateformerAutomaton::update(PlateformerS
 		return nextPlateformerState(state);
 		break;
 	case PlateformerState::EndGame:
-		//resetPlateformerAutomaton();
+		resetPlateformerAutomaton();
 		return PlateformerState::Idle;
 		break;
 	default:

@@ -39,6 +39,7 @@ void Game::gameLoop(State state) {
 void Game::processInput() {
 	reader_m->read(keyEvents);
 }
+
 void Game::render(State state) {
 	switch (state) {
 	case State::Welcome: GameArea::getInstance().welcomeMenu();
@@ -157,7 +158,7 @@ Game::State Game::update(State state) {
 
 		if (!SinglePlayerAutomaton::getInstance().startedAutomaton()) {
 			GameSinglePlayer::getInstance().play();
-			
+
 			return State::SinglePlayer;
 		}
 
@@ -189,26 +190,22 @@ Game::State Game::update(State state) {
 		}
 		break;
 	case State::Plateformer:
-<<<<<<< HEAD
 		if (!PlateformerAutomaton::getInstance().startedAutomaton()) {
 			GamePlateformer::getInstance().play();
 			return State::Plateformer;
 		}
-
 		if (Transaction::getInstance().conditionSnakeCollision(GamePlateformer::getInstance().snake(), GamePlateformer::getInstance().obstacles())) {
 			PlateformerAutomaton::getInstance().resetPlateformerAutomaton();
-=======
-		if (Transaction::getInstance().conditionPause(getKeyEvents()))
-			testPause(State::Plateformer);
-		if (Transaction::getInstance().conditionSnakeCollision(GameMultiPlayer::getInstance().snake())) {
->>>>>>> 96e8dc6b111f1e898be7fd84dec3f6558c5fc81f
-			return State::GameOver;
-		}
-		else {
-			PlateformerAutomaton::getInstance().resumePlateformerAutomaton(PlateformerAutomaton::PlateformerState::Idle);
-			return State::Plateformer;
-		}
-		break;
+			if (Transaction::getInstance().conditionPause(getKeyEvents()))
+				testPause(State::Plateformer);
+			if (Transaction::getInstance().conditionSnakeCollision(GameMultiPlayer::getInstance().snake())) {
+				return State::GameOver;
+			}
+			else {
+				PlateformerAutomaton::getInstance().resumePlateformerAutomaton(PlateformerAutomaton::PlateformerState::Idle);
+				return State::Plateformer;
+			}
+			break;
 	case State::GameOver:
 		if (anyTouch()) {
 			resetAllFruitsCounter();
@@ -236,10 +233,12 @@ Game::State Game::update(State state) {
 		break;
 	default:
 		return State::GameOver;
+		}
 	}
 }
 
-void Game::start(size_t width, size_t height) {
+void Game::start(size_t width, size_t height) 
+{
 
 	ConsoleContext context(800, 800, "The Snake Game", 9, 9, L"Consolas");
 	Console::defineContext(context);

@@ -5,7 +5,6 @@
 
 GamePlateformer::GamePlateformer() :haveFruit_m{ false }, snakeExist_m{ false }, fruit_m{ nullptr }, snake_m{ nullptr }
 {
-
 }
 GamePlateformer::~GamePlateformer()
 {

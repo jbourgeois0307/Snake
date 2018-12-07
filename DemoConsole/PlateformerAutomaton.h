@@ -17,7 +17,7 @@ public:
 		static PlateformerAutomaton instance;
 		return instance;
 	}
-	void startPlateformerAutomaton(PlateformerState state = PlateformerState::Move);
+	void startPlateformerAutomaton(PlateformerState state = PlateformerState::Idle);
 	void resumePlateformerAutomaton(PlateformerState state);
 	void resetPlateformerAutomaton();
 	bool startedAutomaton() const;
